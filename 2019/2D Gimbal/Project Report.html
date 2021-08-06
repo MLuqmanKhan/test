@@ -1,0 +1,280 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:red; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+				Two Dimensinal Gimbal Project Report - (Muhammad Ameen and Fayaz Ahmed)
+		</title>
+		
+		
+	</head>
+	
+	<body> 
+	<font color="white">
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title"><p><b>
+						<marquee direction="left"scrollamount="7"><img src="Project_Pics/iba.png" width="100" height="50" /><img src="Project_Pics/siba.png" width="900" height="50" /></marquee><br>
+				
+					 <p><b><font color="yellow"><h3>MUHAMMAD AMEEN AND FAYAZ AHMED NOONARI</h3></b></font></p><p><font color="0000FF">Department of Electrical Engineering </font></u></p><p><font color="0000FF">
+					 Sukkur IBA University</p>
+					</font> </b></p>
+					
+					<!--<p><b><font color="##00FF00">*******************************************************************************</font></b></p>-->
+					<br>
+					<br>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area"><br><br>
+					<div class="link"><a href="#C1"><b><font color="80000">Introduction</font></a></b></div><div class="separator"></div>
+					<div class="link"><a href="#C2"><b><font color="800000">High Level Design </font></b></a></div><div class="separator"></div>
+					<div class="link"><a href="#C3"><b><font color="800000">Design</font></b></a></div><div class="separator"></div>
+					<div class="link"><a href="#C4"><b><font color="800000">Results</font></b></a></div><div class="separator"></div><br><br>
+					<div class="link"><a href="#C5"><b><font color="800000">Conclusion</font></b></a></div><div class="separator"></div>
+					<div class="link"><a href="#C6"><b><font color="800000">Appendix</font></b></a></div><div class="separator"></div>
+		
+				</div>
+				<div class="clear"></div>
+			</div><br>
+			
+			<!--<p><img src="Project_Pics/hk.jpg" width="950" height="5" /></p>
+			
+			
+			<hr>
+			<div id="main-container">
+				<div id="page-title"><p> <font color="SpringGreen">2D GIMBAL</font></p></div>
+				<div id="assignments">
+				
+
+<br><br>
+<h2 id="C1"><font color="">INTRODUCTION:</font></h2>
+<p> 
+Gimbal is a device which is used to stablize something at a fixed or pivoted point.
+A Two-axis gimbal allows any object mounted on the gimbal to be independent of the movement of the one holding the gimbal. 
+The gimbal dictates the movement of the object and moves accordingly in order to stblize the object.<br>
+Mostly gimbal is used to keep the camera stablized with no vibration.
+A 2 axis gimbal ensures that the motion of the camera is stabilized even if the one holding it
+and  going up,down,left,right front and back. This is what we refer to as roll and pitch stablization.</p>
+<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+<img src="http://latex.codecogs.com/svg.latex?" border="0"/>	
+
+<br><center><img src="Project_Pics/finalprototype.jpg" width="500" height="600" /></center><br>
+
+<p>We got motivation to make gimbal because it is used in most of application.
+Specially it used to stablize the camera and we know that in today's word how much the importance of camera?.
+Almost camera is used every where in every application for instance it is used in drones,vehcles etc.
+It is very useful for those who make videos of snowboarding, skiing, playing basketball and other sports,
+People who love to take videos of their cats and follow them around the house to capture crazy and funny moments.
+
+
+and it is also very useful for professional videographers.</p><br><br>
+<h2 id="C2">HIGH LEVEL DESIGN:</h2>    
+Working principle of a gimbal is very simple.It uses MPU6050 Gyroscope sensor which detects the motion of body and
+genrates a signal and it goes to microcontroler.That microconroler controls the motors accordingly.<br><br>
+
+<center><img src="Project_Pics/flow.PNG"width="600" height="600" /><br></center>
+<br>
+<ul>
+<li><b>Major components used in project and their brief description. </b></li> <br>
+<li><b>Atmega328 IC</b></li>
+<p>The Atmega328 is a very popular microcontroller chip produced by Atmel. It is an 8-bit
+microcontroller that has 32K of flash memory, 1K of EEPROM, and 2K of internal SRAM.
+The Atmega328 has 28 pins.It has 14 digital I/O pins, of which 6 can be used as PWM outputs and 6 analog input pins. These I/O pins account for 20 of the pins.</p><br>
+<b>Pin Configuration</b><br>
+<center><img src="Project_Pics/328ICpin.jpg"width="600" height="600" /><br></center>
+<li><b>2 Servo Motors </b></li>
+<p>A servo motor is a rotary actuator or motor that allows for a precise control in terms of angular position, acceleration and velocity, 
+capabilities that a regular motor does not have.The function of the servo motor is to receive a control signal that represents a desired 
+output position of the servo shaft and apply power to its DC motor until its shaft turns to that position.
+A servo motor is controlled by controlling its position using Pulse Width Modulation Technique. The width of the pulse applied to the 
+motor is varied and send for a fixed amount of time.The pulse width determines the angular position of the servo motor. For example a 
+pulse width of 1 ms causes a angular position of 0 degrees, whereas a pulse width of 2 ms causes a angular width of 180 degrees. </p>
+<p><b>Pin configuration</b></p><br>
+<center><img src="Project_Pics/servoPin.PNG"width="850" height="200" /><br></center><br>
+<br>
+<li><b>MPU6050 Gyro Sensor </b></li>
+<p>It combines 3-axis Gyroscope, 3-axis Accelerometer and Digital Motion Processor all in small package. Also, it has additional feature of on-chip 
+Temperature sensor. It has I2C bus interface to communicate with the microcontrollers.</p>
+<p><b>Pin configuration</b></p><br>
+<center><img src="Project_Pics/MPU6050-Pinout.png"width="800" height="500" /><br></center><br>
+<p><b>Communication Protocol:</b></p><br>
+<p>This module uses I2C protocol in order to communicate with arduino nano, the MPU6050 sensor will collect the data and that 
+data will be communicated with arduino nano to perform specific task.</p>
+<center><img src="Project_Pics/I2C.PNG"width="600" height="300" /><br></center><br>
+
+<p><b>Bill of material used in project</b></p><br>
+<center><img src="Project_Pics/IMG-20191119-WA0007.jpg"width="600" height="600" /><br></center>
+<br><br>
+
+<h4><b>Deligation of Tasks</b></h4>
+Almost We worked togeather in project making.
+
+<center><img src="Project_Pics/task.PNG"width="900" height="450" /><br></center>
+<br>
+ 
+ <h4><b>We have visited the following webpages for our refrence,guidence as well as for understanding.</b></h4>
+  We are thankful to following webpages holders,really speaking these webpages were very helpful.<br><br>
+  <li>"http://fab.cba.mit.edu/classes/863.16/section.Harvard/people/Liu/Gimbal/Gimbal.html" </li> <br>
+   <li>https://github.com/rkubera/ServoGimbal</li> <br>
+   <li>https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/</li> <br>
+   <li>https://www.youtube.com/watch?v=acnLgZ4MiiI</li> <br>
+  <li> https://www.robotshop.com/community/blog/show/how-to-use-multiwii-as-a-servo-based-gimbal-stabilizer</li> <br>
+ 
+<br>
+<h2 id="C3">DESIGN</h2> 
+<h4><b>Electrical Circuit Design</b></h4>
+In the following electrical schemetic we have used <b>Atmega328</b> for controlling the motors and execute the signal given by gyro sensor then it will genrate a signal
+that will operate motors accordingly.We have used <b>Gyro Sensor(mpu6050)</b> that will sence the motin for that we have used 8 pin female connector.We have used <b>crystal
+oscilator.</b>Which is used in the microprocessors and microcontrollers for providing the clock signals.We have used two 3 pin male connectors for servo motors and 2 pin male 
+connector for source (battery). 
+<br><br><img src="Project_Pics/CIRCUIT.jpg" width="900" height="400" /><centre><br><br>
+<p><b>Electrical Schemetic of Eagle:</b></p>
+<br><br><img src="Project_Pics/schemetic.PNG" width="900" height="500" /><centre><br><br>
+<h4><b>PCB Layout</b></h4>
+After schemetic we moved to PCB Board design.In the board design we faced difficulty in to make comapct size of board.
+We routed and derouted again and again in order to make it very compact so that the handle should be in small size and it can be hold in hand very easily.
+<br>
+<br><b>Printed Circuit Board Layout</b><br>
+<br><br><center><img src="Project_Pics/board.PNG" width="500" height="600" /></center><br><br>
+<p>For printing the board We have to make image in .png extension for traces,outline and drills.</p>
+<br><b>Printed Circuit Board Traces</b><br>
+
+<br><br><center><img src="Project_Pics/gimbalFayaz_3_traces.png" width="500" height="600" /></center><br><br>
+<br><b>Printed Circuit Board outline</b><br>
+<br><br><center><img src="Project_Pics/gimbalFayaz_3_outline.png" width="500" height="600" /><centre></center><br><br>
+<br><b>Printed Circuit Board Drills</b><br>
+<br><br><center><img src="Project_Pics/gimbalFayaz_3_drills.png" width="400" height="600" /></center><br><br>
+<p>After milling the board we started to solder the printed board. </p>
+<center><img src="Project_Pics/finalboard.JPG" width="700" height="500" /></center><br>
+<p>Now our board is completely ready.After this we moved to Boat Loader.That was very joyful moment for us when board successfully
+boot loaded.</p>
+<br><img src="Project_Pics/bootloader.JPG" width="900" height="600" /><centre><br><br>
+<p><b>Challanges that we faced:</b><p><br>
+<p>After completion of our PCB soldering we have checked our project either it is working properly or not, we faced a big challange 
+that our project was not working properly, when we uploaded the program to Atmega328 IC, at start MPU6050 sensor detected the motion to
+a very small interval of time and the Servo motors were trying to balance the system, after that MPU6050 failed to detect the
+motion and no data appears on Serial Monitor. Then we reset the System and again we met with the same problem like
+previous one which we have discussed.This was the time where we stuck to a point upto one week.
+To make our project functional,we decided to use Arduino nano and we keep on working towards our 
+project completion.The schematic and PCB layouts of second PCB are as under. 
+</p><br>
+<p><b>Schemetic:</b></p>
+<br><center><img src="Project_Pics/sc1.png" width="900" height="600" /></center><br><br>
+<p><b>Board:</b></p>
+<br><center><img src="Project_Pics/br1.png" width="400" height="800" /></center><br><br>
+  <b><pre>         Traces                                     Outline                            Drills </pre></b>
+<br><img src="Project_Pics/tr1.png" width="275" height="800" />
+<img src="Project_Pics/out1.png" width="275" height="800" />
+<img src="Project_Pics/dr1.png" width="275" height="800" /><centre><br><br>
+<h4><b>Software Development</b></h4>
+Here is the flow chart of our program.<br>
+<img src="Project_Pics/program flow chart.png" width="800" height="600" /><centre>
+<br><br>
+<h4><b>Design of finished Product</b></h4>
+<p>Our project is hand-handeled product,For that we made handle in compact size so that it can be handled in hand easily.
+First we made the mechanical drying</p><br>
+<center><img src="Project_Pics/Drawing.jpg"width="500" height="600" /><br></center>
+<br>
+<p>After completing the mechanical drawing we moved  to solid works design.</p><br>
+<center><img src="Project_Pics/handle.png" width="800" height="800" /></center><br>
+<p>After making handle, we made square bracket type shape for roll motion and clamp for pitch motion.</p><br>
+<center><img src="Project_Pics/clamp.JPG" width="700" height="500" /></center><br>
+<h2 id="C4">Results</h2><br>
+Here is the Link of vedio of our project.<br><br>
+<p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=O-q2j0QvgBc">
+</iframe>
+</p>
+
+<br>
+<p><b>Challenges Faced in Routing</b></p><br>
+<p>This was our first time to have work on Eagle PCB designing software, At start we faced several problems in routing process 
+like, small distances between traces and components which actually creates a problems for PCB Milling Machine, then our instructor 
+guided us about these issues. So before printing our PCB we left little spaces between traces and components so that it becomes 
+easier for PCB Milling Machine. Also, during routing we faced hindrances to have work as professional student but with passage of time 
+we learnt alot, how to tackle and deal with issues in routing phase.
+<br><br>
+<p ><b>Challenging Faced In Bootloader</b></p><br>
+<p align="justify">After designing our first PCB in which we used Atmega328 IC and other components which are mandatory in our project,
+we move towards bootloading pocess and we met with a problem burning the  bootloader program. After that we start thinking about..
+(How to debug the error?) and we took a multimeter in order to check connectivity between different components and traces on the PCB.
+troubleshooting the PCB we have successfully done with bootloader stage.</p>
+<br>
+<h2 id="C5">Conclusions</h2> 
+<p>We have learent alot of new things in this subject. Before this we don't know about how to make Printed Circuit Board(PCB),
+How to work on eagle sowfware. Now we are fully able to make PCB and work on Eagle software. Additionally we learnt about the machine 
+which is used for printing the boards. That is "Roland monoFab SRM-20 Milling machine". On the other hand we learnt how to deal
+with SMD components in soldering, choosing the pakage of particular component. In short now we are able to work on any project of 
+Electronics .
+<br>
+<h2 id="C6">Appendix</h2> 
+<p>Here we have different files which are created in order to accomplish our task like, Solid work files, Eagle circuits/PCB Layout files, Arduino Code and rml files. One can easily access these files by just clicking on the pictures. This will help you in better understanding.
+<br><br>
+
+<center>
+<a href="STLFiles.zip" download>
+<img src="Project_Pics/3dprinter.JPG" width="120" height="120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="EagleFiles.zip" download><img src="Project_Pics/SRM.JPG" weight="220" height="120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="Code.zip" download><img src="Project_Pics/code.JPG" weight="200" height="120"></a>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="RMLFiles.zip" download><img src="Project_Pics/rml.JPG" weight="200" height="120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </center>
+<b><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STL files.zip   &nbsp;&nbsp;&nbsp;&nbsp;   PCB files.zip   &nbsp;&nbsp;  Arduino code.zip    &nbsp;&nbsp;  RML files.zip</pre></b>  
+</center>
+<table style="width:50%"><br><br>
+<p>Special thanks to :<br>
+Instructor: <b>Dr Muhammad Asim Ali</b>(Assitant Professor)<br>
+Department of Electrical Engineering<br>
+Sukkur IBA University<br><br>
+Supervisor:<b>Engr: Aizaz Ali Larik</b>(Lab Engineer)<br>
+Department of Electrical Engineering<br>
+Sukkur IBA University<br><br>
+Supervisor:<b>Engr: Nadir Ali</b>(Fab Lab Assistant)<br>
+Department of Electrical Engineering<br>
+Sukkur IBA University<br><br>
+    
+ 
+<tr>
+    
+  </tr>
+  <tr>
+     
+  </tr>
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+</font>
+	</body>
+</html>
