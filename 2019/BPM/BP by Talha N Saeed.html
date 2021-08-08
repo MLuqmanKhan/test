@@ -1,0 +1,412 @@
+<html>
+<body style="background-color:lightblue;">
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Talha Abdul Rehman & Saeed Akbar Khan)
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					<h2><p style="font-weight:bold;">Semester Project</p></h2>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">Blood Pressure Monitoring System</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+The objectives of this Project is to made the device like:<br>
+<!--<p> In assignment 4 the PCB was available </p><br>
+<img src="http://latex.codecogs.com/svg.latex?" border="0"/>	
+<center><img src="Design-1.jpg"/><br></center><br><br>
+-->
+<p>Our semester project is to design and build a portable blood pressure monitor device that can measures the user's blood pressure using hand cuff. Blood pressure monitor is biomedical instrument which has tremendous use daily life. It is used in hospitals,clinics and homes to measure the blood pressure. The device we made is portable and we can take in pocket for blood pressure meaurement. For doing so we require a pressure sensor, microcontroller device, Nokia 5110 LCD and by using the code device display the the final result. We have been worked on this project for 4 to 5 months and finally it is in working condition.</p>
+<br><br>This project is made by Talha Abdul Rehman and Saeed Akbar Khan.<br><br>
+
+The generic product we intend to have at the end of this semester would look like this.<br><br><br>
+<center><img src="bp.jpg" height="480" /><br></center>
+<br><br>
+
+<h3>Distribution of Tasks</h3>
+ Basically, we worked together regardless of who has done how much work but keeping report requirement here is the list in which we have written about tasks.  <br><br>
+<center>
+<table style="width:50%">
+ 
+<tr>
+    <td>Topics</td>
+    <td>  Talha Abdul Rehman</td> 
+	<td>  Saeed Akbar Khan</td> 
+  </tr>
+  <tr>
+    <td>Review of literature/datasheets</td>
+    <td> &#10004; </td> 
+	 <td> &#10004; </td> 
+  </tr>
+  
+  <tr>
+    <td>Selection of components</td>
+    <td> &#10004; </td> 
+	 <td> X </td> 
+  </tr>
+  
+  <tr>
+    <td>Design of Electrical Circuit and PCB layout</td>
+    <td> &#10004; </td> 
+	 <td> X </td> 
+  
+  </tr>
+    <tr>
+	<td>Soldering of Components on PCB</td>
+	<td> X </td>
+	 <td> &#10004; </td>
+  </tr>
+  
+  <tr>
+    <td>CAD Solidworks Design</td>
+    <td> X </td> 
+	 <td> &#10004; </td> 
+  </tr>
+  
+  <tr>
+    <td>Design of finished product</td>
+    <td> &#10004; </td> 
+	 <td> X </td> 
+  </tr>
+  
+  <tr>
+    <td>Writing firmware</td>
+    <td> &#10004; </td> 
+	 <td> X </td> 
+  </tr>
+  
+  
+  <tr>
+    <td>Testing/Debugging of hardware software and final Assembly</td>
+    <td> X </td> 
+	 <td> &#10004; </td> 
+  </tr>
+   
+</table>
+</center>
+<br><br>
+The project implmentation plan is presented in the form of Gantt Chart is as follows: <br>
+<br><center><img src="Gantt.jpg" height="560" /><br></center>
+<br>
+
+<br><br>
+
+<h2 id="C2">High Level Design</h2>    
+This section includes the high level design for connection and working of our project components.<br><br>
+This is the diagram of our project layout which we use to design in our project. <br><br>
+<center><img src="blockbp.PNG" height="480" /><br></center>
+<br><br>
+<br>
+
+<h2 id="C2">Principle of Operations</h2> 
+Execution of the program is very simple and easy to understand. It starts By inflating the air in the cuff and the air tube is connected with pressure sensor which gives blood pressure in high-level analog output in mili-volts that is proportional to the applied pressure and that analog output is given to micro-controller uno in which I have burned the program which caculates blood pressure in systolic and dysystolic and then the calculated result is displayed on the Nokia LCD.<br> <br>
+
+
+<ul>
+<li>Power supply </li> <br><br>
+ We used 9v battery supply given to header and give supply to voltage regulator which inturn converts 9VDC to 5VDC, which is the requirement for our project to work properly.  .<br><br>
+
+
+<li>The Micro-controller</li><br><br>
+ We used ATMEGA328P IC for storing program and display output. It consists of the 32 pins. From these pins, we use 5 digital pins for displaying LCD and 1 analog pin to take input from pressure sensor  <br><br>
+<center><img src="AT.jpg" height="480" /><br></center>
+<br><br>
+
+
+<li>Pressure Sensor</li><br><br>
+ We used a differential pressure sensor (MPX4250DP) which gives blood pressure output signal in mili-volts. This sensor meaures the value of pressure by using hand cuff. It's output is given on the A0 pin of ATMEGA328P. It's pressure range is 0-250 kPa. It's input voltage range is 4.86-5.35V. <br><br>
+<center><img src="4250.jpg" height="480" /><br></center>
+<br><br>
+
+
+<li>Nokia LCD (5110) </li> <br><br>
+ We used NOkia LCD which has 8 pin connector to display the output. <br>
+ <center><img src="lcd.jpg" height="480" /><br></center>
+ <br><br>
+  
+<li>Inflating Cuff </li> <br><br>
+ Manually inflating cuff is commonly available. It is tightly placed on arm to get pressure for the pressure sensor.<br><br>
+
+<li>Other Discrete Components </li> <br><br>
+			1)	Resistors<br>
+			2)	Capacitors<br>
+			3)	Potentiometer<br>
+			4)	Headers<br><br>
+</ul>
+
+ 
+
+<h2 id="C3">Circuit Design Process</h2> 
+Before started the design process with basic prototype of the system on breadboard to validate our design <br><br>
+<center><img src="BP-1.jpg" height="480" /><br></center>
+<br><br>
+The blood pressure meaurement of our class fellow and his blood pressure meaurement picture is there.
+<br><br>
+<br><center><img src="BP-2.jpg" height="480" width="560" align="left" /></center>
+<center><img src="BP-3.jpg" height="480" width="500" align="right" /><br></center><br>
+<br><br>
+
+
+<br><h4>PCB Designing Process</h4></br>
+In this, we design the circuit on the eagle software which is use for PCB. The eagle work is given below.<br><br>
+<br><h4>Electrical schematic</h4></br>
+This is electrical schematic of the project on eagle software.<br><br>
+Once the design was verified, the circuit schematic was prepared in Eagle. 
+<center><img src="ES.PNG" height="480" /><br></center>
+<br><br>
+<h3>Shematic description</h3><br><br>
+This is electrical schematic consists of two main circuits. First is the basic circuit to operate ATMEGA328P, while the other is connection of pressure sensor with ATMEGA328P and LCD connection with ATMEGA328P. 
+	<br><br>
+
+<h3>PCB Routing</h3>
+ PCB routing picture on Eagle software.<br><br>
+<br><center><img src="pb.PNG" height="480" /><br><br>
+The circuit diagram with trace, pads, drills & package layers visible.
+</center><br>
+
+
+<h3>Description</h3>
+The main point in PCB designing is to minimize the foot print of the circuit. With help of our mentor we managed to bring down the size of our circuit to almost 2 x 1.67 inches. <br><br>
+<h3>Challenges Faced in Routing </h3>
+First we faced some problems in designing, which we mostly take help from our mentor and made the design which is shown above. The main problem is  that the routing/path decision for the components is very difficult.
+<br>
+<br>
+
+<h3>Bill of Material</h3>
+The components used in project are written on the page and there DIP components are placed in front of them.<br>
+<br><center><img src="Page.JPG" height="480" width="480" /><br></center><br>
+
+
+<h3>PCB Layout</h3>
+ description<br><br>
+ 
+<br><center><img src="PCB-1.JPG" height="480" width="480" /><br></center><br>
+
+<h3>Populated Circuited Board</h3>
+ description<br><br>
+<br><center><img src="PCB-2.JPG" height="480" width="480" /><br></center>
+<br><br>
+From this exercise we gained first hand experience of soldering SMD and DIP components on the circuit board.
+<h3>Description</h3>
+This PCB circuit includes the places for the components and holes for header connections. We soldered all the components on the board. From our bitter experience we learnt that keeping solder iron on maximum temperature can easily peal away the traces.<br>
+The populated PCB pic is also added which give the strcuture of components we add later.<br><br> 
+<h3>Challenges faced during Soldering</h3>
+We first solder all components but we faced many problems in that circuit. The main problem we faced is that the connection on PCB are short and for that we desolder the components. The solution to this problem is that when a component is solder check its connectivity. Other problem that we faced is that component are losely solder which shows the connection when we test through the multimeter but the circuit not operate. So, we rectify this problem by discussing with Sir Nadir and he give the solution that we solder the components carefully again. This solution work well for us.<br><br>
+<h3>Procedure to Burn Bootloder</h3>
+By using the FTDI cable we boot the PCB. Bootloder is uploaded to program the ATMEGA328P. There are placed pin on PCB where we connect FTDI.<br>
+<br><center><img src="BOT-1.JPG" height="480" width="480" /><br></center>
+<br>
+<h3>Problems In Bootloading</h3><br>
+First we faced problem in boot loading the PCB the problem is that the Pins are not soldered well. Also, we check all the connection by using DMM to check connectivity. We spent about 5 hours to rectify the problem by taking helping hand from our instructor.
+<br><br>
+<h3>Working Prototype</h3><br>
+<br><center><img src="F-1.JPG" height="480" width="480"/><br></center><br><br>
+
+
+<h3>Software Development</h3>
+<h4>Description</h4>
+The code was borrowed from the website which is given in the refrence. The code we used is given as<br>
+<br><img src="BPC-1.PNG" height="560" width="500" align="left"/>
+<img src="BPC-2.PNG" height="560" width="562" align="right"/>
+<br><br>
+<p>First pic contain the code which intiallized the nokia LCD. The dimension of the LCD is given there.The global variables are also decleared there. 
+The dimension of the LCD is decleared in code. In the loop, the meauring of the pressure is done. This is code that actually calculates the pressures.  <br>
+We created an array of the output voltages using a for loop. The loop is set to run 50 times with a delay of .25s. This number of values corresponds to about 12.5s.  Cuff inflation after this amount of time was too tight for our "patient." You can adjust these values as you see fit. Since Arduino is a 10bit system, the analogRead function returns an integer within the rang [0,1023]. volt is calculated by converting this integer value into its corresponding voltage. The for loop also stores the maximum voltage as data is collected by the Arduino. We subtracted 2.5V from this volt due to the 2.5V offset that the Pressure sensor  has when both ports are exposed to atmospheric pressure.
+</p><br>
+<p> In the second picture, there is main code for blood pressure meaurement. The applied pressure (pressure) is calculated using the equation on the Pressure sensor's data sheet. However, we used a differential Pressure Sensor which mean the pressure we calculated is actually the difference between Ports 1 and 2. MAP is the pressure at Port 2 and is calculated by subtracting the pressure from atmospheric pressure which is 14.7 psi. This value is multiplied by 51.7 to give MAP in units of mmHg. There is an additional term in the equation for MAP.
+
+<br><br>
+
+<br><h3>Design of Enclosure Casing</h3>
+As the enclosure design of our project is given as: <br><br><br><br>
+<center><br><br><br><br><img src="Design-1.JPG" height="480" width="560"/></center><br><br>
+<!-- <img src="Design-2.JPG" height="480" width="480" align= "rigt"/> -->
+<br>
+<br>
+The design we choose is of heart shape. The reason for choosing this design is that we work with blood pressure which is basically of medical field and some how our project is related with the heart. We choose this design after discussing with the teacher.
+
+<br><br>
+<br><br>
+<h3>CAD Design</h3>
+<br> The CAD design is done in form of heart. The dimension of the PCB is meaured first which is 46mm*50mm. Also the dimension of LCD is meaured which is 34mm*40mm.
+ Also we meaured the dimension of all the components.
+ <br><center> <img src="mech.png" height="480"/></center><br>
+ <br> The cad file is pasted in the appendix.
+<br><br>
+<h2 id="C4">Results</h2> 
+The video of the working blood pressure mointoring system is given which shows the blood pressure of our fellow.
+<br><br>
+<center><iframe width="600" height="400"
+src="https://www.youtube.com/embed/NOd_W85NO-0&feature=youtu.be?autoplay=1"></iframe></center>
+<br><br>
+<li><a href="https://www.youtube.com/watch?v=NOd_W85NO-0&feature=youtu.be"><font color="blue"> Blood Pressure Video </font></a><br>
+
+<br><br>
+
+<h2 id="C5">Conclusions</h2>
+ 
+As this subject is Project based subject and we do our project in this whole semester. As this is our first big project in which we learn a lot of things. We learn how to tackle with the problems as we faced in project.The routing problem and how to tackle these problems. We come through some problems which are very difficult to tackle and some are very ordinery problems. This thing build us for final year project and how we can bulid good project.
+<br><br>
+<br><br>
+ <h2>Intellectual Properties and Ethics Considerations</h2>
+ We design the circuit by using datasheets of the components and by taking instructions from the professer. The topologies of the circuits are mentioned in books. Although, We searched different sites for our work. We take the blood pressure meauring code from one site where the code is already placed and we use some of his circuit design but mainly circuit is designed by us.<br>
+	The site we used for our work is open source which everyone can use. We change the code, which we took from site, for our requirement. Thus, we are sure that we do not violate any intellectual property of the existing design.<br>
+The site from where we copy the code is <a href= "https://www.instructables.com/id/Blood-Pressure-Monitor/"> www.instructables.com </a>
+<br><br>
+ <h2>Commercialization Aspects</h2>
+	The project we made is not a commercial grade but it is low cost blood preesure monitoring system with some works which can be commercialized. For commercialization, we can implement heart beat and temperature meaurement in this project by using simple sensor which is going to be very impressive in market.<br><br>
+ 
+<br><br><br><br>
+<h2>Reference</h2>
+The website we follow are as:<br>
+1-  <a href= "https://www.instructables.com/id/Blood-Pressure-Monitor/"><font color="blue"> www.instructables.com </font> </a><br>
+2-  <a href= "https://www.ijraset.com/fileserve.php?FID=14000"> <font color="blue"> IJraset  </font></a><br>
+3-  <a href= "https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2005/ww56_ws62/Final%20Project%20Web/"> <font color="blue">Cornell University </font> </a><br>
+4-  <a href= "http://ijarece.org/wp-content/uploads/2017/12/IJARECE-VOL-6-ISSUE-12-1383-1386.pdf"><font color="blue"> IJ PDF </font></a><br>
+
+
+
+<br><br>
+<h2 id="C6">Appendix</h2> 
+All the files which we used in our project are given below in zip file
+<br><br>
+<li><a href="BP.rar" download><font color="blue"> CAD File </font></a>
+<br><li><a href="EAGLE.rar" download><font color="blue"> EAGLE File </font></a><br>
+<li><a href="BP_Code.rar" download><font color="blue"> Blood Pressure Code</font></a><br>
+<br><br>
+In the below table We write the apporximate cost of each component which we used in our project.<br><br>
+<center>
+<table style="width:50%">
+ 
+<tr>
+    <td>Components</td>
+    <td>  Quantity</td> 
+	<td>  Cost</td> 
+	
+	<tr>
+    <td>Pressure sensor</td>
+    <td>1</td> 
+	 <td>PKR 1800</td> 
+  </tr>
+  
+  <tr>
+    <td>Hand Cuff</td>
+    <td> 1 </td> 
+	 <td> 250 </td> 
+  </tr>
+  
+  <tr>
+    <td>PCB </td>
+    <td> 1</td> 
+	 <td>800</td> 
+  </tr>
+  
+  <tr>
+    <td>Nokia LCD</td>
+    <td> 1</td> 
+	 <td> 450 </td> 
+  </tr>
+  
+  <tr>
+    <td>Resistors</td>
+    <td> 6 </td> 
+	 <td> 70 </td> 
+  </tr> 
+  <tr>
+    <td>Capacitors</td>
+    <td> 9 </td> 
+	 <td> 100 </td> 
+  </tr>
+   <tr>
+    <td>LED</td>
+    <td> 2 </td> 
+	 <td> 50 </td> 
+  </tr>
+	 <tr>
+    <td>Potentiometer</td>
+    <td> 1 </td> 
+	 <td> 30 </td> 
+  </tr>
+   <tr>
+    <td>Rechargable Battery</td>
+    <td> 1 </td> 
+	 <td> 120 </td> 
+  </tr>
+   <tr>
+    <td>Voltage Regulator</td>
+    <td> 1 </td> 
+	 <td> 20 </td> 
+  </tr>
+   <tr>
+    <td>Headers</td>
+    <td> 6 </td> 
+	 <td> 50 </td> 
+  </tr>
+   <tr>
+    <td>Switches</td>
+    <td> 1 </td> 
+	 <td> 10 </td> 
+  </tr>
+	
+	
+  </tr>
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>

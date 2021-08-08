@@ -1,0 +1,418 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+
+		<title>
+						Introduction to Embedded Systems Project Report
+		</title>
+	</head>
+	
+	
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					
+						<h3 align="center">Syed Farooq Hassnain Hashmi</h3>
+						
+						<h3 align="center">Zabih Ullah</h3>
+						<h4 align="center">Supervised by: Dr. Muhammad Asim</h4>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">Digital Clock</div>
+				<div id="assignments">
+<br><br>
+<h2 id="C1">Introduction</h2>  <br>	
+ <p align="justify">
+At this time most people in the whole world use an automated digital clock in their everyday 
+use. Starting from the hand watch we were to those huge street clocks every one of us are 
+dependent on the display the make. 
+At this time most people in the whole world use automated digital clocks in their everyday 
+use.  The digital clock shows time in digit form. This is an automation based clock. It comprises  of both hardware and software work. The variations and changings of time are controlled by a programmed microcontroller, here we’ve used ATmega328P. Microcontroller is the core unit of system. All processes in the system are carried and coordinated by it. Shift-Registers(74HC595), MOSFETS, capacitors and resistors are also used in main circuitry of the project to provide smooth and acuurate power supply to the clock.   
+<br><br>The circuit is shown in the page using eagle and the code has been written using Arduino.</p>	
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+	
+<center><img src="Try.jpeg"/><br></center><br><br>
+<h2><b>Our Idea</b></h2>
+<center><img src="7 segment rough3.PNG" height="500" width="500" /><br></center>
+<br><br>
+<h2 id="C2">High Level Design</h2>
+<p>If the project is implemented on high level and most advanced AI technology then the working procedure would be alike as shown below;</p>    
+<br><br><br>
+<center><img src="FLOWCHART_updated.jpg" height="1380" /><br></center>
+<br><br>
+<h2 id="C2">Project Execution Plan</h2>
+This section describes how the work in project is carried out and executed. It shows the step by step execution and flow of work progress. It depicts the work done in project. <br>The execution plan includes:<br>
+<ul type="I">
+	<li>Literature review</li>
+	<li>Component selection</li>
+	<li>Prototype</li>
+	<li>Large 7-Segment design</li>
+	<li>Assembly and final product</li>
+</ul><br><br><br>
+<center><img src="Workout_1.jpg" height="600" width="650" /><br></center>
+<br><br>
+<h1>Major Electronic Components Requeired</h1>
+<h3>Atmega 328p</h3>
+<p align="justify">    The purpose of the Atmega 328p (Microcontroller) is to control the whole functioning of the display with the aid of  74HC595. In this project 12 Digital pins of Microcontroller has been used:</p>
+<center><img src="medium-ATmega328P-TQFP-32.PNG" height="250" width="300"></center>
+<h3>74HC595D</h3>
+<p align="justify">This device contains an 8-bit serial-in, parallel-out shift register that feeds an 8-bit D-type storage register. The storage register has 8 3-STATE outputs. Separate clocks are provided for both
+the shift register and the storage register. The shift register has a direct-overriding clear, serial input, and serial output (standard) pins for cascading. The purpose of shift register in this project  is to the counting flow of the display.</p>
+<center><img src="images.jpg"></center><br><br>
+<h3>NDS355AN</h3>
+<p align="justify">We have used NDS355AN for switching purpose. The LED Strips that we have used are derived by 12 Volts but we know that the output voltage IC's provide is approximately 3.3 to 5 Volts. So, We have used 12 Volts extra Source connected to LED strips which is connected to the output of the IC through MOSFET</p><br>
+<center><img src="images (1).jpg"></center>
+<h3>LED Strips</h3>
+<p align="justify">An LED strip light is a flexible circuit board populated by surface mounted light-emitting diodes (SMD LEDs) and other components that usually comes with an adhesive backing. We have used LED Strips to have a very unique and visionable display</p><br>
+<center><img src="strip.jpg" height="200" width="240"></center>
+<br><br>
+<h1>Hardware Model</h1>
+<p>We have used Acrylic sheets of 6mm thickness to make the body of the digits. Which will be cutted in form of digits using Laser cutting technology. </p>
+<center><img src="Acrylic.jpg"></center>
+<br><br>
+<h1>Connectivity To Components</h1>
+<p align="justify">In this project we are connecting components by using SPI (Serial Peripheral Interface) which uses the concept of master and slave. We are using 4 ICs in our project which are directly connected to Micro-controller. Micro-controller feeds every IC individually.</p>
+<center><img src="Connectivity.PNG"></center><br>
+<h1><b>Deligation of Tasks</b></h1>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    border: 1px solid #ccc;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+  tr:nth-child(odd) {
+    background-color: #fff;
+  }            
+</style>
+<center>
+<table style="width: 70%">
+	<table style="width:70%">
+  		<tr>
+    		<th rowspan="5" width="30%" align="center"><b>Syed Farooq Hussnain</b></th>
+    		<td>Literature Review</td>
+  		</tr>
+  		<tr>
+  			<td>Hardware Design</td>
+  		</tr>
+  		<tr>
+  			<td>Circuit implementation</td>
+  		</tr>
+  		<tr>
+  			<td>Assembling Hardware Components</td>
+  		</tr>
+  		<tr>
+  			<td>Tasks related to Solid Works</td>
+  		</tr>
+		<tr>
+    		<th rowspan="6" width="30%" align="center"><b>Zabih Ullah</b></th>
+    		<td>Literature Review</td>
+  		</tr>
+  		<tr>
+  			<td>Components Selection</td>
+  		</tr>
+  		<tr>
+  			<td>Interfacing Hardware to Software</td>
+  		</tr>
+  		<tr>
+  			<td>Coding</td>
+  		</tr>
+  		<tr>
+  			<td>Troubleshoot hardware implemented Circuit</td>
+  		</tr>
+  		<tr>
+  			<td>Documentation</td>
+  		</tr>
+
+</table>
+</center>
+<br><br>
+ 
+ 
+<h4><b>Ethical Considerations</b></h4>
+ <p align="justify">This project involves no harm to any person or organization. Also, it doesn’t possess any copy-right violations. Its made and modelled wholly and solely for learning purpose. Its design, work procedure resemblance to any other’s work may only be coincidence. Moreover, the engineer code of ethic are also followed. The references, from where content or help is taken, are properly citated in the project report.</p>
+ <h4><b>Commercialization Aspects</b></h4>
+ <p align="justify">At this time most peoples in the whole world use an automated digital clock in their everyday use. Starting from the hand watch we were to those huge street clocks every one of us are dependent on the display the make. <br><br>
+The clock we’ve designed is very simple and of basic level. The market is already filled up with most advanced digital clocks. But, this project can be modified to high level design to get market value. The addition of Artificial Intelligence i.e. use of touch sensors, wireless time setting options and power supply by solar or other inexpensive sources which may work for years continuously will create huge market value to this product. These will make the product stable and valuable economically.
+</p><br><br>
+<h2 id="C3">Design</h2> 
+<p>The designing of this project  includes four basic steps. The four steps are i. Prototyping, PCB schematic, software development and CAD Designing. The four steps are explained below:</p> <br><br>
+<ol>
+<li><h4>Electrical Schematic</h4></li>
+<p align="justify"><h5>Prototyping</h5>
+Firstly, we implemented its prototype on bread board. On bread board we analyzed the working  process of Digital Clock. Checked how the hardware connections can be made smoothly and efficiently. Prototyping helped us in make the hardware connections simpler and  easier. The pictorial description of this step is attached below:
+</p>
+<li><h5>PCB Schematic:</h5></li>
+<p align="justify">The second step of designing is PCB schematic of the project. The schematic is made on software named as eagle. In eagle software, PCB layouts of the hardware connections are made. In this project, we’ve made four PCB layouts as per requirements of our project. The pictorial description of this step is attached below:</p><br><br>
+<center>
+<h4>7 segment driver Schematic</h4>
+<img src="Schematic.PNG">
+</center>
+<br><br>
+<center>
+<h4>Micro-Controller Schematic</h4>
+<center><img src="Microcontroller Schematic.PNG"></center>
+</center><br><br>
+<p>The electrical schematic shows connection of  <b>74HC595 (Shift-Register)</b> with 355AN N-channel MOSFET and Microcontroller. Description of connections is given as follows:</p>
+<center><img src="5952.PNG" align="center" align="middle"></center>
+<h5><b>Discription of the Schematic:</b></h5>
+<h5><b>74HC595 connections</b> </h5>
+<ul>
+	<li>Pin:1:  Segment G of 7-segment through MOSFET</li>
+	<li>Pin:2:  Segment F of 7-segment through MOSFET</li>
+	<li>Pin:3:  Segment E of 7-segment through MOSFET</li>
+	<li>Pin:4:  Segment D of 7-segment through MOSFET</li>
+	<li>Pin:5:  Segment C of 7-segment through MOSFET</li>
+	<li>Pin:6:  Segment B of 7-segment through MOSFET</li>
+	<li>Pin:7:  Segment A of 7-segment through MOSFET</li>
+	<li>Pin:8:  Ground</li>
+	<li>Pin:9:  Not Used</li>
+	<li>Pin:10: +5V(Vcc)</li>
+	<li>Pin:11: D2 (Micro-Controller)</li>
+	<li>Pin:12: D3 (Micro-Controller)</li>
+	<li>Pin:13: Ground</li>
+	<li>Pin:14: D4 (Micro-Controller)</li>
+	<li>Pin:15: Not Used</li>
+	<li>Pin:16: +5V(Vcc)</li>
+</ul><br>
+<h5><b>355AN N-channel MOSFET connections </b></h5><br>
+<center><img src="MOSFET.png" align="center"></a></center>
+<ul>
+	<li>Gate: Cnnection with IC required Segment</li>
+	<li>Drain: -ve terminal of the Segment</li>
+	<li>Source: Ground</li>
+</ul>
+<p align="justify"> The Microcontroller continuously sends data to the Shift Register. The algorithm processes the data and displays the data in correct order which is recived by the Shift Register and it is forwarded to 7-segment display.</p>
+<br><br>
+<h4>PCB Layout</h4>
+Considering the above Schematic we had designed Printed Circuit Board.<br><br><br>
+<h5><a href="https://www.youtube.com/watch?v=_jL7vkxp1Zo"> PCB milling</a></h5>
+<h4 align="center">Eagle Layout</h4>
+<center><img src="PCB layout.PNG"></center>
+<h4 align="center">PCB Milled</h4>
+<center><img src="20191128_233324.jpg" width="500"></center>
+<h4 align="center">PCB Components attached</h4>
+<img src="20191121_195054.jpg" width="500"><br><br>
+<h4>Micro-Controller PCB layout</h4>
+<img src="Microcontroller Layout.PNG">
+<h4 align="center">PCB Milled</h4>
+<center><img src="20191123_223350.jpg" width="500"></center>
+<h4 align="center">PCB Components attached</h4>
+<center><img src="20191123_223350.jpg" width="500"></center>
+<br><br><br>
+In first steps we designed a 7 segment driver circuit by using ATmega328p and 74hc595. Our task was quite simple when it was upto manufactured 7 segment display but we faced a lot of problems when it came to control our own 7 segment display which was made by our 12V LED strips.
+<br><br>
+<h1>Challenges faced in routing and tackling those challenges</h1>
+<p>It was quite difficult to design the PCB layout of this project because projct required large number of MOSFETS, four ICs and a Microcontroller. So taking the decision took lot of time because arrangement of those all components on single IC was not easy, hence we decided to make PCB layout of each digit individually and a seperate micro-controller. </p><br><br>
+<li><h4>Software Development</h4></li>
+<p align="justify">The programming part of  project is done in this step. The program is written  in Arduino software and burned into the Microcontroller namely ATmega328P. This was one of the most crucial stages of our project designing. For this first we’d to learn Arduino programming basics and working principles. In this stage, we tackled many programming issues. This was the most time consuming stage of the project. After a lot of troubleshooting, finally, we copped up with programming issues.</p>
+<center><img src="Code-Flowchart.png"></center>
+<br><br>
+<h1>Prcedure adopted to Burn Bootloader</h1>
+<p>To burn bootloader in Micro-controller is another challenging task. So,initially we got failed in burning bootloader. It was probably due to continuitity problems on the PCB. After careful trace by trace troubleshooting of the board, we got our issue resolved</p>
+<center><img src="IMG-20191124-WA0001.jpg" width="300" height="400"></center>
+<li><h4>Design of Finished Product</h4></li>
+<p>
+In CAD designing, our aim was to make this clock attractive, and aesthetically appealing. For CAD design, we’ve used acrylic sheets, High quality LED strips. The cutting of the sheets were done in FAB Lab (Khairpur) using Laser Cutting Technology. Initially all parts were dissembled and separate, we had assembled  and joined them elegantly with the help of notches. The pictorial description of this step is attached below:
+</p>
+<h5>Idea</h5>
+<center><img src="20191115_001014.jpg" width="500"></center>
+<h5>Conveting idea to a final Solid works design</h5>
+<table>
+	<tr>
+		<td><img src="1.jpg" width="400" height="400"></td>
+		<td><img src="2.jpg"width="400" height="400"></td>
+	</tr>
+	<tr>
+		<td><img src="3.jpg" width="400" height="400"></td>
+		<td><img src="4.jpg" width="400" height="400"></td>
+	</tr>
+	<tr>
+		<td><img src="5.jpg" width="400" height="400"></td>
+		<td><img src="6.jpg" width="400" height="400"></td>
+	</tr>
+	<tr>
+		<td><img src="7.jpg" width="400" height="400"></td>
+	</tr>
+</ol></table><br><br>
+<a href="clock5mmImproved.pdf"> Solid works complete machinable files</a><br>
+<a href="clock2mmCut.pdf"> Diffusers</a>
+<br><br>
+<h1>Design of the final product without assembly</h1>
+<center><img src="Without assembly.jpg" height="400" width="400"></center>
+<br><br>
+<h1>Design of the final product with assembly</h1>
+<center><img src="With assembly.jpg" height="400" width="400"></center>
+<h2 id="C4">Results</h2> 
+We’ve made a videos of the final product with successful implementation and results. The videos are uploaded on YouTube whose links are given below. In this video one can see how this clock is working. <br>
+<a href="https://www.youtube.com/watch?v=fEszjHP-OPs"> Click on the link to watch Fully functional Digital Clock</a>
+
+<br><br>
+<h1>References</h1>
+ <ul>
+ <li><a href="url" target="_blank"><font color="#0000FF">https://pdf1.alldatasheet.com/datasheet-pdf/view/636901/ONSEMI/74HC595.html</a></font></li>
+<li><a href="url"><font color="#0000FF">http://fab.cba.mit.edu/classes/863.06/11.13/NDS355AN.pdf</a></font></li>
+<li><a href="url"><font color="#0000FF">http://fab.cba.mit.edu/classes/863.06/11.13/NDS355AN.pdf</a></font></li></ul>
+
+
+
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+<p align="justify">It is an embedded systems  project which includes both hardware and software work. In this project we learnt how difficult is  the practical implementation of theoretical concepts. It’s very complicated and quite problematic to interface software with hardware modules. For example, there’s huge difference in theoretical study of Mosfets’ switching and their practical implementation. It’s very hard to encounter and simplify the project in terms of wiring and connections. The most confusing part is trouble shooting of hardware components. If any failure happens, one has to check each and every component to know which components is not functioning properly. Also, the error detection part of this project is the most time consuming part due to its complex hardware circuitry.</p><br><p align="justify"> To execute this project we started with thorough review of literature and  we did our research to finalize component selection. It was very tough task to select appropriate components for project because components have all control of the system. One has to think upon each angle of the project i.e. implementation efficacy and cost effectiveness of project etc. PCB layout, hardware connection and power supply have their own importance. In short, one has to take decisions very wisely and  precisely, in each aspect of project, to have good and efficient Digital Clock. The pictorial description of Microcontroller Boot loading is attached below:</p>
+<br>
+Please include ample pictures to be as illustrative and descriptive as possible with various issues you came across and how you got around them.<br><br>
+<br><br>
+<h2 id="C6">Appendix</h2> 
+The bill of material along with number of components is given below:<br>
+<center>
+<h1>Bill of Materials</h1>
+<table style="width:80%">
+	<tr>
+		<th>Item</th>
+		<th>Quantity</th>
+		<th>Price in Rupees</th>
+	</tr>
+	<tr>
+		<td>Atmega 328p</td>
+		<td>1</td>
+		<td>340</td>
+	</tr>
+	<tr>
+		<td>74HC595</td>
+		<td>4</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td>355AN</td>
+		<td>28</td>
+		<td>850</td>
+	</tr>
+	<tr>
+		<td>Acrylic Sheet (24" x 16")</td>
+		<td>4</td>
+		<td>3500</td>
+	</tr>
+	<tr>
+		<td>LED strips</td>
+		<td>10 meter</td>
+		<td>1200</td>
+	</tr>
+	<tr>
+		<td>Resistors(0 ohm)</td>
+		<td>2</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>Resistor (10Kohm)</td>
+		<td>1</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>Resistor (499 ohm)</td>
+		<td>2</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>5V power LED</td>
+		<td>1</td>
+		<td>15</td>
+	</tr>
+	<tr>
+		<td>V REG LM1117 SOT223</td>
+		<td>1</td>
+		<td>45</td>
+	</tr>
+	<tr>
+		<td>Capacitor(10uf)</td>
+		<td>3</td>
+		<td>30</td>
+	</tr>
+	<tr>
+		<td>Capacitor(22pf)</td>
+		<td>2</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td>Capacitor(0.1uf)</td>
+		<td>1</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td>Crystall Oscillator(16MHz)</td>
+		<td>1</td>
+		<td>10</td>
+	</tr>
+</table>
+</center>
+<br><br><br><br>
+<center><img src="20191123_213902.jpg" width="500"></center><br><br><br><br><br><br>
+
+<!-- <center><img src="20191123_213902.jpg" width="500" style="transform: rotate(90deg);"></center><br><br><br><br><br><br>-->
+
+<center>
+<table style="width:50%">
+<tr>
+    <td>Report Submitted on Time</td>
+    <td> .......................  </td> 
+  </tr>
+  <tr>
+    <td>Matlab Profeciency</td>
+    <td> .......................</td> 
+  </tr>
+</table>
+</center>
+<br><br>
+<h1>Files to download</h1>
+<h5><a href="Eagle files.zip"> Click to Download Eagle Files</a></h5>
+<h5><a href="7 Segment Solid works.rar"> Click to Download Solid works files</a></h5>
+<h5><a href="Clock.rar">Click to Download Arduino files</a></h5>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->	
+					<!-- This is comment -->
+				</div>
+			</div>
+		</div>
+		<div id="right-ajrak">
+		</div>
+	</div>
+	</body>
+</html>
