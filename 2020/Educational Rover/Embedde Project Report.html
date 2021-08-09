@@ -1,0 +1,485 @@
+<html >
+
+<head>
+<title>Embedded Project Report </title>
+<link rel="icon" href="https://pngimg.com/uploads/book/book_PNG2105.png">
+<style>
+.h1{
+
+padding: 80px;
+
+}
+
+
+</style>
+</head>
+
+
+<body class="h1"; bgcolor="olive" >
+
+<br><br>
+<h1 style="color:silver"><center> Hamza Ashraf & Syed Iftihar Shah</center></h1><br><br><br>
+<h1 style="color:black"><left> Educational Robot</center></h1></left>
+<br><br>
+
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Introduction:</h1>
+
+<p style="text-align:justify;color:black;font-size:20px;">
+This project is named as educational robot. 
+In this project we are going to make a robot that will work accurately as per the instructions given by a controller. 
+The main aim of this project is to build knowledge related to embedded systems. 
+In this project we will have our own self build android base App by which we will give instructions to our robot.
+This projetc works like if we want to make a path for our robot to move certain distance forward, backward, left or right 
+we will set the position on our app. Further, the robot will get that instructions via reciver and then perform its task. 
+If we want to reset the position or gives another imstruction to our robot then there will be no need of another program.
+For this, we simply change the instructions on the app and the robot will follow that without changing its programming. 
+This robot can be used for educational activities to make sure the purpose of instruction following. 
+The distance of the path can be verified using hall effect sensors or using the time to distance formula
+which we have prefered in this project
+This project will consist of different parts that are given:
+<br>
+1):&nbsp;&nbsp;PCB Design Of Circuit <br>
+2):&nbsp;&nbsp;Assembly of the components<br>
+3):&nbsp;&nbsp;App Invention<br>
+4):&nbsp;&nbsp;App Intraction with hardware<br> 
+</p>
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Design Requirements:</h1>
+
+<p style="text-align:justify;color:black;font-size:20px;">
+This project is consist of two parts including the software and hardware.<br>
+</p>
+<h3>
+i):&nbsp;&nbsp;Hardware<br>
+</h3>
+<p style="text-align:justify;color:black;font-size:20px;">
+For hardware design we need following components<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a):Chassis Board<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b):DC Motors<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c):Battery<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d):Connectors<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e):PCB Deigned Board for aurduino and motor driver<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f):Bluetooth Module (HC-05)<br> 
+</p>
+<h3>
+ii):&nbsp;&nbsp; Software<br>
+</h3>
+
+<p style="text-align:justify;color:black;font-size:20px;">
+For software design we need the following things:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a):A computer or laptop with internet access<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b):MIT App Inventor(An online website for app development)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c):Good knowledge of programming<br>
+</p>
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Sample Image of Final Design:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+While designing the circuit we need a sample which could be look like our project.
+After research we come up with idea that how our project will look like.
+ Below is the attached pictures of the hardware and software design sample.
+Our project will be like this. 
+<br>
+<h3>
+
+&nbsp;&nbsp;Hardware & Software<br>
+</h3>
+
+<img src="Proposed.jpg" alt="PCB Design" width="400" height="400">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="mobile.png" alt="PCB Design" width="600" height="400"><br>
+
+<p style="text-align:justify;color:black;font-size:20px;">
+The Above pictures shown are the sample design of our project but not the axact like this. 
+We have to make a robot and a an android application for our project that will be somthing like this
+</p>
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Project Execution Plan:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+As we have assigned this task as a semester project and for that we were having months to complete this.
+So, to complete this within time we divide our task in 4-months in following way:
+</p>
+
+<table  style="text-align:left; width:40%">
+
+<tr>
+   <td><h3>Task No.</h3></td>    
+   <td><h3>Task Name</h3></td>
+   <td><h3>Months</h3></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Literature Review</td>
+    <td>Sep</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Preparation of Schemetic/Model</td>
+    <td>Oct</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>Implementation of Schemetic/Model</td>
+    <td>Nov</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>Final Design/Write-up</td>
+    <td>Dec</td>
+</tr>
+</table>
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Task Distribution:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+As we have mentioned the detail work of our project above so to compelete this project with efficiency
+we divide this work as follow:
+</p>
+
+<table  style="text-align:left; width:50%">
+
+<tr>    
+   <td><h3>Task Name</h3></td>
+   <td><h3>Assigned Person</h3></td>
+</tr>
+<tr>
+    <td>Literature Review </td>
+    <td>Collective Task</td>    
+</tr>
+<tr>
+    <td>Components & its Info </td>
+    <td>Collective Task</td>    
+</tr>
+<tr>
+    <td>Schematic designing & Routing  </td>
+    <td>Collective Task</td>    
+</tr>
+<tr>
+    <td>PCB Population </td>
+    <td>Hamza Ashraf</td>    
+</tr>
+<tr>
+    <td>APP Formulation & Programming </td>
+    <td>Hamza Ashraf</td>    
+</tr>
+<tr>
+    <td>Hardware Implementation </td>
+    <td>Hamza Ashraf</td>    
+</tr>
+<tr>
+    <td>Testing/Troubleshooting </td>
+    <td>Collective Task</td>    
+</tr>
+
+
+<tr>
+    <td>Documentation </td>
+    <td>Collective Task</td>    
+</tr>
+
+<tr>
+    <td>Html Report </td>
+    <td>Hamza Ashraf </td>    
+</tr>
+
+
+</table>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;High Level System Diagram:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+For understanding the working of this project we have made a higher level system diagram for hardware as well as for
+softwre as shown below:<br><br>
+<img src="HLD.jpeg" alt="PCB Design" width="400" height="400">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="HLDS.png" alt="PCB Design" width="400" height="400">
+
+</p>
+<p style="text-align:justify;color:black;font-size:20px;">
+There is a reciever and a transmitter is cnnected to recieve and transmit signals that will be given by our android app.
+Two motors are connected that will work as per the instruction given by the instructor.
+The Power will be given to H-bridge and the aurdino and that power from the aurdino will be given to bluetooth module.
+For Software the task will be perormed as per the instruction. 
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Components Used:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+In our project we have used the components in which some components are main and which are expensive too which are given all below:
+<br>
+<br>
+
+◘&nbsp;&nbsp;<b>Arduino</b><br>
+
+The Arduino Uno is an open-source microcontroller board based on the Microchip ATmega328P microcontroller and developed by Arduino.
+The board is equipped with sets of digital and analog input/output pins that may be interfaced
+to various expansion boards and other circuits.<br>
+◘&nbsp;&nbsp;<b>IR Sensor</b><br>
+A passive infrared sensor is an electronic sensor that measures infrared light radiating from objects in its field of view.<br> 
+◘&nbsp;&nbsp;<b>Hall Effect Sensor</b><br>
+A Hall-effect sensor is a device to measure the magnitude of a magnetic field. 
+Its output voltage is directly proportional to the magnetic field strength through it.
+ Hall-effect sensors are used for proximity sensing, positioning, speed detection, and current sensing applications.<br>
+◘&nbsp;&nbsp;<b>Bluetooth Module</b><br>
+HC-05 Bluetooth Module is an easy to use Bluetooth SPP (Serial Port Protocol) module,
+ designed for transparent wireless serial connection setup. 
+Its communication is via serial communication which makes an easy way to interface with controller or PC.<br>
+◘&nbsp;&nbsp;<b>Chassis Board With Wheels</b><br> 
+◘&nbsp;&nbsp;<b>Dual H Bridge Motor Driver module</b><br> 
+◘&nbsp;&nbsp;<b>Motors</b><br>
+◘&nbsp;&nbsp;<b>Li-on Battery</b><br>
+◘&nbsp;&nbsp;<b>Jumping wires</b><br>
+◘&nbsp;&nbsp;<b>On/Off Switch</b><br>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Electrical Schemetic:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+Now for designing PCB, we used Eagle software. The boards of aurduino and of H-bridge has been designed collectively. 
+Those designed are shown below and are designed on eagle. 
+</p>
+<br><br>
+<img src="Simulation.png" alt="Simulated" width="1000" height="500">
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;PCB Layout:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+Most software have their own advantages and drawbacks, 
+but the one we selected Eagle because we have already used this program in previous semesters. 
+Eagle software is a scriptable program with many features, such as schematic capture, design, routing, 
+and computer assisted manufacturing (CA) of printedcircuit boards (PCBs).
+</p>
+<br><br>
+<img src="Routing.png" alt="Simulated" width="500" height="430">
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Chalanges on Routing:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+The routing phase was very tough for us because from previous one month 
+we was just working on app development and specially developing the logic for given conditions in project. 
+The components placement on right place was a big issue because the main hurdle to resolve was how to avoid overlapping. 
+For example, If we are trying to rout ic with bridge there was overlapping enough. 
+To resolve overlapping and placement we got help by Engr. Faisal Thebo and Engr. Nadir. 
+After getting help them and our hard work of days and nights finally we routed successfully.
+When we have routed many of components, 
+one more issue we faced was the components that were left could have a possible path to route them, 
+so there we used resistors of 0 ohms to provide path to those components. 
+</p>
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Fabricated PCB:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+After the finishing of these boards, SRM files were generated to get our PCB boards milled by SRM-20 machine available in our Fab-lab.
+After the milling process, we finally got our PCB boards in our hands.
+</p>
+<br><br>
+<img src="PCB.jpeg" alt="Simulated" width="500" height="430">
+
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Populated PCB:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+As of the fabrication done of the circuit the next task is to mount the coponents on the fabricated board.
+The populated PCB board is shown below.
+</p>
+<br><br>
+<img src="Hardware1.jpeg" alt="Simulated" width="500" height="430">
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Procedure adopted to burn Bootloader:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+We were using bootloader connector which was connected to PC through USB port. 
+Then we opened the Arduino program and write the bootloader program there, which was then uploaded to the controller board.
+Our PCB is worked properly as the bootloading is successfully done and shown an idicator o success by a red LED mounted on board.
+</p>
+<br><br>
+<img src="Bootloader.jpeg" alt="Simulated" width="500" height="430">
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Challenges while booting:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+While booting the code, we faced a tiny issue but it took 2-3 hours. 
+The issue was that code was successfully burnt but it was not responding after completion. 
+After some tries we noticed that we were giving 5 volt supply and 
+IC (Integrated Circuit) was also attached which required 7.5 voltage minimum. 
+Finally, we overcome this issue by taking out IC from the circuit.
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;The Flow Diagram of your Software Design:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+As we have to make an android app so for this we have designed it on mit app inventor whose flow of blocks are as given:
+</p> 
+<br><br>
+<img src="s1.png" alt="Simulated" width="500" height="430">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="s2.png" alt="PCB Design" width="500" height="430">
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Challenges while coding:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+The coding phase was very tricky for us because making an LFR and its programming was very easy for us.
+ But in this project the challenge was to create logic for buttons so that user just have to push
+ for example 20 feet right then it should move 20 feet left and 10 feet straight and so on. 
+INTIALLY Sir Dr. Asim has given us some logic but we was stuck. 
+After working few days and a guidance about delays by Sir Aizaz we come to know a solution.
+ We come to know that if we create such a delays and know that if robot is moving one second 
+and how much distance is covering then we can easily cope up this problem. 
+We started on that and we have made different set of buttons for left, right, front and back.
+In left there was 10, 20,30, and 40 and for right, front and back as well.
+Now for 10 we have set if user is pressing 10 right then robot will move 20 melee second to be right and then remaining time straight and all buttons like that.
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Fully Assembled & Functional System:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+As this project is consist of a robot and its operating application.
+The Picture of final assembled hardware is attached below and the interface of the application is also shown in below fig.
+ The hardware is a robot which we called an educational robot which will operate as per the instruction given by the 
+application. The application is consist of pre defined functions like moving forward, backward, left and right but all the functions 
+are subjected as per program and can be changed as instructor like. 
+Final design of hardware and software are shown in the below figures.
+</p>
+
+<br><br>
+<img src="Software2.jpeg" alt="Simulated" width="300" height="500">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="Hardware2.jpeg" alt="PCB Design" width="600" height="500">
+
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Business model:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+Our robot is human controlled which is a great product for child education. 
+By playing with it teacher can easily teach them about distance and Speed as well. 
+So if we make in massive quantity we can easily earn from these robots 
+and in future if we make some changes in it then this could be national or international brand. 
+In the Business our target market will be schools and children. 
+We can easily make a great place in target market because there is no such a great robot of this type in market.
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Understanding about Intellectual Property:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+Intellect is the power of the mind, the power of mind to think and imagine and innovate. 
+Intellectual property is that kind of property which is a thought by one’s mind. 
+It is the property over certain ideas of the mind. Certain creations of mind are recognized as special creations 
+and they can be protected through law. Also Intellectual property (IP) refers to creations of the mind,
+ such as inventions; literary and artistic works; designs; and symbols, names and images used in commerce.
+ Here I can Say that for the recognizing such intellectual property of anyone
+ there should be a platform like which is given us <b> Sir Dr Asim Samejo Sb</b> in this Subject “Embedded System”.
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Cost Of Project:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+
+There is no use of extra components. All the components used are described below.<br>
+
+
+<table  style="text-align:left; width:25%">
+
+<tr>
+   <td><h3>Components</h3></td>    
+   <td><h3>Cost</h3></td>
+</tr>
+<tr>
+   <td>Arduino</td>    
+   <td>750</td>
+</tr>
+<tr>
+   <td>Motor-Driver</td>    
+   <td>250</td>
+</tr>
+<tr>
+   <td>Chassis board with motors & wheels</td>    
+   <td>900</td>
+</tr>
+<tr>
+   <td>Battery</td>    
+   <td>500</td>
+</tr>
+<tr>
+   <td>Bluetooth Module</td>    
+   <td>400</td>
+</tr>
+<tr>
+   <td>Jumpers</td>    
+   <td>100</td>
+</tr>
+<tr>
+   <td><h3>Total</h3></td>    
+   <td><h3>2900</h3></td>
+</tr>
+
+</table>
+
+</p>
+
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Conclusion:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+This is all about we have done through out this semester. We have tried our level best for making this project possible.
+During this session we faced a lot of issues as this project was new for us and we learned a lot o things including
+technical learning, boosting energy even when shed with illness, time managment, project related skills and many more.
+The credit of all these things goes to <b>Sir Dr. Asim samejho</b> for guiding us in all manners and
+ trust on us and giving us a plateform
+where we develop our skills not only in term of embedded system project but many more. 
+Special Thanks to <b> sir Nadir, sir Aizaz Larik and sir faisal</b> for helping through out this project.
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Project Video link:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+<a href="https://www.youtube.com/channel/UCXFcMWVSLzExccK4eSIYcNg" target="blank" >Click Here for Project Video</a><br>
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Arduino Code link:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+<a href="Bluetooth_Module.ino" target="blank" >Educational Robot Arduino Code</a><br>
+</p>
+
+
+<br><br>
+<h1 style="color:black;font-size:24px;">⦿&nbsp;&nbsp;Refrences:</h1>
+<p style="text-align:justify;color:black;font-size:20px;">
+
+<a href="https://www.electronics-tutorials.ws/" target="blank" >Tutorials link</a><br>
+<a href="https://www.tutorialspoint.com/embedded_systems/index.htm" target="blank" >Tutorials link</a><br>
+
+
+</p>
+
+
+
+
+
+<br><br><br><br>
+</body>
+</html>
