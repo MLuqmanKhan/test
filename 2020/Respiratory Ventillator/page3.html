@@ -1,0 +1,67 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<title> Electric Ventilator</title>
+
+	<div id="main-container">
+<font color="black"><div id="page-title">ELECTRONIC PART</div></font>			
+
+
+	</head>
+	
+	<body>
+<center>	   
+<p><a href=page2.html>
+<img src="Project_pics/b1.png"  width="150" height="70">
+</a>
+<a href=page1.html>
+<img src="Project_pics/b5.png"  width="150" height="70">
+</a>
+<a href=page4.html>
+<img src="Project_pics/b3.png"  width="150" height="70">
+</a>
+<a href=page5.html>
+<img src="Project_pics/b4.png"  width="150" height="70">
+</a></p></center>
+
+<center>
+<h1>A4988 Driver</h1>
+<p>The  4 pins  1A and 1B pins will be connected to one coil of the motor and the 2A and 2B <br> pins to the other coil of the motor. And at Vmot and Ground will connect the power supply.<br>
+On the left side, if the driver has two pins, Step and Direction are the pins that we really <br> use for controlling the motor’s movement. The Direction pin controls direction to associate it to one of the <br>advanced pins on our microcontroller, or for our situation, I will interface it to the pin number<br> 4 of my Arduino Board. Step pin defines the step size of the stepper motor.
+<p>><br>
+
+
+  <img  src="Project_pics/schematic8.png" style= width="300" height="300"><br>
+<h1>Stepper Motor</h1><br> 
+
+ <img  src="Project_pics/schematic9.png" style= width="300" height="300"><br>
+<br><br><h1>ARDUINO UNO</h1><br>
+<p>
+Arduino Uno is a microcontroller board consist of various different digital input/output pins ,<br> analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset<br> button. simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.<br>
+In our project we used digital input and out pins of Arduino for connection, one analog pin for <br>direction and one digital pin to identify the step of the motor. Furthermore, we connected 3 <br>digital pins to the MS1, MS2 and MS3 pins of driver to make them high, high, low respectively,<br> to make the configuration of steps 1/8 and to gain more accurate results.
+</p>
+	
+  <img  src="Project_pics/schematic7.jpg" style= width="300" height="300"><br></center>
+<div class="w3-content w3-display-container">
+<center><h2 id="C1">PCB DESIGNING<b></b> <h2>
+
+  <img class="mySlides" src="Project_pics/schematic1.png" style= width="300" height="300">
+  <img class="mySlides" src="Project_pics/schematic2.png" style= width="300" height="300">
+  <img class="mySlides" src="Project_pics/schematic3.png" style= width="300" height="300">
+  <img class="mySlides" src="Project_pics/schematic4.jpeg" style= width="300" height="300">
+  <img class="mySlides" src="Project_pics/schematic5.jpg" style= width="300" height="300">
+  <img class="mySlides" src="Project_pics/schematic6.jpg" style= width="300" height="300">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+<script src="styles/slider1.js"></script></center>
+</div><br>
+
+
+	</body>
+</html>
