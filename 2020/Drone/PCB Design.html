@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Project Report</title>
+
+        <style>
+
+            h1 {
+                font-size: 40px;
+            }
+            .sub-Headings {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            .sub-Headingdrone{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            h2 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h5 {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h6{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            } 
+
+            .table-font{
+                font-size: 20px; 
+                line-height: 1.6;  
+            }
+
+            .tableP{
+
+                margin-bottom: -30px;        
+            }
+
+            .tableStyle td{
+                border: 1.5px solid black;
+                border-color:#8391A3;
+                border-collapse: collapse;
+                line-height: 23px;
+                background-color: #9AC6F3;
+            }
+
+            .rotate90 {  
+
+                transform: rotate(270deg);
+            } 
+
+        </style>
+
+        <style>
+            .button {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\003C\003C';
+                position: relative;
+                opacity: 0;
+                top: 0;
+                left: -70px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-left: 32px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+            .button2 {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button2 span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button2 span:after {
+                content: '\003E\003E';
+                position: inherit;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button2:hover span {
+                padding-right: 25px;
+            }
+
+            .button2:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+
+            body {
+
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+                background-size: cover;
+                background-color: #FCF7F4 ;
+            }
+
+            <!--This is the part for slide show -->
+
+        </style>
+
+        <style>
+            body {
+                margin:0;
+                font-family: TImeNew , Helvetica, sans-serif;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color:#338BFF;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 13px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #A5EDF5;
+                color: #E9AC2C;
+            }
+
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 500px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+                color: #F7062E;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {font-size: 9px}
+            }
+        </style>
+        <style>
+            .special-case{
+                background-color: #A5EDF5;   
+            }  
+        </style>
+
+        <style>
+            .aPart{
+                font-family: impact;
+                font-size:  40px;
+                color: white;
+
+            }
+            .bPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  20px; 
+                font-style:  italic;
+                color: white;
+            }
+            .cPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  30px;
+                color: white;
+
+            }
+            .cPart1{
+                font-family:   inherit;
+                font-size:  45px;
+                text-decoration: underline;
+
+            }
+            .cPart2{
+                font-family:   Algerian;
+                font-size:  45px;
+                text-decoration: underline;
+                color: #1244F2;
+            }
+            .for-pic-table{
+                background-image: url("IBA.png");
+            } 
+        </style>
+        <!--Ending point of slide show  -->
+    </head>
+
+    <body style="color:black">
+
+        <table width="100%" align = "center" class='for-pic-table' style="background-color: #CFEAEA">
+            <tr >
+                <td width="20%">
+
+                </td>
+                <td  width="50%" align =center>
+                    <span class="aPart"> SUKKUR IBA UNIVERSITY</span><br>
+                    <span class="bPart">Merit-Quality-Excellence</span><br>
+                    <span class="cPart"> DEPARTMENT OF ELECTRICAL ENGINEERING</span><br>
+                </td>
+                <td class = "sub-Headings" width="20%" align="right">
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="topnav">
+            <a href="Home.html" >Home</a>
+            <a href="Our-Journey.html">Our Journey</a>
+            <a href="About The Components.html">Components</a>
+            <a href="PCB Design.html" style="color:#E9AC2C" class="special-case">PCB Design</a>
+            <a href="CAD Design.html" >CAD Design</a>
+            <a href="Coding.html">Coding</a>
+            <a href="PID-Tuining.html">PID Tuning</a>
+            <a href="Project Planning.html">Project Planning</a>
+            <a href="Bussiness-Model.html" >Business-MD</a>
+            <a href="Refrences.html">Refrences</a>
+        </div>
+
+
+        <table width="80%" align = "center" class ="tableP" >
+            <br><br>
+            <tr class = "sub-Headingdrone" >             
+                <td align='center'>
+                    Flight Controller PCB Design<br> 
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font"><br>
+                    There are number of softwares available on internet for PCB design, including<b> Altium Designer, 
+                        Fusion 360, NI Multisim, Autodesk EAGLE, KiCad EDA, CAM350, SolidWorks PCB </b>etc. All of these
+                    softwares have their own pros and cons, but the one that we chose Eagle because we had already 
+                    used this software in previous semesters.  Eagle software is a scriptable Application having several 
+                    features like Schematic Capture, Printed Circuit Board (PCB) Designing, Routing, and Computer 
+                    Aided Manufacturing (CAM). So here we present the whole process of flight controller design using 
+                    Eagle software. 
+                    <br><br>
+                    As PCB designing is a two-step process. The first step includes making a schematic and the second is 
+                    PCB Layout, based on the schematic. Both of them work side by side. So the first step is to design a 
+                    schematic for PCB.<br><br>
+                    <a href="Eagle File.rar"  target="_blank"> Click Here  </a> for Eagle File of PCB design.
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br> Designing Schematic for PCB:
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font"><br>
+                    First, we need to open the Eagle Software from the desktop shortcut or from the search option. 
+                    When Eagle application opens successfully, we need to click on <b>File </b> and then to create
+                    a new project by selecting <b>New Project </b> option. Then we need to name the file and click 
+                    on the project to create new schematic.<br>
+
+                    A new schematic window will open with a blank work space. This is called the Schematic Editor, where 
+                    can draw schematics of our design. Next is to save the schematic file with extension <b>.sch</b>.
+                    We started our work by first reading the datasheet of the required components. Then we simply added our 
+                    desired components to the schematic. For adding any component to Schematic one need to have the basic 
+                    knowledge of Certain Package containing that contain the required components. For this we need to, 
+                    select<b> Add</b> option from the side tool bar. A new window opens with a list of all the components
+                    available in the libraries.
+                    Then we need to just select the desired components and add it to the schematic. We added <b> AT Mega 328P Microcontroller, Resistors, Capacitors, Voltage Regulator, Female Connectors, Push Button</b> in our schematic.
+
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br> Connecting Components in Schematic:
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font"><br>
+                    Then the Next step includes connecting the components. For this we need to use <b>net</b> to  sketch a small 
+                    wires from the terminal of components. Then we need to use the <b>Label</b> command and connect a label to each
+                    end of the wire. When we click on a lablel, it will pop-up a rename pane, so there we can give a name to label.
+                    In order to connect the components, we just need to name the two or more labels same—same labels automatically 
+                    get connected to one another.<br>After making all the connections, the final schematic looked like the figure 
+                    below. Then we simply saved the schematic file. <br>
+                    Working on schematic was quite easy task because we had the idea what to add. One need to be cautious while 
+                    connecting the components sometime seems to be connected but they are not so for that we need to select the 
+                    component and move in randomly. If wires can move along with the components, it means connection is done. But
+                    if not, we need to connect the wires or labels again. After this we Applied<b> ERC (Electrical Rule Check)
+                    </b>to further verify the connectivity. But luckily, in our case we didn’t find any error or Warnings.  
+
+                </td>
+            </tr>
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br> <img src="schematic-cpie.png" alt="Schematic" width="100%">
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br>PCB Layout Design:  
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font"><br>
+                    After completing the schematic, we have to proceed with the design of the PCB layout. For that we need to 
+                    select the switch to board option from the top tool bar. We can create the board file from the schematic. A new 
+                    window will appear, which is the <b>PCB layout editor</b>. The black space is the board area and all the components 
+                    are at the outside bottom left of the board area. Now, we need to place the components in to the editor. Now, by 
+                    using the group option from the side tool bar, we need to select all the components and using move option we need 
+                    to move all the components to board area. Then we need to separate the components so that the yellow color lines 
+                    called <b>air wires </b>can be clearly visible and then we need to place the components according to our design
+                    requirements. 
+
+                </td>
+            </tr>
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br> <img src="mesh-board.png" alt="Schematic" width="100%">
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br>
+                    Routing:
+
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font"><br>
+                    Now, it was time to make the connections or traces for the Printed Circuit Board. For this, we used the Route tool 
+                    from the side tool bar. Also set the width of the trace to be routed as your requirement.                                         
+                    In our case we chosen the wire size of 0.012. After this we need to selected the top layer, as our PCB is a 
+                    double sided board. As we start routing we see the air wires disappearing. Routing is one of the complicated
+                    step in PCB Designing. It is a tiresome job especially when the circuit is double layered. We gave a lot of time
+                    to routing because our circuit was quite complicated and we had to make it as smaller as possible. We did a lot 
+                    of Mistakes while routing. Many routed air wires were mingled together. Even though at some places we were sure 
+                    that the wires are not touching but drill size also matters but we came to know when we did DRC (Design Rule Check). 
+                    DRC helped us a lot in removing Errors.<br>  
+                    There were a lot of issue related to clearance. There are many other issues that can be resolved in DRC related
+                    to Distance between the pads, SMD’s, and the board dimensions and after great strenuous efforts we improved our 
+                    design. You can adjusted the size of the board as per the required dimensions. We tried our best and finalized 
+                    it to 1.4x 1.4 sq. Inches. Then we saved the file. The board file will be save with .brd extension. The layout 
+                    for the PCB was ready. The next step was to check for errors once again and then generate the necessary Gerber
+                    files for further PCB milling process. <br>
+                    After successful routing, the circuit was looking like this:
+
+
+                </td>
+            </tr>
+            <tr class = "sub-Headings" >             
+                <td align="center">
+                    <br> <img src="afterwireing.png" alt="Schematic" width="70%">
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br>
+                    PCB Milling:
+
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font"><br>
+                    Next step was PCB milling on SRM 20 available in FAB Lab. Milling process consist of several steps including: 
+                    Creating files for traces, holes, and outline of PCB. Due to limited time this work was done by sir Nadir Ali—one 
+                    of our mentors for this project. After successful completion of milling process, our circuit was looking like this:   
+                </td>
+            </tr>
+            <tr class = "sub-Headings" >             
+                <td align="center">
+                    <br> <img src="circuits-together.png" alt="Schematic" width="70%">
+                </td>
+            </tr>
+
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br>
+                    Issue With PCB After Milling The Circuit:
+
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font"><br>
+                    We found few traces having undesired shorts during continuity check. Actually, Spindle of SRM-20 sometime skip some traces while milling.This might happen due to the following reasons.<br>
+                    1.	When the drill gets loose.<br>
+                    2.	When The PCB board is loosely pressed on the sacrificial Board.<br>
+                    3.	Sometimes the residue hinders in milling if not removed.<br>
+                    4.	When the circuit is not well routed.<br><br> 
+                    We solved these issues just by cutting the undesired short path using a cutter.
+
+                </td>
+            </tr>
+
+            <tr class = "sub-Headings" >             
+                <td align="left">
+                    <br>
+                    PCB Soldering:
+
+                </td>
+            </tr>
+            <tr>             
+                <td class = "table-font"><br>
+                    Soldering was one of the interesting step in PCB manufacturing as per our skill. We had done a lot of work on 
+                    soldering and de soldering in first semester. In this project we got another chance to show our skill.
+                    Basically there are three things that matters the most <b>Pads, Holes,</b> and <b>vias</b>. Pads are the
+                    place where SMD’s are going to be mounted. Holes for DIP components and vias to avoid trace crossing and 
+                    to connect the two layers of the PCB. We started with soldering IC <b>ATmega-328P</b>, then<b> female
+                        connecters</b>, after that the <b>push Button</b>, following <b>Crystal</b> and the list goes on.
+                    Every task has some difficulty in it same is the case here soldering an IC is very tricky job in 
+                    Soldering Process. Here once again thanks to sir Nadir Ali for his corporation in this problematic 
+                    task.  We filled all the vias by using small pieces of wires and then soldered them finely. Flux made 
+                    our work easy as it helped in accumulating all the molten soldering wire at one place without touching
+                    the succeeding traces or pad. In short we soldered all the components proficiently.
+                </td>
+            </tr>
+
+        </tr>
+        <tr class = "sub-Headings" >             
+            <td align="center">
+                <br> <img src="after-soldering.png" alt="Schematic" width="70%">
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings" >             
+            <td align="left">
+                <br>
+                Continuity Check:
+
+            </td>
+        </tr>
+        <tr>             
+            <td class = "table-font"><br>
+                Continuity check was followed by Soldering. As the name shows to check either the circuit is electrically short at 
+                any point or not. Continuity check was done using Multimeter by setting it on beep option. When probes of the
+                multimeter were placed on two points it sounded beep indicating the two points were short. The points where 
+                circuit was getting short were detected. Thus undesired shorts and discontinuities were fixed by using cutter
+                and soldering. In this way we got our circuit ready for Boot loading.
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings" >             
+            <td align="left">
+                <br>
+                Boot Loading:
+
+            </td>
+        </tr>
+
+        <tr>             
+            <td class = "table-font"><br>
+                Boot loading is the essential part of PCB designing. Here we learned two new terminologies the first is firmware 
+
+                and second is Boot loader .Firmware is the written code that tells the microprocessor what to do.
+
+                The firmware is loaded into the processor using a dedicated programming device. Boot loader is an 
+                extra bit of code that is loaded into the micro-controller before the firmware to allow the firmware to be 
+                loaded into the microcontroller  without the use of a dedicated programming device. A boot loader may allow the 
+                firmware to be updated using just a USB connection or even wirelessly via Wi-Fi. We do not need a boot loader but we
+                always need firmware to make a microprocessor function. A boot loader is only loaded once and firmware can be loaded 
+                over and over again as the needs change. Devices like an Arduino have a boot loader so we can easily program them via 
+                the USB cable instead of having to buy a dedicated programming device. We followed  a few steps to </b>Boot load the
+                Microcontroller</b>.  Firstly, we connected six boot loader pins of our Flight controller with the Boot loader circuit.
+                Secondly, we connected the boot loader circuit to the PC. Thirdly, we opened the <b>Arduino IDE</b>. Followed by Board 
+                selection from the tools Option. In our case<b> Arduino/Genuino UNO </b>was the board. Then we selected <b>USBtinyISP</b> 
+                option by following this path <b>tools=>Programmer => USBtinyISP</b>. In addition to this we selected <b>Burn boot 
+                    Loader</b> option from tools.
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings" >             
+            <td align="left">
+                <br>
+                Issue Faced while Boot Loading:                                                                                                               
+
+            </td>
+        </tr>
+
+        <tr>             
+            <td class = "table-font"><br>
+                Unfortunately boatload was unsuccessful. It was a bit worrying moment because we had done everything and
+                we expected a positive result but mistakes teach us how to stick to something when it’s not working and you 
+                want it to work. “Failure is a stage not a destination in the journey of life we had to pass through”.  
+                We were optimistic for better results and we continued our task with the same zeal. Some ideas prompted
+                into our mind. Now we were looking for the possible issues. Everyone was putting his idea forward. One said 
+                there may be some issue with the traces file. In the mean while another said we might have skipped undesired 
+                short in the circuit.so, everyone was participating in the discussion.   
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings" >             
+            <td align="left">
+                <br>
+                Solution For Boot Loading Issue:                                                                                                              
+
+            </td>
+        </tr>
+
+        <tr>             
+            <td class = "table-font"><br>
+                We started inspecting each and every step of the project keenly. Finally we compared our PCB Circuit 
+                traces with the Traces file which we had submitted for PCB Milling. It was a moment of great excitement
+                when we came to know that SRM-20 had skipped some traces. Thus our trouble shoot was successful. We found 
+                the spot which was just laying beneath the soldered crystal. We simply removed the copper and once again did 
+                continuity check for surety. We repeated the above process for Boot load and saw the <b>  “Done burning bootloader”
+                </b>message on the screen indicating that boot loading was successful.
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings" >             
+            <td align="left">
+                <br>
+                Successful Test Of The Circuit:
+
+            </td>
+        </tr>
+        <tr>             
+            <td class = "table-font"><br>
+                This was the first successful test that we carried out after done with all of the above mentioned
+                conundrums.
+            </td>
+        </tr>
+
+        <tr >
+            <td align="center"><br>
+                <iframe  width="700" height="500"   src="https://www.youtube.com/embed/QxcD1d-kTP0?autoplay=0&mute=0&loop=1" frameborder="0" allowfullscreen></iframe>
+
+            </td>  
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <table width="100%" align = "center" class ="tableP" >
+        <tr><br> <br> <br> <br> 
+        <td align="left"> 
+            <a href="About The Components.html" class="button" ><span>Prev </span></a>
+        </td>
+        <td  align="right">
+            <a href="CAD Design.html" class="button2" ><span>Next</span></a>
+        </td>
+    </tr>  <br>
+    <tr><td><br> <br>  <br> <br> <br> <br>    </td><tr>
+</table> 
+
+</body>
+</html>

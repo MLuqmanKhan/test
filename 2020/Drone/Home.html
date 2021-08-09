@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Project Report</title>
+
+        <style>      
+            h1 {
+                font-size: 40px;
+            }
+
+            .sub-Headings {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            .sub-Headingdrone{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            }
+
+            h5 {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            }
+
+            h6{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            } 
+
+            .table-font{
+                font-size: 20px; 
+                line-height: 1.6;  
+            }
+
+            .tableP{
+                margin-bottom: -30px;   
+
+            }
+            .tableP1{
+                margin-bottom: -30px;   
+                border: 8px solid black;
+                border-color:#8391A3;
+                border-collapse: collapse;
+                background-color: #FCF6E1;
+            }
+        </style>
+
+        <style>
+            .button {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\003C\003C';
+                position: relative;
+                opacity: 0;
+                top: 0;
+                left: -70px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-left: 32px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+            .button2 {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button2 span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button2 span:after {
+                content: '\003E\003E';
+                position: inherit;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button2:hover span {
+                padding-right: 25px;
+            }
+
+            .button2:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>   
+            body {
+
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+                background-size: cover;
+                background-color: #FCF7F4 ;
+            }
+
+            <!--This is the part for slide show -->
+        </style>
+
+        <style>
+            body {
+                margin:0;
+                font-family: TImeNew , Helvetica, sans-serif;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color:#338BFF;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 13px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #A5EDF5;
+                color: #E9AC2C;
+            }
+
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 500px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+                color: brown;
+                font-size: 0px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                font-weight: 600; 
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #0C74BA;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 100px) {
+                .text {font-size: 9px}
+            }
+        </style>
+
+        <style>
+            .special-case{
+                background-color: #A5EDF5;   
+            }  
+        </style>
+        <!--Ending point of slide show  -->
+
+
+        <style>
+            /* Make it a marquee */
+            .marquee {
+                width: 500px;
+                margin: 0 auto;
+                white-space: nowrap;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            .marquee span {
+                display: inline-block;
+                padding-left: 100%;
+                text-indent: 0;
+                animation: marquee 15s linear infinite;
+                font-size: large;
+                font-style: italic;
+                background-color:  #C3DCFE;
+                color:  #F38605;
+            }
+
+            .marquee span:hover {
+                animation-play-state:  paused;
+
+            }
+
+            /* Make it move */
+            @keyframes marquee {
+                0%   { transform: translate(0, 0); }
+                100% { transform: translate(-100%, 0); }
+            }
+
+        </style>
+
+        <style>
+            .aPart{
+                font-family: impact;
+                font-size:  40px;
+                color: white;
+
+            }
+            .bPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  20px; 
+                font-style:  italic;
+                color: white;
+            }
+            .cPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  30px;
+                color: white;
+
+            }
+            .cPart1{
+                font-family:   inherit;
+                font-size:  45px;
+                text-decoration: underline;
+
+            }
+            .cPart2{
+                font-family:   Algerian;
+                font-size:  45px;
+                text-decoration: underline;
+                color: #1244F2;
+            }
+            .for-pic-table{
+                background-image: url("IBA.png");
+            } 
+        </style>
+
+    </head>
+
+    <body style="color:black">
+
+        <table width="100%" align = "center" class='for-pic-table' style="background-color: #CFEAEA">
+            <tr >
+                <td align="center">
+                <td  width="100%" align =center>
+                    <span class="aPart"> SUKKUR IBA UNIVERSITY</span><br>
+                    <span class="bPart">Merit-Quality-Excellence</span><br>
+                    <span class="cPart"> DEPARTMENT OF ELECTRICAL ENGINEERING</span>
+                </td>
+            </tr>     
+        </table>
+
+        <div class="topnav">
+            <a href="Home.html"  style="color:#E9AC2C" class="special-case" >Home</a>
+            <a href="Our-Journey.html">Our Journey</a>
+            <a href="About The Components.html">Components</a>
+            <a href="PCB Design.html">PCB Design</a>
+            <a href="CAD Design.html" >CAD Design</a>
+            <a href="Coding.html">Coding</a>
+            <a href="PID-Tuining.html">PID Tuning</a>
+            <a href="Project Planning.html">Project Planning</a>
+            <a href="Bussiness-Model.html">Business-MD</a>
+            <a href="Refrences.html">Refrences</a>
+        </div>
+
+        <p class="marquee"><span><b>"I can state flatly that heavier than air flying machines are impossible." —Lord Kelvin, 1895.</b></span></p>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 20</div>
+                <img src="firstcomponents.jpg" style="width:100%">
+                <div class="text">First testing components</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 20</div>
+                <img src="caseShifting.jpg" style="width:100%">
+                <div class="text">To hold the motors for testing purpose</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3/ 20</div>
+                <img src="fourmorsworks.jpg" style="width:100%">
+                <div class="text">Usual works, Just a mesh!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 20</div>
+                <img src="cardpropellers.jpg" style="width:100%">
+                <div class="text">Frst test with Node-MCU</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 20</div>
+                <img src="successfulresultonossilo.jpg" style="width:100%">
+                <div class="text">Control signal on ossiloscope</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6/ 20</div>
+                <img src=" mewithchodry.jpg" style="width:100%">
+                <div class="text">With GENIUS Muhammad Waqas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 20</div>
+                <img src="Circuitglimpsepng.png" style="width:100%">
+                <div class="text">Circuit view afte successful routing</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 20</div>
+                <img src="meandsinghr.jpg" style="width:100%">
+                <div class="text">Finally done with routing </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 20</div>
+                <img src="Circuit.jpg" style="width:100%">
+                <div class="text">Circuit view after done with soldering</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10/ 20</div>
+                <img src="firstfuctionalcircuit.jpg" style="width:100%">
+                <div class="text">First functional circuit demo</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">11/ 20</div>
+                <img src="autocadpng.png" style="width:100%">
+                <div class="text">Thanks sir Azmat</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 20</div>
+                <img src="3dpr.png" style="width:100%">
+                <div class="text">3D Priting</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">13/ 20</div>
+                <img src="withcaseandpropellers.jpg" style="width:100%">
+                <div class="text">Cool! Done with components placement in the frame</div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext"> 14 / 20</div>
+                <img src="littlewithlapt.jpg" style="width:100%">
+                <div class="text">Sorry! Frame was too heavy..Changed the frame</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">15/ 20</div>
+                <img src="droneonbalance.jpg" style="width:100%">
+                <div class="text">Drone weight without limbs</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">16/ 20</div>
+                <img src="jirjeessinghewaqAS.png" style="width:100%">
+                <div class="text">Engineers while testing their prototype</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">17/ 20</div>
+                <img src="glipses-of-fab-lab-worktime.jpg" style="width:100%">
+                <div class="text">Drone weight without limbs</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">18/ 20</div>
+                <img src="Waqasworkingtoolate.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">19/ 20</div>
+                <img src="tkSirAsim.jpg" style="width:100%">
+                <div class="text">Fruit in the midnight, Cool! Thanks sir ASIM for FOR KIND SUPPORT</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">20/ 20</div>
+                <img src="Teachers.png" style="width:100%" >
+                <div class="text">THANK YOU ALL! </div>
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2500); // Change image every 2 seconds
+            }
+        </script>
+
+        <br>
+
+        <table width="95%" align = "center" class ="tableP" style="background-color: #CFEAEA">
+            <tr >
+
+                <td  width="50%" align =center>
+
+                    <span class="cPart1"> Semester Project</span><br>
+                    <b> <span class="cPart2"> Quadcopter</span> </b><br>
+                </td>
+
+            </tr>
+
+        </table>
+        <br><br><br><br><br>
+        <h2 align="center" > Introduction  </h2>
+
+        <table width="80%" align = "center" class ="tableP">
+            <tr>
+                <td class = "sub-Headings">
+                    Background Of Project: 
+                </td>
+            </tr>
+            <tr>
+                <td class = "table-font"> <br>
+                    The world is always fascinated by the stupendous revolution that 
+                    science has brought through inventions and innovations. There are hundreds and thousands 
+                    of bizarre tools that science has created for the betterment of mankind, 
+                    like engines, computers, internet, medicines etc. All of these technological revolutions 
+                    have their own role in human development. Besides this, one of the intriguing works of
+                    science is in the field of aviation, more specifically, in the development of 
+                    Unmanned Aerial Vehicles (UAV's).<br><br>
+
+                    An unmanned aerial vehicle is an aircraft with or without a human pilot on board. There are several sensors
+                    and devices attached with these machines that provide the ability to fight autonomously 
+                    and also capability to control them from ground. These days many universities all around the 
+                    globe are in the race to make drones which are efficient, autonomous,cheap,more reliable
+                    and are able to perform complex maneuvers. There are already several models available in 
+                    the market that can be used for different purposes: defence, emergency response, 
+                    agriculture, home delivery, health care and many more. 
+                    With the exponential increase in the uses of these autonomous vehicles, the drone market is skyrocketing! 
+                    According to the Drone Market Report 2020, the global drone market will grow from $22.5 billion in 2020 
+                    to over $42.8 billion in 2025.<br>
+                    For more details
+                    <a href="https://www.globenewswire.com/news-release/2020/07/22/2066029/0/en/The-Drone-Market-Report-2020-2025.html#:~:text=According%20to%20the%20Drone%20Market,software%20is%20the%20fastest%20growing." target="_blank">Click Here!</a> <br> <br>           
+                </td>
+            </tr>    
+
+            <tr>
+                <td class = "sub-Headings">
+                    Our Goal:
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "table-font"> <br>  
+                    By taking all of the above facts into  consideration I, along with my 
+                    three classmates, decided to choose a project that helps us to understand 
+                    the core idea behind the working of UAV's: To make a drone. This was an intricate 
+                    and exciting task! We had to complete this project within the period of four months 
+                    and we were supposed to make everything from scratch—like a flight controller, case 
+                    for drone etc. Beside these conundrums we were so optimistic and keen to make this project 
+                    mark up to a standard.<br><br>  
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "sub-Headings">
+                    Purpose Of This Report: 
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "table-font"> 
+                    <br>  This report presents our whole journey of failures 
+                    and achievements while working on this
+                    project. In this report we have tried our best to 
+                    cover everything step by step, like how
+                    we tackle the intricacies in circuit design, 
+                    components interface, coding, case design etc, 
+                    so that it can be a perfect guide for other aspirants 
+                    of drones. We have provided the links for softwares, 
+                    all the essential drivers, references for literature 
+                    review, and complete description about  components 
+                    which are essential for this project. <br><br><br>  
+                </td>
+            </tr>
+        </table>     
+
+        <table width="80%" align = "center" class ="tableP" >
+
+            <tr>
+                <td class = "sub-Headingdrone"  style="text-align:center" >
+                    Drone Sketch:<br> <br>  
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "table-font">
+                    When we started our project, the first thing that we 
+                    considered was a sketch of how our drone would look 
+                    like. This was an important step because we had to make 
+                    our drone as much lighter as possible, and for this a
+                    clever design was a necessity. So, we all searched on
+                    multiple sources and analyzed some pre-existing mini
+                    drones. We found hundreds of designs—some were
+                    with hard frames and complex structure, some were
+                    light weighted but without propellers guards. Finally, 
+                    we all sat together and shared our sketches. All of 
+                    them were intriguing, but the one that seemed 
+                    compelling for all of our team members was the 
+                    one sketched below. With this design we could reduce 
+                    much of the material from frame so that it can be
+                    lighter, and also placement of components like flight 
+                    controller and motors, was the best in this masterpiece.<br> <br> 
+                </td>
+            </tr>
+
+            <tr>
+                <td align ="center" height="50">
+                    <img src="Drone--Sketch.png" alt="Drone Sketch" height ="490" width="600">
+
+                </td>
+            </tr>  
+
+            <tr>
+                <td class = "sub-Headingdrone"  style="text-align:center" >
+
+                    <br>Project Requirements:<br> <br>  
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "table-font">
+                    As drone is a type of vehicle which has capability 
+                    to fly, to perform complex maneuvers, move autonomously
+                    to a targeted place, so it requires several components 
+                    depending upon how advanced one wants to design it.
+                    In our case, we don’t want to make anything
+                    complicated—one that requires a lot of resources and
+                    time, rather we want to make a small prototype: a miniquadcopter. 
+                    The components that we needed for successful compilation 
+                    of this project, which are explained in the label 
+                    <a href="About The Components.html"  target="_blank"> About Components </a>, are:
+                    <br>
+                    <b>1:</b> Four motors <br>
+                    <b>2:</b> Four propellers <br>
+                    <b>3:</b> A battery <br>
+                    <b>4:</b> A transmitter <br>
+                    <b>5:</b> A receiver <br>
+                    <b>6:</b> A gyro sensor  <br>
+                    <b>7: </b>Flight controller 
+                    (The components need for flight controller 
+                    and its designing procedure is available   
+                    <a href="PCB Design.html"  target="_blank">Here!</a>)<br>
+                    <b>8:</b> A frame to hold the components.
+                    (Check out CAD Design label, 
+                    <a href="CAD Design.html"  target="_blank">Click Here!</a>)
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class = "sub-Headingdrone"  style="text-align:center" >
+
+                    <br>Block Diagram:<br> <br>  
+                </td>
+            </tr>    
+
+            <tr>
+                <td align="center">
+                    <img src="Higher-level-diagram.png" 
+                         alt="Hiher level diagram"  height="500" width="800">
+                </td>
+            </tr>
+
+            <tr>          
+                <td class = "table-font">
+                    <br>Above block diagram represents how different components interact with one another. 
+                    At the center there is the flight controller—brain of the drone, which controls 
+                    all the process. At the top-left side there is a receiver that communicates with
+                    the transmitter to receive commands from the user and then it feeds the received 
+                    data into the flight controller. The Flight controller, more specifically, the 
+                    microcontroller receives this data and changes the magnitude of the control signal
+                    (duty cycle of PWM signal) accordingly.<br>
+                    On the top-left side there is a battery—in our case LiPo battery, that supplies 
+                    power both to the flight controller and to motors. One thing that one might need
+                    to bear in mind is that battery terminals are not directly connected to the motors
+                    rather one terminal is connected though flight controller, and the other one is directly connected
+                    with the battery. This is more explicitly explained in the components connection below.<br>
+                    On the bottom-left side there is gyro—this is actually gyro and accelerometer together,
+                    it gives the flight controller information about the orientation of the drone (for more details  <a href="About The Components.html#MPU6050"  target="_blank"> Click Here!</a>). <br>
+                    So, by using the data that is continuously feeded into the flight controller—both from gyro
+                    and receiver, the flight controller adjusts the speed of motors. <br>  <br>  
+
+                </td>
+            </tr>
+
+            <tr class = "sub-Headingdrone"  style="text-align:center">             
+                <td>
+                    Electrical Schematic<br>  <br>  
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <img src="Hardware-Connections.png" 
+                         alt="Hardware-Connections"  height="520" width="900">
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font">
+                    <br>Above diagram is a crystal clear 
+                    representation of how different components 
+                    are physically connected to one
+                    another—through wires. This was one 
+                    of the intricate parts of our journey 
+                    to dig out the right connections between
+                    the components that we had to used. It took almost
+                    a week, but finally we came up with the above 
+                    components configuration.<br>
+                    In the above figure we can see there is an Arduino Nano 
+                    that is placed at the center and the rest of components 
+                    are connected to it. Though in our case, we have made 
+                    our own flight controller but the microcontroller 
+                    that we have used is the same as the one used in 
+                    the Arduino Nano. Thus the pins, like GPIO, PWM,
+                    SCL and SDA, are the same—due to same 
+                    microcontroller ATmega328p. For more 
+                    details <a href="About The Components.html#ATmega328P"  target="_blank"> Click here! </a><br>
+                    There are four mosfets connected to each of the 
+                    four motors to control their speed. One must
+                    note here that the positive terminal of the battery is 
+                    directly connected to each corresponding 
+                    terminals of motors, but negative connection is
+                    provided through the drain of the mosfet.
+                    This configuration actually allows to control 
+                    the magnitude of signal from source to drain by 
+                    applying a control signal at the gate terminal.
+                    Thus we can control the speed of motors by changing 
+                    the duty cycle of PWM signals. <br>
+                    On the top side there is an MPU6050 sensor which 
+                    is connected to SCL and SDA pins of Arduino Nano 
+                    and it is powered by a battery through wires 
+                    connected to its Vcc and Gnd. As we can see
+                    there are four other pins which are not connected 
+                    to any other component. We can't use these pins 
+                    in our project but they are useful for some other
+                    purposes.  <br>
+                    On the bottom side there is receiver FS-A8S which
+                    is connected to the interrupt pin of Arduino Nano
+                    (pin 02). As this receiver is PPM based, so it requires
+                    only a single wire to transfer all the data of eight channels collectively. 
+                    <br>
+                    <a href="About The Components.html"  target="_blank"> Click here </a> for more details about the components
+                    specifications and working principles.  
+                </td>
+            </tr>  
+
+        </table> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100%" align = "center" class ="tableP" >
+            <tr>
+                <td  align="right"> <br> <br> 
+                    <a href="Our-Journey.html" class="button2" ><span>Next </span></a>
+
+                </td><br>
+            <tr><td><br> <br>  <br> <br> <br> <br>    </td><tr>
+            </tr>  
+        </table> 
+
+    </body>
+</html>

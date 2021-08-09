@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Project Report</title>
+
+        <style>
+
+            h1 {
+                font-size: 40px;
+            }
+            .sub-Headings {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            .sub-Headingdrone{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            h2 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h5 {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h6{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            } 
+
+            .table-font{
+                font-size: 20px; 
+                line-height: 1.6;  
+            }
+
+            .tableP{
+
+                margin-bottom: -30px;        
+            }
+
+            .tableStyle td{
+                border: 1.5px solid black;
+                border-color:#8391A3;
+                border-collapse: collapse;
+                line-height: 23px;
+                background-color: #9AC6F3;
+            }
+
+            .rotate90 {  
+
+                transform: rotate(270deg);
+            } 
+
+        </style>
+
+        <style>
+            .button {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\003C\003C';
+                position: relative;
+                opacity: 0;
+                top: 0;
+                left: -70px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-left: 32px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+            .button2 {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button2 span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button2 span:after {
+                content: '\003E\003E';
+                position: inherit;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button2:hover span {
+                padding-right: 25px;
+            }
+
+            .button2:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+                background-size: cover;
+                background-color: #FCF7F4 ;
+            }
+
+            <!--This is the part for slide show -->
+
+        </style>
+
+        <style>
+            body {
+                margin:0;
+                font-family: TImeNew , Helvetica, sans-serif;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color:#338BFF;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 13px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #A5EDF5;
+                color: #E9AC2C;
+            }
+        </style>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 500px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+                color: #F7062E;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {font-size: 9px}
+            }
+        </style>
+        <style>
+            .special-case{
+                background-color: #A5EDF5;   
+            }  
+        </style>
+
+        <style>
+            .aPart{
+                font-family: impact;
+                font-size:  40px;
+                color: white;
+
+            }
+            .bPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  20px; 
+                font-style:  italic;
+                color: white;
+            }
+            .cPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  30px;
+                color: white;
+
+            }
+            .cPart1{
+                font-family:   inherit;
+                font-size:  45px;
+                text-decoration: underline;
+
+            }
+            .cPart2{
+                font-family:   Algerian;
+                font-size:  45px;
+                text-decoration: underline;
+                color: #1244F2;
+            }
+            .for-pic-table{
+                background-image: url("IBA.png");
+            } 
+        </style>
+
+        <!--Ending point of slide show  -->
+    </head>
+
+
+
+
+
+    <body style="color:black">
+        <table width="100%" align = "center" class='for-pic-table' style="background-color: #CFEAEA">
+            <tr >
+                <td width="20%">
+
+                </td>
+                <td  width="50%" align =center>
+                    <span class="aPart"> SUKKUR IBA UNIVERSITY</span><br>
+                    <span class="bPart">Merit-Quality-Excellence</span><br>
+                    <span class="cPart"> DEPARTMENT OF ELECTRICAL ENGINEERING</span><br>
+                </td>
+                <td class = "sub-Headings" width="20%" align="right">
+                </td>
+            </tr>
+        </table>
+
+
+        <div class="topnav">
+            <a href="Home.html" >Home</a>
+            <a href="Our-Journey.html">Our Journey</a>
+            <a href="About The Components.html">Components</a>
+            <a href="PCB Design.html">PCB Design</a>
+            <a href="CAD Design.html" >CAD Design</a>
+            <a href="Coding.html">Coding</a>
+            <a href="PID-Tuining.html"  style="color:#E9AC2C" class="special-case">PID Tuning</a>
+            <a href="Project Planning.html">Project Planning</a>
+            <a href="Bussiness-Model.html">Business-MD</a>
+            <a href="Refrences.html">Refrences</a>
+        </div>
+        <table width="80%" align = "center" class ="tableP" >
+
+
+            <tr  align="center" class="sub-Headingdrone" >              
+                <td>
+                    <br> <br>PID Tuning: 
+                </td>
+            </tr>
+            <tr>             
+                <td class = "table-font"><br>
+                    PID tuning is the last and an essential part of this project. PID is basically an acronym for 
+                    proportional-integral-derivative which is a control loop mechanism mostly used in industrial control 
+                    systems. As its name implies, it combines proportional control with additional integral and derivative
+                    adjustments which helps a system to automatically compensate any changes that occur. <br>
+                    As stabilization is very important for any drone because it is inherently unstable due to its six degrees of freedom.
+                    So we need to use a mechanism, like PID control, to adjust the moments of the drone. <br>
+                    Due to an issue in one of the motors of our designed quadcopter we were unable to perform PID in a proper way, 
+                    however we understood the PID control mechanism. Here we present the steps on how PID tuning can be done through the GUI interface of 
+                    the Multiwii platform. 
+
+                </td>
+
+            </tr>  
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 1: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    First of all we need to hang our quadcopter in the air using rubber bands or threads in such a way that
+                    it can move in all three-axis so that we can check its pitch,yaw, and roll controls. In our case we used 
+                    threads and hung it between four sticks. We kept the threads a little loose so that the quadcopter can easily
+                    move according to the control signals.<br>
+
+                </td>
+            </tr>    
+
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 2: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    Second step includes connecting the flight controller with the computer. We connected our flight controller
+                    through FTDI cable. One thing important to note here is that before connecting FTDI or any other USB cable with
+                    PC, battery from quadcopter should be removed, otherwise it will cause severe damage to PC. 
+
+                </td>
+            </tr>  
+
+
+
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 3: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    Next step is to open the config GUI interface and choose the right port through which the flight controller is
+                    connected. Once connection is done, ‘select port’ option will turn into green.
+
+                </td>
+            </tr>
+            <tr>
+
+                <td align="center"  >
+                    <br>
+                    <img src="select-port.png" alt="MPU6050" width="200" height="170" >
+                </td> 
+            </tr>
+
+
+
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 4: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    After done with connection, we need to first change the <b>P</b>  values from GUI. In most of the cases we 
+                    only change roll, pitch and yaw values from <b>P</b> settings. To change the values we need to click on a label, 
+                    like roll, and slide the courser to the right or left to increase or decrease the values. At this moment we need 
+                    to keep other parameters, <b>I</b> and <b>D</b> , at zero. When we kept the value of P very low, the quadcopter
+                    started to wobble, so we increased the P values to a point where it seems to be pretty stable. But when we 
+                    increased the P values too much, the drone started shaking very quickly. By analyzing these moments we found 
+                    the correct <b>P</b>  values for our quadcopter and by pressing the write button, which is located at the bottom 
+                    left of PID settings, we  uploaded new PID values to our flight controller.
+
+
+                </td>
+            </tr>
+
+            
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 5: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    Next is to change <b>I</b> parameters. For this we need to keep<b> I</b> peramenters at a certain value and 
+                    then apply an external force. If <b>I</b> values are correct, the drone will try to compensate for any change 
+                    and try to recover its position. In our case we kept <b>P</b> parameter values greater than<b> I</b> parameter 
+                    values so that <b> P</b> gain should be a little greater than <b>I</b> gain. If values are not set according 
+                    to this condition, then the quadcopter  overcorrects the angle and rather than being stable horizontally, it 
+                    moves a little to the right side or left while recovering to its original position. After finding correct 
+                    values we again pressed write button to save the new PID values.
+            </tr>
+
+
+            <tr  align="left" class="sub-Headings" >              
+                <td>
+                    <br>Step 6: 
+                </td>
+            </tr> 
+            <tr>             
+                <td class = "table-font"><br>
+                    Last step is to change <b>D</b> parameters. <b>D</b> settings are important if we want to make a quadcopter that
+                    performs complex maneuvers like very quick turns to left or right. If we can not adjust <b>D</b> parameters correctly 
+                    than, while taking turns, our quadcopter will shake rather than being solid. For this we constantly monitored the
+                    behaviour of the quadcopter and adjusted <b>D</b> parameters. After this we again press the write button to save the 
+                    new PID values. <br>
+
+                </td>
+            </tr> 
+
+            <tr>             
+                <td class = "table-font"><br>
+                    Here is a video on how to change PID values from config GUI and how to load updated PID values on flight controller.
+
+                </td>
+            </tr> 
+
+
+            <tr >
+                <td align="center"><br>
+                    <iframe  width="750" height="470"   src="https://www.youtube.com/embed/t599gmBB07M?autoplay=0&mute=0&loop=1" frameborder="0" allowfullscreen></iframe>
+
+                </td>  
+            </tr>
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+
+
+
+
+        <table width="100%" align = "center" class ="tableP" >
+            <tr><br> <br> <br> <br> 
+            <td align="left"> 
+                <a  href="Coding.html" class="button" ><span>Prev </span></a>
+            </td>
+            <td  align="right">
+                <a href="Project Planning.html" class="button2" ><span>Next</span></a>
+            </td>
+        </tr>  <br>
+        <tr><td><br> <br>  <br> <br> <br> <br>    </td><tr>
+    </table> 
+
+
+
+</body>
+</html>

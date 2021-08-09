@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Project Report</title>
+
+        <style>
+
+            h1 {
+                font-size: 40px;
+            }
+            .sub-Headings {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            .sub-Headingdrone{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+            h2 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h5 {
+                font-size: 30px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+                padding-left: 130px;
+            } 
+
+            h6{
+                font-size: 40px;
+                font-weight: 200;
+                text-decoration: underline;
+                color: #993300 ;
+            } 
+
+            .table-font{
+                font-size: 20px; 
+                line-height: 1.6;  
+            }
+
+            .tableP{
+
+                margin-bottom: -30px;        
+            }
+
+            .tableStyle td{
+                border: 1.5px solid black;
+                border-color:#8391A3;
+                border-collapse: collapse;
+                line-height: 23px;
+                background-color: #9AC6F3;
+            }
+
+            .rotate90 {  
+                transform: rotate(270deg);  
+            } 
+
+        </style>
+
+        <style>
+            .button {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\003C\003C';
+                position: relative;
+                opacity: 0;
+                top: 0;
+                left: -70px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-left: 32px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+            .button2 {
+                display: ruby-text-container;
+                border-radius: 4px;
+                background-color: #f4511e;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 15px;
+                padding: 12px;
+                width: 120px;
+                transition: all 0.5s;
+                cursor: zoom-in;
+                margin: 150px;
+            }
+
+            .button2 span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button2 span:after {
+                content: '\003E\003E';
+                position: inherit;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button2:hover span {
+                padding-right: 25px;
+            }
+
+            .button2:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
+
+        <style>
+
+            body {
+
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+                background-size: cover;
+                background-color: #FCF7F4 ;
+            }
+
+            <!--This is the part for slide show -->
+
+        </style>
+
+
+        <style>
+            body {
+                margin:0;
+                font-family: TImeNew , Helvetica, sans-serif;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color:#338BFF;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 13px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #A5EDF5;
+                color: #E9AC2C;
+            }
+
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 500px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+                color: #F7062E;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {font-size: 9px}
+            }
+        </style>
+
+        <style>
+            .special-case{
+                background-color: #A5EDF5;   
+            }  
+
+        </style>
+
+        <style>
+            .aPart{
+                font-family: impact;
+                font-size:  40px;
+                color: white;
+
+            }
+            .bPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  20px; 
+                font-style:  italic;
+                color: white;
+            }
+            .cPart{
+                font-family:Franklin Gothic Heavy;
+                font-size:  30px;
+                color: white;
+
+            }
+            .cPart1{
+                font-family:   inherit;
+                font-size:  45px;
+                text-decoration: underline;
+
+            }
+            .cPart2{
+                font-family:   Algerian;
+                font-size:  45px;
+                text-decoration: underline;
+                color: #1244F2;
+            }
+            .for-pic-table{
+                background-image: url("IBA.png");
+            } 
+        </style>
+        <!--Ending point of slide show  -->
+    </head>
+
+    
+    
+    <body style="color:black">
+
+        <table width="100%" align = "center" class='for-pic-table' style="background-color: #CFEAEA">
+            <tr >
+                <td width="20%">
+
+                </td>
+                <td  width="50%" align =center>
+                    <span class="aPart"> SUKKUR IBA UNIVERSITY</span><br>
+                    <span class="bPart">Merit-Quality-Excellence</span><br>
+                    <span class="cPart"> DEPARTMENT OF ELECTRICAL ENGINEERING</span><br>
+                </td>
+                <td class = "sub-Headings" width="20%" align="right">
+                </td>
+            </tr>
+        </table>
+
+        <div class="topnav">
+            <a href="Home.html" >Home</a>
+            <a href="Our-Journey.html">Our Journey</a>
+            <a href="About The Components.html" style="color:#E9AC2C" class="special-case">Components</a>
+            <a href="PCB Design.html">PCB Design</a>
+            <a href="CAD Design.html" >CAD Design</a>
+            <a href="Coding.html">Coding</a>
+            <a href="PID-Tuining.html">PID Tuning</a>
+            <a href="Project Planning.html">Project Planning</a>
+            <a href="Bussiness-Model.html">Business-MD</a>
+            <a href="Refrences.html">Refrences</a>
+        </div>
+
+        <table width="80%" align = "center" class ="tableP">
+            <tr class = "sub-Headingdrone"  style="text-align:center">             
+                <td style="font-size:40px" >
+                    <br>
+                    MPU6050 Sensor:
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center"  >
+                    <br>  <br> 
+                    <img src="MPU6050-Pinout.png" alt="MPU6050" width="330" height="410" >
+                </td>   
+            </tr>
+
+        </table>  
+
+
+        <table width="80%" align = "center" class ="tableP" >
+            <tr>
+                <td align="right"> 
+                    <a href="https://www.google.com/search?q=mpu6050&rlz=1C1SQJL_enPK928PK928&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjvyZKymN_tAhVzURUIHZwoDysQ_AUoAXoECA4QAw&biw=1280&bih=616#imgrc=dl0xMWhPYnBMUM" target="_blank"><br><br>Ref</a>
+
+                </td>   
+            </tr>
+            <tr><br>
+            <td class = "table-font" align="left"> 
+                <a href="https://datasheet.octopart.com/MPU-6050-InvenSense-datasheet-21631037.pdf" target="_blank">Click Here</a>
+                to download datasheet.
+
+            </td> 
+        </tr>
+        <tr>
+            <td class = "table-font" align="left"> 
+                <a href="https://www.daraz.pk/products/gy-521-mpu-6050-mpu6050-module-3-axis-analog-gyro-sensors-3-axis-accelerometer-module-i105232919.html" target="_blank">Click Here</a>
+                to purchase online.
+                <br><br>
+            </td> 
+        </tr>
+    </table>
+
+
+    <table width="80%" align = "center" class ="tableP" >
+
+        <tr class = "sub-Headingdrone" >             
+            <td style="font-size:30px">
+                <br>MPU6050 Pin Configuration:<br>  <br>  <br> 
+            </td>
+        </tr>
+    </table>
+
+    <div  > 
+        <table align="center" width="80%" class="tableStyle">
+            <tr>             
+                <td class = "table-font" width="10%" align="center" style="background-color:#E7C64B"><br>
+                    <b style="font-size: 20px">   Pin Number</b>
+
+                </td>
+                <td class = "table-font" width="18%" align="center" style="background-color:#E7C64B"><br>
+                    <b style="font-size: 20px"> Pin Name</b>
+
+                </td>
+                <td class = "table-font" width="52%" align="center"  style="background-color:#E7C64B" ><br>
+                    <b style="font-size: 20px">   Description </b>
+
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 1</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Vcc
+
+                </td>
+                <td class = "table-font" ><br>
+                    For providing power to the module, can be +3V to +5V. Typically +5V is used.
+
+                </td>
+            </tr>
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 2</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Ground
+
+                </td>
+                <td class = "table-font" ><br>
+                    Used to connect the system to the ground.
+
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 3</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    SerialClock(SCL)
+
+                </td>
+                <td class = "table-font" ><br>
+                    Used for providing clock pulse for I2C Communication.
+
+                </td>
+            </tr>
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 4</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Serial Data(SDA)
+                </td>
+                <td class = "table-font" ><br>
+                    Used for transferring Data through I2C communication.
+
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 5</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Auxiliary Serial Data(XDA)
+                </td>
+                <td class = "table-font" ><br>
+                    Used to interface other I2C modules with MPU6050. (Optional)
+
+                </td>
+            </tr>
+
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 6</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Auxiliary Serial Clock(XCL)
+                </td>
+                <td class = "table-font" ><br>
+                    Used to interface other I2C modules with MPU6050. (Optional)
+
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 7</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    AD0
+                </td>
+                <td class = "table-font" ><br>
+                    This pin is used when more than one MPU6050 is used on a single MCU.
+                </td>
+            </tr>
+
+            <tr>             
+                <td class = "table-font" align="center"><br>
+                    <b> 8</b>
+
+                </td>
+                <td class = "table-font" align="center"><br>
+                    Interrupt (INT)
+                </td>
+                <td class = "table-font" ><br>
+                    Interrupt pin to indicate that data is available for MCU to read.
+                </td>
+            </tr>
+
+
+        </table>
+    </div> 
+
+    <table width="80%" align = "center" class ="tableP" >
+        <tr class = "sub-Headings" >             
+            <td id="MPU6050">
+                <br>Discription: <br> <br>
+            </td>
+        </tr>
+
+        <tr>             
+            <td class = "table-font">      
+                The MPU6050 is a Micro Electro-Mechanical Systems (MEMS). Inside the MPU6050 there are 3-axis Accelerometer 
+                and 3-axis Gyroscope. The parameters related to the motion of a system like acceleration, velocity, orientation,
+                displacement are measured using the data collected from them. There are also two auxiliary pins. These auxiliary 
+                pins are used to interface external I2C modules. This module can very easily be used with any Arduino plateform by
+                installing some of the libraries. 
+                <br>
+            </td>
+        </tr>
+
+        <tr class = "sub-Headings"  >             
+            <td>
+                <br>Applications:<br> 
+            </td>
+        </tr>
+        <tr>             
+            <td class = "table-font"><br>
+                Gyro is used in wide range of fields where position or orientaion of any object needs
+                to be monitored. Some of the common uses are:<br>
+                •	Used for IMU measurement<br>
+                •	Drones / Quad copters<br>
+                •	Self balancing robots<br>
+                •	Robotic arm controls<br>
+                •	Humanoid robots<br>
+                •	Tilt sensor<br>
+                •	Orientation / Rotation Detector<br>
+            </td>
+        </tr>
+
+    </table> 
+
+
+    <table width="80%" align = "center" class ="tableP" >
+        <br><br>
+        <tr class = "sub-Headingdrone"  style="text-align:center">             
+            <td style="font-size:40px">
+                <br>Flysky-A8S Receiver: <br><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center"   style="background-color:darkslategray" >
+
+                <img src="Flysky.PNG" alt="MPU6050" width="450" height="400" >
+            </td>   
+        </tr>
+
+    </table>  
+
+
+    <table width="80%" align = "center" class ="tableP">
+
+    </tr>
+    <tr><br><br><br>
+    <td class = "table-font" align="left"> 
+        <a href="https://static1.squarespace.com/static/5bc852d6b9144934c40d499c/t/5d36a925339e910001a1657a/1563863417506/FS-A8S+User+manual+20170221.pdf" target="_blank">Click Here</a>
+        to download datasheet.
+
+    </td> 
+</tr>
+<tr>
+    <td class = "table-font" align="left"> 
+        <a href="https://www.alibaba.com/product-detail/FS-A8S-2-4G-8CH-Mini_62150086065.html?spm=a2700.galleryofferlist.normal_offer.d_title.412d74aaPcaNG0" target="_blank">Click Here</a>
+        to purchase online.
+        <br><br>
+    </td> 
+</tr>
+</table>
+
+
+<table width="80%" align = "center" class ="tableP" >
+
+    <tr class = "sub-Headingdrone" >             
+        <td style="font-size:30px">
+            <br><br>Flysky-A8S Pin Configuration:<br>  <br>  <br> 
+        </td>
+    </tr>
+</table> 
+
+<div > 
+
+    <table align="center" width="70%" class="tableStyle">
+        <tr>             
+            <td class = "table-font" width="18%" align="center" style="background-color:#E7C64B"><br>
+                <b style="font-size: 20px"> Pin Name</b>
+
+            </td>
+            <td class = "table-font" width="52%" align="center"  style="background-color:#E7C64B" ><br>
+                <b style="font-size: 20px">   Description </b>
+
+            </td>
+        </tr>
+
+        <tr>             
+
+            <td class = "table-font" align="center"><br>
+                Vcc
+
+            </td>
+            <td class = "table-font" ><br>
+                For providing power to the module.
+
+            </td>
+        </tr>
+        <tr>             
+
+
+            <td class = "table-font" align="center"><br>
+                Ground
+
+            </td>
+            <td class = "table-font" ><br>
+                Used to connect the system to the ground.
+
+            </td>
+        </tr>
+
+
+        <tr>             
+
+            <td class = "table-font" align="center"><br>
+                Receiver
+
+            </td>
+            <td class = "table-font" ><br>
+                Used for receiving the data from the transmitter
+
+            </td>
+        </tr>
+        <tr>             
+
+
+            <td class = "table-font" align="center"><br>
+                PPM Signal Port
+            </td>
+            <td class = "table-font" ><br>
+                Output standard PPM signal.
+
+            </td>
+        </tr>
+
+        <tr>             
+
+
+            <td class = "table-font" align="center"><br>
+                i-BUS/S.BUS signal port
+            </td>
+            <td class = "table-font" ><br>
+                Outputs i-BUS/S.BUS signals, up to 18 channels
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+<table width="80%" align = "center" class ="tableP" >
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>Discription: <br> <br>
+        </td>
+    </tr>
+
+    <tr>             
+        <td class = "table-font">
+
+            The FS-A8S is a compact 1-way receiver designed for multi-rotor aircraft. It uses the AFHDS 2A (Automatic
+            Frequency Hopping Digital System) protocol, supports standard PPM output and has i-BUS support for up to 
+            18 channels. As for drone our major concern mostly remains is its components weight. This FS-a8s fits the
+            specified requirements being only 20x14x5.3mm in size and 1.2gm in weight.
+            <br>
+
+        </td>
+    </tr>
+
+</table>
+
+<table width="80%" align = "center" class ="tableP" >
+    <br><br>
+    <tr class = "sub-Headingdrone"  style="text-align:center">             
+        <td style="font-size:40px">
+            <br>Flysky Transmitter: <br><br>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center"   style="background-color:darkslategray" >
+
+            <img src="FlySKyTRansmitter.jpg" alt="FLy Sky ransmitter" width="450" height="400" >
+        </td>   
+    </tr>
+    <tr>
+
+        <td class = "table-font" align="left"> <br>
+            <a href="https://static1.squarespace.com/static/5bc852d6b9144934c40d499c/t/5c0787e10e2e721a7f17c998/1543997593953/FS-i6+User+manual+20160819.pdf"target="_blank">Click Here </a> for manual.
+
+        </td> 
+    </tr>
+    <tr>
+        <td class = "table-font" align="left"> 
+            <a href="https://www.alibaba.com/product-detail/Flysky-FS-i6-AFHDS-2A-2_1600088393267.html?spm=a2700.galleryofferlist.normal_offer.d_title.412d74aaPcaNG0" target="_blank">Click Here</a>
+            to purchase online.
+            <br><br>
+        </td> 
+    </tr>
+
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>Features: <br> <br>
+        </td>
+    </tr>       
+    <tr>             
+        <td class = "table-font">
+
+            •	Offering good protection against interference while maintaining lower power consumption and 
+            high reliable receiver sensitivity.<br>
+            •	Bidirectional Communication Capable of sending and receiving data, each transmitter is
+            capable of receiving data from temperature, altitude and many other types of sensors, servo calibration 
+            and i-BUS Support(But in our case, we are only using uni-directional transmission: only to send data
+            from transmitter to receiver).<br>
+            •	Each transmitter and receiver has it's own unique ID. Once the transmitter and receiver have
+            been paired, they will only communicate with each other, preventing other systems accidentally 
+            connecting to or interfering with the systems operation.<br>
+
+        </td>
+    </tr>
+
+    <tr class = "sub-Headings" id="Binding" >             
+        <td>
+            <br>Binding Receiver With Transmitter: <br> <br>
+        </td>
+    </tr>
+
+    <tr>             
+        <td class = "table-font" >
+
+            We need to bind the transmitter with receiver when we are powering them for first time. Once they are in bind mode,
+            we do not need to bind them again until a new code is loaded into the microcontroller. The process of binding is 
+            described below:<br>
+            •	Power On the transmitter while holding the bind button.<br> 
+            •	If the receiver’s LED is flashing this means it is ready for binding. <br>
+            •	If binding is successful, you can see an RX symbol appears at the top-right side of your transmitter display. <br>
+            •	 After successful binding, LED will stop flashing and remains solid. <br>
+
+        </td>
+    </tr>
+
+    <tr class = "sub-Headingdrone"  style="text-align:center">             
+        <td style="font-size:40px">
+            <br>Coreless DC Motor And Propellers: <br><br>
+        </td>
+    </tr>
+    <tr>
+        <td align="center"   style="background-color:darkslategray" >
+
+            <img src="CorelessMotros.jpg" alt="FLy Sky ransmitter" width="450" height="400" >
+        </td>   
+    </tr>
+    <tr>
+        <td class = "table-font" align="left"> <br>
+            <a href="https://www.daraz.pk/products/mini-drone-motors-with-propellers-quad-copter-motors-i194462803-s1388816566.html?spm=a2a0e.searchlist.list.6.7101262eEoUKfc&search=1" target="_blank">Click Here </a> to buy online.
+
+        </td> 
+    </tr>
+
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>Specifications Of Coreless Motors: <br> <br>
+        </td>
+    </tr>       
+    <tr>             
+        <td class = "table-font">
+            •	Material: Metal<br>
+            •	Operating Voltage: 3.7 VDC<br>
+            •	Rated Speed: 4200 RPM<br>
+            •	Shaft Dimension: 3 x 0.5mm (L x D)<br>
+            •	Body Dimension: 6 x 16mm (D x L)<br>
+            •	Total Dimension: 19mm<br>
+            •	Cable Length: 13mm<br>
+
+        </td>
+    </tr>
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>About DC Motors: <br> <br>
+        </td>
+    </tr>       
+    <tr>             
+        <td  class = "table-font">
+            As mentioned before, the key factor to make a drone successful is to make it light weight and
+            choose the components that can provide more thrust. These motors that we have chosen for our project, meet these requirements. They are efficient in terms of power dissipation and have high RPM. These 
+            motors start rotating at 2.5V, but give full RPM at the voltage around 3.7V to 4.2V. 
+
+        </td>
+    </tr>
+
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>About Propellers: <br> <br>
+        </td>
+    </tr> 
+
+    <tr>             
+        <td  class = "table-font">
+            Propellers are essential components of a drone because they provide lifting force against the rotation of motors. 
+            One needs to do a deep research before choosing motors and propellers. Even if one buys motors having high
+            RPM but fail to choose compatible propellers, it will be a failure. The propellers that we have chosen were 
+            best suited for 6*16mm motors. Buy right propeller and motors from the above mentioned link.
+
+        </td>
+    </tr>
+</table>
+
+
+<table width="80%" align = "center" class ="tableP" >
+
+
+    <tr class = "sub-Headingdrone"  style="text-align:center">             
+        <td style="font-size:40px">
+            <br>Flight Controller: <br><br>
+        </td>
+    </tr>
+    <tr> 
+        <td align="center"   style="background-color:darkslategray" >
+
+            <img src="Circuit.jpg" alt="Circuit" width="450" height="400" >
+        </td>   
+    <tr>   
+
+        <td class = "table-font"><br>
+            As mentioned earlier, in the beginning we decided to work with NodeMCU, so we didn’t need to make any flight controller. But soon after not succeeding with NodeMCU we decided to make our own flight controller. 
+            The components required for making a fight controller are mentioned below.
+        </td>
+
+    </tr>
+
+    <tr class = "sub-Headings"  style="text-align:center">             
+        <td id="ATmega328P">
+            <br>ATmega328P: <br> <br>
+        </td>
+    </tr> 
+
+    <tr> 
+        <td align="center"   style="background-color:darkslategray" >
+
+            <img src="atmega328p.jpg" alt="Circuit" width="450" height="400" >
+        </td>  
+    </tr>   
+    <tr>
+        <td class = "table-font" align="right"> 
+            <a href="https://www.google.com/search?q=atmega328p&rlz=1C1SQJL_enPK928PK928&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjN5oOaqeHtAhUjt3EKHW45B6MQ_AUoAXoECBAQAw&biw=1280&bih=616#imgrc=5PMgTLE3YlUW3M" target="_blank">Pic Ref</a>
+
+        </td> 
+    </tr>   
+    <tr>
+        <td class = "table-font" align="left"> 
+            <a href="https://pdf1.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html" target="_blank"  >Click Here </a> for manual.
+
+        </td> 
+    </tr>
+    <tr><br><br>
+    <td class = "table-font" align="left"> 
+        <a href="https://www.alibaba.com/product-detail/Atmega328p-Microcontroller-Atmega328p-ATMEGA328P-AU-ATMEGA328P_62125116517.html?spm=a2700.galleryofferlist.normal_offer.1.89c07325MMCtg9&s=p" target="_blank">Click Here </a> to buy online.
+
+    </td> 
+</tr>
+
+</table>
+
+
+<div > 
+    <br>  <br>  <br>  
+    <table align="center" width="55%" class="tableStyle">
+        <tr>             
+            <td class = "table-font" width="40%" align="center" style="background-color:#E7C64B"><br>
+                <b style="font-size: 20px"> Parameter</b>
+
+            </td>
+            <td class = "table-font" width="30%" align="center"  style="background-color:#E7C64B" ><br>
+                <b style="font-size: 20px">  Value</b>
+
+            </td>
+        </tr>
+
+        <tr>             
+            </td>
+            <td class = "table-font" align="center"><br>
+                CPU type
+
+            </td>
+            <td class = "table-font" ><br>
+                8-bit AVR
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Performance
+
+            </td>
+            <td class = "table-font" ><br>
+                20 MIPS at 20 MHz
+
+            </td>
+        </tr>
+
+
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Flash memory
+
+            </td>
+            <td class = "table-font" ><br>
+                32 KB
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                SRAM
+            </td>
+            <td class = "table-font" ><br>
+                2 KB
+
+            </td>
+        </tr>
+
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                EEPROM
+            </td>
+            <td class = "table-font" ><br>
+                1 KB
+
+            </td>
+        </tr>
+
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Pin count
+            </td>
+            <td class = "table-font" ><br>
+                28 or 32 pin
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Maximum operating frequency
+            </td>
+            <td class = "table-font" ><br>
+                20 MHz
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Number of touch channels
+            </td>
+            <td class = "table-font" ><br>
+                16
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Hardware QTouch Acquisition
+            </td>
+            <td class = "table-font" ><br>
+                No
+
+            </td>
+        </tr>
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                Maximum I/O pins
+            </td>
+            <td class = "table-font" ><br>
+                23
+
+            </td>
+        </tr>
+
+
+        <tr>             
+
+            </td>
+            <td class = "table-font" align="center"><br>
+                External interrupts
+            </td>
+            <td class = "table-font" ><br>
+                2
+
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<table width="80%" align = "center" class ="tableP" >
+    <tr>
+    <tr class = "sub-Headings" >             
+        <td>
+            <br>Its Applications: 
+        </td>
+    </tr> 
+    <tr>   
+
+        <td class = "table-font"><br>
+            There are hundreds of applications for ATMEGA328P:<br>
+            •	Used in ARDUINO UNO, ARDUINO NANO and ARDUINO MICRO boards. <br>
+            •	Industrial control systems. <br>
+            •	SMPS and Power Regulation systems. <br>
+            •	Digital data processing. <br>
+            •	Analog signal measuring and manipulations. <br>
+            •	Embedded systems like coffee machine, vending machine. <br>
+            •	Motor control systems. <br>
+            •	Display units. <br>
+            •	Peripheral Interface system. <br>
+
+        </td>
+    </tr>
+
+
+    <tr class = "sub-Headings"  style="text-align:center">             
+        <td>
+            <br>MOSFET(Si2302): <br> <br>
+        </td>
+
+    </tr> 
+    <tr> 
+        <td align="center"   style="background-color:darkslategray" >
+
+            <img src="mosfet.png" alt="Circuit" width="450" height="400" >
+        </td>  
+    </tr>   
+
+    <tr>
+        <td class = "table-font" align="left"> 
+            <a href="https://www.vishay.com/docs/70628/70628.pdf" target="_blank">Click Here </a> for manual.
+
+        </td> 
+    </tr>
+    <tr><br><br>
+    <td class = "table-font" align="left"> 
+        <a href="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=si2302+mosfet" target="_blank">Click Here </a> to purchase online.
+
+    </td> 
+</tr>
+
+<tr>   
+    <td class = "table-font"><br>
+        For a flight controller we need 4 MOSFETs. As we are using 3.7 V battery, so we need MOSFETs 
+        that can operate on this voltage. We have used <b>SI2302</b> because of its low power loses and Vgs. These
+        MOSFETs start conduction at the voltages greater than 2.5 (Vgs voltage). This means that when we apply 
+        the control signal from GPIO pin having the voltage less than 2.5, the MOSFETs will act as an open circuit. 
+        But for voltages greater than 2.5 or 3 they will start conduction, and thus motors will start to rotate. 
+        As each motor is connected to separate MOSFETs, so we can control individual motor by changing the strength
+        of control signal or voltage at the gate terminal of each MOSFETs. 
+
+    </td>
+</tr>
+
+<tr class = "sub-Headings"  style="text-align:center">             
+    <td>
+        <br>Some Other Basic Components: <br> <br>
+    </td>
+</tr> 
+
+<tr>       
+    <td class = "table-font">
+
+        We also require some of the basic components for this project, including:<br>
+        SMD Components<br>
+        •	<b>5V voltage regulator<br></b>
+        •	<b>One push Button <br></b>
+
+        •	<b>Resistor: </b>One <b>10K </b>and two <b>470</b> ohm<br> 
+        •	<b>Crystal: </b> One Crystal </br>
+        •	<b>lED’s : </b> Two <b>(3.7V)</b> <br>
+        •	<b>Capacitor: </b> Three <b>10uF</b>, one <b>0.1uf</b> and two <b>22pF</b> <br>
+        •	<b>Male Headers:</b>  <b>14</b> L-Shape and <b>6</b> Stright.<br>  
+        •       <b>Female Headers:  6</b> <br>
+
+
+    </td>
+</tr>
+<tr class = "sub-Headings"  style="text-align:center">             
+    <td>
+        <br>Battery: <br> <br>
+    </td>
+</tr> 
+
+<tr> 
+    <td align="center"   style="background-color:darkslategray" >
+
+        <img src="battery.jpg" alt="Circuit" width="450" height="400" >
+    </td>  
+</tr>   
+
+
+<tr>
+    <td class = "table-font" align="left"> <br>
+        <a href="https://www.daraz.pk/products/37v-650mah-25c-lipo-battery-for-drones-toys-and-diy-projects-i157314755-s1323594246.html?spm=a2a0e.searchlistcategory.list.4.4e34559af9zBb3&search=1t" target="_blank">Click Here </a> to purchase online.
+
+    </td> 
+</tr>
+
+
+<tr>   
+    <td class = "table-font"><br>
+        For this project we have used 3.7 V LiPo battery because these batteries are light weight and have
+        higher charge density than other batteries available in the market. We have actually designed our 
+        circuit that works both on a single battery (3.7 V) and also on two batteries in series(7.4 V). Depending 
+        upon our design requirements, we can use any of the options. More details about our designed circuit
+        are available<a href="PCB Design.html">  Here!  </a> 
+    </td>
+</tr>
+
+
+
+
+
+
+<tr class = "sub-Headings"  style="text-align:center">             
+    <td>
+        <br>Total Cost Of The Components: <br> <br><br> 
+    </td>
+</tr> 
+
+</table>  
+<div > 
+
+    <table align="center" width="40%" class="tableStyle">
+        <tr>             
+            <td class = "table-font" width="30%" align="center" style="background-color:#E7C64B"><br>
+                <b style="font-size: 20px"> Components</b>
+                <br>
+            </td>
+            <td class = "table-font" width="20%" align="center"  style="background-color:#E7C64B" ><br>
+                <b style="font-size: 20px">   Price (Rs) </b>
+                <br>
+            </td>
+        </tr>
+
+
+
+
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                MPU6050
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                420
+            </td>
+        </tr>
+        <tr>      
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                Motors & properllers
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                1550
+            </td>
+        </tr>
+
+
+
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                FS-a8s Receiver
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                1620
+            </td>
+        </tr>
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                Fly-Sky transmitter
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                5931
+            </td>
+        </tr>
+        <tr> 
+
+
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                Microcontroller ATmega328p  
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                240
+            </td>
+        </tr>
+        <tr> 
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                MOSFETs   
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                35
+            </td>
+        </tr>
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                Resistors  
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                150
+            </td>
+        </tr>
+        <tr>     
+
+        <tr>              
+            <td class = "table-font" width="30%" align="center">
+                Headers, push button & LED's 
+
+            </td>
+            <td class = "table-font" width="20%" align="center">
+                130
+            </td>
+        </tr>
+        <tr> 
+
+
+        <tr>             
+            <td class = "table-font" width="30%" align="center" style="background-color:#E7C64B">
+                <b style="font-size: 20px"> Total cost</b>
+
+            </td>
+            <td class = "table-font" width="20%" align="center"  style="background-color:#E7C64B" >
+                <b style="font-size: 20px">   10076 </b>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+<table width="100%" align = "center" class ="tableP" >
+    <tr><br> <br> <br> 
+    <td align="left">
+        <a href="Our-Journey.html" class="button" ><span>Prev </span></a>
+    </td>
+    <td  align="right">
+        <a href="PCB Design.html" class="button2" ><span>Next </span></a>
+    </td>
+</tr>  <br>
+<tr><td><br> <br>  <br> <br> <br> <br>    </td><tr>
+</table>    
+
+
+</body>
+</html>
