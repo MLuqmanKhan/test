@@ -1,0 +1,642 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (K G R !)
+		</title>
+	</head>
+	
+
+	
+	<body>
+
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				<aaa style=color:white;>
+					Abdul Rehman Arif<br>
+					Gul MAR SHAH<br>
+					KASHIFUALLAH</aaa>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">FM Radio & MP3 Player</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1"><b>Introduction</b></h2>  
+<p>
+With the advancement in technology the use of microcontroller for communication became very popular. As we know that FM receiver of analogue tuning method is difficult to tune and various environmental effects changes the tuned frequency of FM receiver. In order to overcome the frequency variation problem, various digital tuning methods implement. The use of microcontroller makes it very easy to overcome the above problem by interfacing the FM receiving module with microcontroller to give commands to the TEA5767 module.
+For the amplification of the audio signal received by the TEA5767 module, we are using an audio amplifier LM386 circuit.
+Side by side we are also alocating space for the Mp3 player in our final product. For Mp3 player we are using DFplayer Mini module. 
+A two way switch allows user to listen either FM or Mp3.  <br>
+The prototype is designed using ATmega328 Microcontroller based Arduino UNO development Board.
+The main disadvantage of manual tuning is that it is not accurate and various natural factors can change the frequency.
+Using digital tuning methods accurate tuning is possible. The prototype is designed to function in auto scan mode in which a channel is searched automatically. The signal level is constantly monitored and the microcontroller is programmed
+to set receiver frequency accurately. The output from the TEA5767 module is fed to amplifier section. The antenna can be designed as per the application need.</p> <br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+<img src="http://latex.codecogs.com/svg.latex?" border="0"/>	
+<center><img src="final pic.jpg"/><br></center><br><br>
+<p>
+<p>Aim of the project is to build a device having the characteristics of FM Radio as well as MP3 player.<br><br>
+We three group members ABDUL REHMAN, GUL MAR SHAH, KASHIFUALLAH working to design a device that meets the design requirements. The mechnical design of the project is given below.
+</p>
+<br>
+<br>
+<center><img src="mech.PNG" height="480" /><br></center>
+<br><br>
+<h2 id="C2"><b>High Level Design</b></h2>    
+The main components of the project are: <br>
+<br>
+
+<ul>
+<li>The Microcontroller(ATMEGA328)</li><br>
+<li>TEA5767 FM Module </li> <br>
+<li>DFplayer Mini </li> <br>
+<li>Amplifier Circuit</li><br>
+<li>LCD</li><br>
+</ul>
+<center><img src="hd.PNG" height="480" /><br></center>
+<br>
+<br>
+<br>
+<b>Microcontroller(ATMEGA328)</b>
+<p>
+The Atmel 8-bit microcontroller combines 32 KB ISP flash memory with read-while-write capabilities,  1 KB EEPROM,2 KB SRAM,23 general purpose I/O lines,  32 general purpose working registers,   three flexible timer/counters with compare modes,  internal and external interrupts, serial programmable USART,  a byte-oriented 2-wire serial interface, SPI serial port, programmable watchdog timer with internal oscillator,
+and five software selectable power saving modes.  The device operates between 1.8-5.5 volts. The device achieves throughput approaching 1 MIPS per MHz.
+</p>
+<br>
+<br>
+<center><img src="ATMega328.PNG" height="480" /><br></center>
+<br>
+<br>
+<b>TEA5767 Module:</b>
+<p>
+FM Stereo radio Module is a high sensitivity, low power, ultra-small size of the FM stereo radio module. All-digital single-chip integrated circuits.
+ High receiver sensitivity,generic I2C bus control,external components,the minimum noise figure. With small size,low power, low cost,a simple,using a wide range of advantages.
+The module uses the TEA5767 radio chip, the module used in this project uses the I2C interface, so it is straightforward to use with Arduino.
+This FM module has a builtin audio amplifier. But unfortunately, this is amplifier is suitable for headphone, so we cannot connect a speaker to the output of the module directly since the audio signal is very weak. <br><br>
+ We need to amplify it first. Also, there is no way to control the volume that comes out of the module with software,
+ so we are going to use a potentiometer later on. On the module there are two headphone jacks, one is for the antenna, 
+and the other one is the standard headphone output. The module comes with a small antenna, but you can easily build your own if you wish.
+</p>
+<br>
+<br>
+
+<center><img src="tea5767.PNG" height="480" /><br></center>
+
+<center><img src="pin fm.PNG" height="235" /><br></center>
+<br>
+<br>
+<b>DFplayer Mini Module:</b>
+<p>
+DFPLayer Mini module is a serial MP3 module provides the perfect integrated MP3, WMV hardware decoding. While the software supports TF card driver, supports FAT16, FAT32 file system.
+<br>
+ Through simple serial commands to specify music playing,as well as how to play music,volume adjustment up to 30 levels and other functions,easy to use, stable and reliable are the most important features of this module.</p>
+<br>
+<center><img src="dfmini.PNG" height="480" /><br></center>
+
+<center><img src="pin df.PNG" height="580" /><br></center>
+<br><br>
+<b>LM386:</b>
+<p>
+The LM386 is a power amplifier designed for use in low voltage consumer applications. The gain is internally set to 20 to keep external part count low, but the addition of an external resistor and capacitor between pins 1 and 8 will increase the gain to any value from 20 to 200.
+<br>
+The inputs are ground referenced while the output automatically biases to one-half the supply voltage. The quiescent power drain is only 24 mW when
+operating from a 6-V supply, making the LM386 an ideal for battery operation.
+</p>
+<center><img src="lm386.PNG" height="480" /><br></center>
+<br><br>
+<center><img src="pin lm.PNG" height="400" /><br></center>
+<br><br>
+<br><br>
+<b>LCD:</b>
+<p>The Nokia 5110 LCD module is a basic graphic LCD display that can be used in a wide range of applications.
+Its operating voltage is 2.7V to 3.3V and current consumption is 6mA. The Nokia 5110 is a basic graphic LCD screen which was originally intended for as a cell phone screen. It uses the PCD8544 controller which is a low power CMOS LCD controller/driver. Because of this, the display has an impressive power consumption.<br><br>
+
+It uses only 0.4mA when it is on, but the backlight is disabled.  It uses less than 0.06mA when in sleep mode! That's one of the reasons that make this display my favorite.  The PCD8544 interfaces to microcontrollers through a serial bus interface.
+ That makes the screen very easy to use with Arduino.  You only need to connect 8 wires.  I have prepared a detailed tutorial on how to use the Nokia 5110 LCD with Arduino.
+</p>
+<br>
+LCD consists of 48 rows and 84 columns (84×48) monochrome pixels, It works using SPI interface and can be easily interfaced with Arduino.
+Nokia 5110 LCD supports decent graphics of bitmap images available in Green and Blue Backlight
+</p>
+<center><img src="lcd.PNG" height="480" /><br></center>
+<center><img src="pin lcd.PNG" height="300" /><br></center>
+
+<br><br>
+<br><br>
+
+
+<h4><b>Connectivity: </b></h4>
+
+<p>
+This section tells you how the componets of the prototype is connected with microcontroller.<br>
+<br>
+<b>Connection of FM Module</b>
+<br>
+ We connect the ground pin of every part to the breadboard’s ground rail and the Vcc pin of every part to the breadboard’s positive rail except the Potentiometer which will control the volume.<br>
+ 
+ Now, let’s connect the radio module.<br>
+ The SLC pin goes to analog pin 5 of the Arduino Nano, and the SDA pin goes to analog pin 4.  Now we connect the middle pin of the potentiometer to analog pin 0. With this potentiometer, we are going to select the frequency. Now we need to connect the Volume potentiometer to able to control the volume.  I used an audio cable.  I plugged in one end of the cable to the audio output of the module.<br> <br>
+ Next, I cut the other end to find 4 wires inside the cable. The module outputs stereo sound,  but we are going to use only one audio channel this time. So, I connect only two of the wires.  One of them is GND, and the other one is the audio signal which needs to be amplified.
+ The audio signal wire goes to the input pin of the volume potentiometer.  The middle pin of the potentiometer is the audio signal that comes out.
+<br>
+<br>
+<b>Connection of Amplifier </b>
+<br>
+
+ To amplify the audio signal we use this module which uses the LM386 amplifier chip.  The audio signal goes to this pin, the ground pin from the audio cable goes to this pin.  Now, all we have to do is to provide power to the module.<br> <br>
+ So we connect this pin the positive rail of the breadboard and this pin to the negative rail of the breadboard.  The only thing that we have to do now is to connect a small speaker to the output of the module like this.  With this small potentiometer, we can control the amplification of the signal. 
+ </p>
+<br>
+<br>
+
+<b>Connecting the Nokia 5110 LCD Display</b>
+<ul>
+<li>RST goes to Digital Pin 5 of the Arduino</li>
+<li>CE goes to Digital Pin 6 of the Arduino</li>
+<li>DC goes to Digital Pin 7 of the Arduino</li>
+<li>DIN goes to Digital Pin 8 of the Arduino</li>
+<li>CLK goes to Digital Pin 9 of the Arduino</li>
+<li>VCC goes to Arduino 3.3V</li>
+</ul>
+<br>
+<b>Connection of Dfplayer mini </b>
+
+<p>
+This module is following SPI protocol.So its RX pin goes to the digital pin 11 of microcontroller .
+similarly, Tx pin goes to the digital pin 10 of the microcontroller.
+<br>
+Rx - D11<br>
+Tx - D10<br>
+VCC - 5v<br>
+Gnd - Gnd<br>
+</p>
+<h4><b>Protocols:</b></h4>
+
+<p>
+Communication between the microcontroller and other componets are following differs protocol including I2C and SPI protocol.
+Microcontroller is communicating with TEA5767 Fm modelusing I2C protocol which means data is transferred bit by bit along a single wire.
+<br>
+While Dfplayer Mini is communicating SPI protocol for receiving data from the heart of circuit(microcontroller).
+And the remaining component LCD is also using I2C protocol for its functionality.
+Side by side output of Fm is directly amplified by an amplifier circuit in prototype.
+A two way Switch is used to select either Fm radio or Mp3 player.</p><br>
+<b>I2C Protocol:</b>
+<p>
+I2C is a serial communication protocol, so data is transferred bit by bit along a single wire (the SDA line).
+ Like SPI, I2C is synchronous, so the output of bits is synchronized to the sampling of bits by a clock signal shared between the master and the slave.
+<br></p>
+<center><img src="I2C.PNG"  /><br></center><br><br>
+<b>SPI Protocol:</b>
+<p>
+The Serial Peripheral Interface (SPI) is a synchronous serial communication interface specification used for short-distance communication,
+ primarily in embedded systems. 
+SPI communicate in full duplex mode using a master-slave architecture (alternate terminology being main and secondary) with a single master. 
+</p>
+<br>
+<center><img src="spi.PNG"  /><br></center>
+
+<br><br>
+
+<h4><b>Deligation of Tasks</b></h4>
+Taks is divided into the following categories although team work is 
+also considered.<br><br>
+<center>
+<table style="width:75%">
+  <tr>
+   <th>Name</th>
+    <th>task</th>
+	</tr>
+    <td>ABDULREHMAN</td> 
+    <td>Selection of components</td>
+	</tr>
+	<td>ABDULREHMAN</td> 
+    <td>Review of literature/datasheets</td>
+	</tr>
+	<td>KASHIFUALLAH</td> 
+    <td>Design of electrical circuit</td>
+	</tr>
+	<td>GUL MAR SHAH</td> 
+    <td>PCB layout</td>
+	</tr>
+	<td>KASHIFUALLAH</td> 
+    <td>Design of finished product</td>
+	</tr>
+	<td>GUL MAR SHAH</td> 
+    <td>Writing firmware</td>
+	</tr>
+	<td>GUL MAR SHAH</td> 
+    <td>Testing/debugging of hardware</td>
+	</tr>
+	<td>KASHIFUALLAH</td> 
+    <td>Testing/debugging of software</td>
+	</tr>
+	<td>ABDULREHMAN</td> 
+    <td>Report writing (html)</td>
+</table>  
+</center>
+<br>
+<br>
+<center><img src="task.PNG" height="250" /><br></center>
+<br>
+<br>
+<center><img src="task1.PNG" height="480" /><br></center>
+<br>
+
+ <h4><b>Intellectual Property and Ethical Considerations</b></h4>
+ 
+ <p>
+ The product we have established as our semester project has some basic references.
+ We did not created this stuff from level-0 ,  but we have modified these separate ideas in such a way that we made a durable and a modified version of the original designs. <br><br>
+ As our product includes three main items, the first one is the Fm radio.  We collected most of the data to develop a radio from one reliable source which is "Arduino.cc".<br><br>
+ The second part is MP3 player, we collected its lead from the web-tutorial on "www.electronics-lab.com".<br>
+ The third one one is the amplifier and in this regard we followed the lead of "www.circuitsbasics.com"
+ We acknowledge that these were originally created by these sources we modified these three concepts using a microcontroller on board and developed a single new product.
+ <br>
+ We would like to keep our project as Open-Source thats why we are providing zip files. Any one can interested in this project can use these resources to design this prototye.<br></p>
+ <br>
+ 
+ <h4><b>Commercialization Aspects</b></h4>
+ <p>This product goes commertial on a higher level.
+ The cost of this product is around 1800 rupees.
+ We are providing a product having Fm radio ,Mp3 player and an interesting colourful LCD.
+  So, you can easily see the running frequency and song.
+ </p>
+ <br>
+ <center><img src="busi.PNG" height="480" /><br></center>
+<br><br><br><br>
+<h2 id="C3"><b>The Design Process</b></h2> 
+The design process has several layers to it. Electrical Design, PCB layout, Software Design and the Final Hardware package.<br><br>
+
+<h4><b>Electrical Circuit</b></h4>
+<p>For electrical design of protype we use arduino uno for testing purpose. Before that we came up with amplifier circuit so that the output signal coming from the FM module must be amplified up to the audible range. To display the FM radio frequency, we interfaced an LCD with arduino. MP3 player is controlled through two buttons.<br><br>
+Following picture is all about electrical design.
+
+</P>
+<br><br>
+<center><img src="Electical.PNG" height="480" /><br></center>
+<br><br>
+
+<br><br>
+<center><img src="elec design.PNG" height="480" /><br></center>
+<br><br>
+<h4><b>Circuit Board Layout</b></h4>
+<p>
+A printed circuit board (PCB) mechanically supports and electrically connects electronic components or electrical components using conductive tracks,
+ pads and other features etched from one or more sheet layers of copper laminated onto and/or between sheet layers of a non-conductive substrate. 
+Fabrication of the PCB is done by using EAGLE software. For that first of all schematic file is designed after that we headed towards printed circuit board.
+</p>
+<br><br>
+<b>Schematic:</b>
+<p>
+Schematic is basically a circuit diagram.  It uses agreed symbols to represent components and shows how they are electrically connected.
+ Following figure shows the schematic file generated in the Eagle file.
+</p>
+<center><img src="schematic.PNG" height="480" /><br></center> 
+<br><br>
+<b>Board Layout:</b>
+<p>
+A Gerber file is basically an image of a PCB.  It showcases each individual layer as it appears throughout your circuit design. 
+ Gerber files represent copper layers images, solder mask, legend, and drill and route data helping to simplify the process of seeing how the circuit board should be fabricated.
+ </p>
+
+<br><br>
+<center><img src="brd.PNG" height="480" /><br></center>
+<br><br>
+<b>Outline:</b>
+<p>
+Before placing footprints we need to create a board outline.
+ The board outline must be drawn on the Board OutLine layer. 
+ So,set Board OutLine as the active layer. This layer is all about the boundary of the pcb board.
+</p>
+<br><br>
+<center><img src="outline.PNG" height="480" /><br></center>
+<br>
+
+<b>Traces:</b>
+<p>
+In the picture below, there are traces that electrically connect the various connectors and components to each other.
+A PCB allows signals and power to be routed between physical devices.
+Traces are made by 1/64 pin header.
+</p>
+<br><br>
+<center><img src="traces.PNG" height="480" /><br></center>
+<br><br>
+<b>Drills:</b>
+<p>
+PCB drill hole is one of the important part for PCB design.
+Two main technologies that are used to produce accurate and repeatable holes of microns in diameter are mechanical drilling and laser drilling.
+The through hole diameters can range from 50-300 microns and run about 1-3 mm deep using these PCB drilling techniques.
+we are using a 1/32 (inch) tool for the drills.</p>
+<br> 
+<center><img src="drills.PNG" height="480" /><br></center>
+<br><br>
+<b>PCB:</b>
+<center><img src="pcb.JPG" height="480" /><br></center>
+<br><br>
+<h4><b>Software Development</b></h4>
+<p>Coding is also a major part of the prototype.
+Writing proper code according to our requirements is also a challenging part of this project.
+The following flow chart is easy for understanding purpose that how code is executing in microcontroller:</p><br>
+<br>
+<center><img src="soft code.PNG" height="800" /><br></center>
+
+
+<br><br>
+<h4><b>Design of finished Product</b></h4>
+<p>
+
+CAD design for the prototye is necessary to give the proper shape.
+For our implementation we have used Solidworks as our CAD sofware.
+We developed our design through the skteches.
+</p>
+<br><br>
+<br><br>
+<h2 id="C4"><b>Results</b></h2> 
+<p>FM radio receiver is implemented using TEA5767 Module. The TEA5767 Module is successfully interfaced with ATMEGA328. Using TEA5767
+module frequency tuning can be done accurately through software. The soldering of PCB traces with TEA5767 module requires special tools and skill. The audio signal obtained from the MP3 module is much more reliable, unlike the analogue signal obtained FM Receivers.
+LCD displays channel information. We have used a potentiometer as input device to tune to different channels.
+Similarly,
+ATMEGA328 also operating our Dfplayer Mini. we can forward/backward the songs by pressing forward/backward button.
+Volume is increased by continuous pressing forward button and Volume is decresed by continuous pressing backward button.
+</p>
+
+ <br><br>
+ <center><img src="final.PNG" height="500" /><br></center>
+ 
+<br><br>
+
+<b>
+Project Description:</b>
+<br>
+
+<center><video width="620" height="340" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  
+</video>
+</center>
+<br>
+<h2 id="C5"><b>Conclusions</b></h2> 
+<p>
+Embedded Systems is all about the controlling the dedicated function.
+It includes the electrical, mechanical and computing constraints.
+In the electrical domain, we majorly talked about microcontrollers
+their used for soft and programmed running of any device.
+While we learnt a lot of softwares for desinging PCB, designing casing etc.
+During this course we people go through a lot of phases.
+This is first time in the histroy of department that a course is fully based on practical work. Hence practical work is much more different from theoretical. During the project we faced a lot of difficulties. All of them are sorted out during the troubleshooting.
+ 
+
+</p>
+<br><br>
+<h2 id="C6"><b>Appendix</b></h2> 
+
+This section should contain all your Eagle Circuit/PCB Layouts files,  Arduino Code, Solid work Desings etc.<br><br>
+
+<b>PCB Files</b>
+<li><a href="PCB files.rar" download><font color="blue">PCB Files</font></a><br>
+
+<b>Arduino Code</b>
+<li><a href="Code.rar" download><font color="blue">Code</font></a><br>
+<b>CAD design</b>
+<li><a href="Cad design.rar" download><font color="blue">Code</font></a><br>
+<br>
+
+<h2>Bill of Materials</h2>
+<p>This details of components required for implementation of this project. </p>
+<center>
+<table style="width:75%">
+  <tr>
+   <th>No.</th>
+    <th>Component</th>
+    <th>Package</th> 
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>LED</td>
+    <td>LED1206FAB</td>
+    <td>2</td>
+  </tr>
+  <tr>
+     <td>2</td>
+    <td>Voltage Regulator</td>
+    <td>LM1117</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>3</td>
+    <td>Capacitor 10uF</td>
+    <td>C1206FAB</td>
+    <td>4</td>
+  </tr>
+ <tr>
+    <td>4</td>
+    <td>Capacitor 100uF</td>
+    <td>C1206FAB</td>
+    <td>1</td>
+  </tr>
+ <tr>
+    <td>5</td>
+    <td>Capacitor 22pF</td>
+    <td>C1206FAB</td>
+    <td>2</td>
+  </tr>
+ <tr>
+    <td>6</td>
+    <td>Capacitor 0.1uF</td>
+    <td>C1206FAB</td>
+    <td>3</td>
+  </tr>
+ <tr>
+    <td>7</td>
+    <td>Capacitor 1000uF</td>
+    <td>C1812K</td>
+    <td>1</td>
+  </tr>
+
+ <tr>
+    <td>8</td>
+    <td>LM386N-1</td>
+    <td>DIL08</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>9</td>
+    <td>LM386N-1</td>
+    <td>Jacket</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>10</td>
+    <td>Resistor 499 ohm</td>
+    <td>R1206FAB</td>
+    <td>2</td>
+  </tr>
+ <tr>
+    <td>11</td>
+    <td>Resistor 10k ohm</td>
+    <td>R1206FAB</td>
+    <td>2</td>
+  </tr>
+ <tr>
+    <td>12</td>
+    <td>Resistor 1k ohm</td>
+    <td>R1206FAB</td>
+    <td>1</td>
+  </tr>
+ <tr>
+    <td>13</td>
+    <td>Resistor 0 ohm</td>
+    <td>R1206FAB</td>
+    <td>4</td>
+  </tr>
+ <tr>
+    <td>14</td>
+    <td>TEA5767</td>
+    <td>Tj-102BC</td>
+    <td>1</td>
+  </tr>
+
+ <tr>
+    <td>15</td>
+    <td>DFplayer</td>
+    <td>DFplayer</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>16</td>
+    <td>Connector</td>
+    <td>1x02</td>
+    <td>7</td>
+  </tr>
+  <tr>
+     <td>17</td>
+    <td>Connector</td>
+    <td>1x08</td>
+    <td>1</td>
+  </tr>
+ <tr>
+    <td>18</td>
+    <td>Connector</td>
+    <td>1x03</td>
+    <td>3</td>
+  </tr>
+ <tr>
+    <td>19</td>
+    <td>Connector</td>
+    <td>1x01</td>
+    <td>1</td>
+  </tr>
+ <tr>
+    <td>20</td>
+    <td>Connector</td>
+    <td>AVRISP 2x03</td>
+    <td>1</td>
+  </tr>
+ <tr>
+    <td>21</td>
+    <td>Connector</td>
+    <td>1x06</td>
+    <td>1</td>
+  </tr>
+
+ <tr>
+    <td>22</td>
+    <td>ATMEGA328</td>
+    <td>TQFP32-08</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>23</td>
+    <td>Crystal Oscillator</td>
+    <td>HC49U70</td>
+    <td>1</td>
+  </tr>
+  <tr>
+     <td>24</td>
+    <td>Sliding Switch</td>
+    <td>EG1218</td>
+    <td>1</td>
+  </tr>
+   <td>25</td>
+    <td>Speakers</td>
+    <td>N/A</td>
+    <td>2</td>
+  </tr>
+</table>
+</center>
+<br>
+<br>
+<p>
+The following picture is showing the bill of material required for this prototye.
+</p>
+<br>
+
+<center><img src="bom.PNG" height="800" /><br></center>
+
+<br><br>
+
+<br><br>
+<br><br>
+<center>
+<table style="width:50%">
+ 
+<tr>
+    <td>Report Submitted on Time</td>
+    <td> 7 December 2019  </td> 
+  </tr>
+ 
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>

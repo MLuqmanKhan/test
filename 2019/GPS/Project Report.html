@@ -1,0 +1,303 @@
+
+<!-- saved from url=(0128)file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html -->
+<html>
+<head>
+<style>
+div.a {
+  text-align: center;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+}
+
+div.d {
+  text-align: justify;
+}
+</style>
+</head>
+<body>
+
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<link href="./Project Report_files/style.css" type="text/css" rel="stylesheet">
+		<link href="./Project Report_files/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="./Project Report_files/latexit.js.download"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Your name here!)
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					<h1><b><u>Semester Project</u></b></h1>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C2">Main components</a></div><div class="separator"></div>
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="file:///D:/Books%20of%20%20B.E%20(IV)/introduction%20to%20embeded%20theory/Intro%20to%20Embedded%20Systems/Project%20Report.html#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title"><b><u>Location  Tracker</u></b><br></div>
+				<div id="assignments">
+
+<br><br>
+<center>
+<h2 id="C1"><u>Introduction</u></h2><br></center>
+<b>Group members:</b><br>
+1) Mansoor Ahmad Khan<br> 
+2) Muhammad Nauman Tariq<br><br>
+ <center>The purpose of our device is to locate the position of (specifically) vehicle </center>but you may find the location of anything you want by just fitting it in that object, and whenver you send a message to it, it will send you a google map link.
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+	
+<center><img src="./Project Report_files/GPS.jpg" height="350"><br></center><br><br>
+<b>The objectives of our project are:<br></b>
+<p> 1) Location tracker<br> 2) Speed limit <br> 3) Accident alarm<br>
+ <b>The</b> device we are going to made will help  us to find its location using GPS, we will send a message over GSM and GSM through arduino receive the loction from GPS and in reply it will send its location in form of google map link  and also the LCD will diplay its location in form of (latitude,longitude). Also it will send a message if its speed is get increase than the restricted speed limit, morever if there is sudden large decrease in its speed  then it means there is chance of accident in such situation it will also create a message and will deliver it  to user.
+
+
+</p><center>
+<h2 id="C2"><u>  Main components</u></h2><br></center>
+<center>
+<table style="width:95%">
+ 
+<tbody><tr>
+    <td><b>Name of components </b></td>
+    <td><b> Specifications &amp; pins required </b></td> 
+  </tr>
+  <tr>
+    <td>NEO-6M GPS module </td>
+    <td>  Tx,Rx,Vcc and Ground<br>
+          2.5m<br>
+          0.1m/s<br>
+          2.7-3.6V <br>
+          D.C 3V 
+  </td> 
+  </tr>
+<tr>
+   <td>SIM-900A GSM module</td>
+   <td>Tx,Rx,Vcc and Ground<br>
+        4.8-5.6V D.C<br>
+        Sms
+</td>
+</tr>
+<tr>
+  <td>TfT 1.44 inch-LCD </td>
+  <td>128x128 resolution <br>
+         Led-3.3v<br>
+  	 Vcc-5v<br>
+     5 pins for SPI digital interface</td>
+</tr>
+</tbody></table>
+</center>  
+Selection of the components are very important! you to have select the componens wisely. Above are the some main component we used during our project.The main thing in this project is network either with satellite for location or mobile network for Sms we face alot of troubles during connection validation but we trouble shoot all these problems,So you have to select the components which are better in network connection.
+<br>
+<center>
+<h2><u>Flow chart</u></h2><br></center>
+<center><img src="./Project Report_files/block.PNG" height="350"><br></center>
+<br><br>
+<ul>
+Above flow chart displays the flow of execution of our system i.e the human(user) will send a message to the GSM and  GSM through arduino will fetch the location from GPS and reverse process will take place and user will receive a message having a Google map location(link). 
+<br><br>
+<center>
+<h2><u>Final prototype to be expected</u></h2><br></center>
+<center><img src="./Project Report_files/Picture1.jpg" height="350"><br></center>
+<br><h2><center><b><u>Deligation of task</u></b></center></h2><br>
+<table style="width:95%"><tbody><tr>
+
+
+
+ </tr><tr>
+    <td><b>Mansoor Ahmad Khan </b></td>
+    <td><b> Muhammad Nauman Tariq</b></td> 
+  </tr>
+  <tr>
+    <td>Literature Review </td>
+    <td>Literature Review </td> 
+  </tr>
+  <tr>
+    <td>Selecting the best GSM Module </td>
+    <td> Selecting the best GPS Module 
+  </td> 
+  </tr>
+<tr>
+   <td>Software Designing</td>
+   <td>Hardware Implementation
+</td>
+</tr>
+<tr>
+  <td>PCB Designing </td>
+  <td>PCB Printing</td>
+</tr>
+<tr>
+  <td>Populating the PCB </td>
+  <td>Populating the PCB</td>
+</tr>
+<tr>
+  <td>Software Trouble Shooting</td>
+  <td>Hardware Trouble Shooting</td>
+</tr>
+<tr>
+  <td>Documentation</td>
+  <td>Designing of Console</td>
+</tr>
+</tbody></table>
+<center><br><br><h4><b><u>Intellectual Properties and Ethics Considerations</u></b></h4>
+All the codes we are going to share with you in last are open source(available to everyone) so that every can get benefit of it.Morever we have gone through many website but the website which we mostly prefferd are below: <br>
+<b><a href="https://circuitdigest.com/microcontroller-projects/vehicle-tracking-system-using-arduino-gps-and-gsm"><font color="FF00CC">https://circuitdigest.com/microcontroller-projects/vehicle-tracking-system-using-arduino-gps-and-gsm</font></a></b><br>
+<b><a href="https://www.itead.cc/wiki/SIM900/SIM900A_GSM/GPRS_Minimum_System_Module#Overview"><font color="FF00CC">https://www.itead.cc/wiki/SIM900/SIM900A_GSM/GPRS_Minimum_System_Module#Overview </font></a></b><br>
+  
+ 
+ <h4><b><u>Commercialization Aspects</u></b></h4>
+ The primary concern of this product is all  vehicle owners because its main purpose is to  track vehicles,we can also get the information that how fast is vehicle travelling.This device also help to put an end to thieves and you may plan to catch the theives through this device.However we may also fit this device in wild animals beacuse they are very important to our enviroment but for them we have to fit a small battery to provide source to the device.Also we can fit it in handicaps persons(mentaly handicaps) as a handbrace so that their family can easiy got them. 
+ 
+<br><br><br><br><h2 id="C3"><b><u>Design</u></b></h2> 
+The Design process has several layers to it. Schematic Design, Software Design, Final Hardware Assembly <br><br>
+<h4><b>During hardware Interfacing  </b></h4>
+<center><img src="progress1.jpg" height="450"><br></center><br><br>
+<b>location we got during  hardware interfaincg</b>
+<center><img src="progress2.jpg" height="570"><br></center><br>
+<h4><b><u>Schematic Diagram</u></b></h4>
+<center><img src="schematic.png" height="450"><br></center>
+
+
+<center><h4><b><u>PCB Layout</u></b></h4></center><center><img src="./Project Report_files/PCB soft and hard.png" height="350"><br></center><br><br>
+first of all  sketch all the comoponent in schematic and connect them accurately to their adajacent terminal then convert it into schematic then route all the wires in such way that their should be no crossing of two wires,one wire should be  little  apart from other wire otherwise our PCB will be short and will not work properly.
+    
+    <h4><b> PCB components  </h4></b></h4><br>
+        <center><img src="components.jpg" height="550"><br></center><br>
+		<h4><b><u>Populated PCB </u> </h4></b></h4><br>
+		<center><img src="populatedpcb.jpg" height="550"><br></center><br>
+		<h4><u><b>PCB successfully Booted</b></u></h4>
+		<center><img src="booting.jpg" height="550"><br></center><br>
+<br><br><h4>Software Development</h4>
+Describe the structure of your software. In a pictorial format you may describe the flow of your algorithm and how you have used the functions to implement the code in an efficient way.
+<br><br><h4><b><u>Design of finished Product</u></b></h4>
+<center><img src="casing.jpg" height="550"><br></center><br>
+The above design we have made is through laser cut but you may design a small and compact box approximately equal to match box.
+
+<br><br><br><br><b><u><h2 id="C4">Results  in Video form</u></b></h2> 
+Below is the drive link containing the video of functional GPS displaying the result on LCDs
+<b><a href="https://drive.google.com/file/d/1B-e8U83D21VtlDMzQp8LYb8S0WVjh0Xk/view?usp=sharing"><font color="FF00CC">https://drive.google.com/file/d/1B-e8U83D21VtlDMzQp8LYb8S0WVjh0Xk/view?usp=sharing</font></a></b><br>
+ <br><br><br><br><br>
+  
+  <h2 id="C5"><b><u>Conclusions</u></b></h2>
+  <div class="d">
+ We learn alot because initially! everytime when we get into our work  it takes almost one hour to get our prevoius work's output after troubleshooting of a hour we proceed further but anyways we got so mush command, that after finalizing our project  within 5 to 6 minute we can interface our components and it will work surely.<br><br>
+<br>
+  </div>
+      <br>
+        <h2><b><u>Project Execution Plan</u></b></h2><br>
+<div class="d">
+        •Determined direction in Two weeks Aug(19)-sep3<br>
+•Finalize bill of materials from sep5 to sep25<br>
+•Interfaced GPS with Arduino from sep25 to Oct1<br>
+•Displayed the GPS location on LCD from Oct2 to oct9<br>
+•Send the Location over cell phone from oct9 to oct22<br>
+•Design the PCB in software from oct22 to Nov1<br>
+•Software + Hardware on bread board from Nov2 to Nov15<br>
+•Final Product withthout box upto 20th of Nov<br>
+•Solid  Works upto 25th Nov<br>
+•casing,lab report and  finalized upto 5th Dec
+</div><br>
+<h2 id="C6"><b><u>source Codes, Eagle files & CAD file</u></b></h2> 
+
+Below is the link of source code for GSM,GPS,LCD and combine code for all three of them:
+
+<b><a href="https://drive.google.com/drive/folders/1oCLbyZjzQkXteW_jnxep64JFnzUCxUjS?usp=sharing"><font color="FF00CC">https://drive.google.com/drive/folders/1oCLbyZjzQkXteW_jnxep64JFnzUCxUjS?usp=sharing</font></a></b><br>
+<br><br>
+Below is the link of Eagle files(Schematic and Board):<br>
+<b><a href="https://drive.google.com/drive/folders/1JoQiSPBNux8xwLX0RLBrf7cttzPB-Ycg?usp=sharing"><font color="FF00CC">https://drive.google.com/drive/folders/1JoQiSPBNux8xwLX0RLBrf7cttzPB-Ycg?usp=sharing</font></a></b><br>
+Below is the link of CAD files<br>
+ <b><a href="https://drive.google.com/file/d/1S2Rc-MSYEGQU-RhDReypBlYaH1QqXAUD/view?usp=sharing"><font color="FF00CC">https://drive.google.com/file/d/1S2Rc-MSYEGQU-RhDReypBlYaH1QqXAUD/view?usp=sharing</font></a></b><br>
+ <br><br>
+<center>
+<h2><center><b><u>Bill of materials(components)</u></b></center>
+<center>
+<table style="width:95%">
+ 
+<tbody><tr>
+    <td><b>Name of components </b></td>
+    <td><b> price in pkr </b></td> 
+  </tr>
+  </tr><tr>
+    <td>Neo 6m <b>GPS</b> module  </td>
+    <td> Rs 900</td> 
+  </tr>
+  <tr>
+  </tr><tr>
+    <td><b>GSM</b> 900A module  </td>
+    <td> Rs 2150/-</td> 
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td><b>Tft</b> LCD (128x128)  (optional)<br>1.44 inch </td>
+    <td>Rs 1100/-</td> 
+  </tr>
+  <tr>
+    <td><b>Other Discrete components  </td>
+    <td>Rs 250/-</td> 
+  </tr>
+  <tr>
+    <td><b>Total Cost </td>
+    <td>Rs 4400/-</td> 
+  </tr>
+  <tr>
+</center><table style="width:50%">
+ <br>
+</center>
+
+<br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</ul></div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+<u><b>For any query contact us:</b></u><br>
+<h4><b>nauman.be18@iba-suk.edu.pk</b><br>
+<b>mansoor.be18@iba-suk.edu.pk</b></h4>	
+
+	
+</body></html>
+
