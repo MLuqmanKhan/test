@@ -1,0 +1,188 @@
+
+<html>
+<head>
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+
+
+*{
+
+  padding: 0;
+  margin: 0;
+
+
+}
+
+body
+{
+background-image: url(background4.jpg);
+background-size: cover;
+background-position: center;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+.menu-bar
+{
+  background: rgb(0,100,0);
+  text-align: center;
+  margin-left: 0;
+}
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+
+  color: #fff;   
+}
+.menu-bar ul li
+{
+   width: auto;
+   height: auto;
+   padding: 15px;
+   margin-left: 0;
+   
+}
+
+.menu-bar ul li a
+{
+  text-decoration: none;
+  color:#fff;
+}
+
+.active, .menu-bar ul li a:hover
+{
+  background: #2bab0d;
+  border-radius: 10px;
+}
+
+.menu-bar  .fa
+{
+
+  margin-right: 8px;
+}
+
+img{
+
+  height: auto;
+}
+
+  </style>
+  <title>Micro Invert</title>
+</head>
+<body>
+  <div class="menu-bar" style="margin-left: 0">
+<ul>
+<li class="active"><a href="index.html"> <i class="fa fa-home" ></i>Home</a></li>
+  <li><a href="INTRODUCTION OF PROJECT.html"> <i class="fa fa-user" ></i>Introduction of Project</a></li>
+  <li><a href="DETAILS OF MAJOR COMPONENTS.html"> <i class="fa fa-microchip" ></i>Detail of Major Componenets</a></li>
+  <li><a href="PCB Design.html"> <i class="fa fa-clone" ></i>PCB Design</a></li>
+  <li><a href="Journey.html"> <i class="fa fa-angellist" ></i>Journey</a></li>
+  <li><a href="CONTACT US.html"><i class="fa fa-phone" ></i>Contact Us</a></li>
+
+
+
+</ul>
+</div>
+
+<table width=80% align="center">
+  <tr ><th width=20%><img src="iba logo.jpeg" width=100></th>
+           <th>   <h1> MICRO INVERTER PROJECT  </h1>
+            <small><h2 align="center">INSTRUCTOR: SIR ASIM ALI SAMEJO</h2></small>
+
+        </th> 
+  </tr>
+</table>
+<br><br><h1 align="left">First and The Biggest problem "ROUTING":</h1>
+<br><br>
+<table >
+
+<tr><td>
+Routing was the biggest challenge of our project. It was so complex that most of the time we spent while doing routing. There were three IC’s (microcontroller, hip4082 and LM324) interconnected to each other and the four sensors (two current sensors and two voltage sensors) along with “Arduino Board” circuitry. It was a tough job to route them on a single layer (approximately impossible). There were many overlaps. Consequently we decided to make two layers PCB board. After a very hard work we succeeded in making the final PCB board.</td></tr>
+</table>
+<br><br>
+
+<center><table align="center"><tr><td align="center"><img src="pcb2.jpg" width="400"></td></tr></table></center>
+
+
+
+
+
+<br><br><h1 align="left">Soldering :</h1>
+<br><br>
+<table >
+
+<tr><td>
+When we had completed  routing and milling of our circuit then we  were supposed to solder the components on PCB milled board.
+There were few problems that we faced in soldering.
+There are two types of components SMD (surface mounting devices ) and DIP (Dual in-line Package) .SMD has terminals  with external pins and they are supposed to be mounted on surface of PCB circuit and they are usually very small in size and hard to solder because of size so soldering those components were hard but we were taught how to solder those components and we did so nicely. But there few components which we had selected in SMD packages and we expected we will receive those components in SMD but unfortunately those components were not in </td></tr>
+</table>
+<br><br>
+
+<center><table align="center"><tr><td align="center"><img src="solder.jpeg" width="400"></td></tr></table></center>
+
+
+<br><br>
+<table >
+
+<tr><td>
+our Fablab’s inventory and there were insufficient place for those components because usually SMS are smaller than DIP but finally we solved those issues by soldering DIP components instead of SMD but with a lot of struggles and hit trial method.
+When we got our PCB printed circuit we thought it is completely accurate one but due lack of experience there were some paths which were short and they were not supposed to be short then we tackle this problem by heating and insulating paths from each other.
+ </td></tr>
+</table>
+<br><br>
+
+<table >
+
+<tr><td>
+We had transformer in our project and it was of large size and there was not enough place for that so them we decided to keep transfer outside of circuit and we just connected to sides(input and output) to connectors which solved the issue of lack of space .
+ </td></tr>
+</table>
+<table >
+
+<tr><td>
+We had transformer in our project and it was of large size and there was not enough place for that so them we decided to keep transfer outside of circuit and we just connected to sides(input and output) to connectors which solved the issue of lack of space .
+solve this problem but finally we came to know that one of the resistor was burnt and at that place circuit was open and we just replaced tat resistor which solved the issue.
+Some components were missing like inductor and dual voltage booster etc.   we  ordered from online sources but due to coivd-19  pandemic we hadn’t enough time to wait for so there was issue for HIP IC because it needed 12 voltage and operational amplifiers were requiring 15 volt positive and negative but there was no dual voltage supply for that then there was device which had capability of producing positive and negative voltage of out range then we used that device only for testing purpose.
+We required inductor of 48mH but there was inductor of only 2.2mH in our inventory and we were not supposed to wait for online order so we went with 2.2mH inductor which really effected our results.
+VIAs are used to create the connection between two layers of PCB circuit and we used many vias because to avoid overlapping .When we checked circuit there was open path then we used continuity test to find missing connection and we were succeeded that some of vias were not connected then we soldered them correctly.
+ </td></tr>
+</table>
+<br><br>
+
+<table >
+
+<tr><td>
+<b>There are some precautions to avoid soldering problems.</b>
+Always read component datasheet before soldering if their tolerating range of heat in beyond the soldering heat of your soldering machine then you can use because sometimes it can’t sustain that much heat that you are giving and they burn and after soldering your circuit doesn’t give your desired output because 
+VIAs are used to create the connection between two layers of PCB circuit and we used many vias because to avoid overlapping .When we checked circuit there was open path then we used continuity test to find missing connection and we were succeeded that some of vias were not connected then we soldered them correctly.
+
+<b>There are some precautions to avoid soldering problems.</b>
+Always read component datasheet before soldering if their tolerating range of heat in beyond the soldering heat of your soldering machine then you can use because sometimes it can’t sustain that much heat that you are giving and they burn and after soldering your circuit doesn’t give your desired output because the component is burnt which means absent from circuit  and you are unable to find error. 
+<b>Always measure components values before soldering</b> because sometimes values don’t match with datasheet values so it will create issues for you and will create issues in working of circuit. Measuring values before soldering will help circuit to work correctly and you will not dissolder those components again and again.
+
+<b>
+Always use continuity test after soldering</b> because components may be short which is more than enough to destroy your circuit and you don’t know so if it  occurs then you can solve on the spot. Sometimes we see by naked eyes that components are connected to each other but they are not so te circuit is open which creates many problems. continuity test gives sound(beef) if they are connected otherwise you have to solder them correctly.
+
+</table>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

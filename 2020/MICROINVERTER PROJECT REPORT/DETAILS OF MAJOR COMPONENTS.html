@@ -1,0 +1,321 @@
+
+<html>
+<head>
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+
+
+*{
+
+  padding: 0;
+  margin: 0;
+
+
+}
+
+body
+{
+background-image: url(background4.jpg);
+background-size: cover;
+background-position: center;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+.menu-bar
+{
+  background: rgb(0,100,0);
+  text-align: center;
+  margin-left: 0;
+}
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+
+  color: #fff;   
+}
+.menu-bar ul li
+{
+   width: auto;
+   height: auto;
+   padding: 15px;
+   margin-left: 0;
+   
+}
+
+.menu-bar ul li a
+{
+  text-decoration: none;
+  color:#fff;
+}
+
+.active, .menu-bar ul li a:hover
+{
+  background: #2bab0d;
+  border-radius: 10px;
+}
+
+.menu-bar  .fa
+{
+
+  margin-right: 8px;
+}
+
+img{
+
+  height: auto;
+}
+
+  </style>
+  <title>Micro Invert</title>
+</head>
+<body>
+  <div class="menu-bar" style="margin-left: 0">
+<ul>
+ <li class="active"><a href="index.html"> <i class="fa fa-home" ></i>Home</a></li>
+  <li><a href="INTRODUCTION OF PROJECT.html"> <i class="fa fa-user" ></i>Introduction of Project</a></li>
+  <li><a href="DETAILS OF MAJOR COMPONENTS.html"> <i class="fa fa-microchip" ></i>Detail of Major Componenets</a></li>
+  <li><a href="PCB Design.html"> <i class="fa fa-clone" ></i>PCB Design</a></li>
+  <li><a href="Journey.html"> <i class="fa fa-angellist" ></i>Journey</a></li>
+  <li><a href="CONTACT US.html"><i class="fa fa-phone" ></i>Contact Us</a></li>
+
+
+
+</ul>
+</div>
+
+<table width=80% align="center">
+  <tr ><th width=20%><img src="iba logo.jpeg" width=100></td>
+           <td>   <h1> MICRO INVERTER PROJECT  </h1>
+            <small><h2 align="center">INSTRUCTOR: SIR ASIM ALI SAMEJO</h2></small>
+
+        </td> 
+  </tr>
+</table>
+
+
+
+<table><tr>
+  <td>
+ <h3>Arduino UNO</h3><br>
+  Arduino Uno is a microcontroller board based on the ATmega328P. It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.. You can tinker with your Uno without worrying too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again. "Uno" means one in Italian and was chosen to mark the release of Arduino Software (IDE) 1.0. The Uno board and version 1.0 of Arduino Software (IDE) were the reference versions of Arduino, now evolved to newer releases. The Uno board is the first in a series of USB Arduino boards, and the reference model for the Arduino platform; for an extensive list of current, past or outdated boards see the Arduino index of boards.</td>
+  <td><img src="arduino uno.png" width="400"></td></tr></table>
+
+
+<table><tr>
+  <td>
+
+ <h3>Hip 4082 (h- bridge controller)</h3><br>
+
+The HIP4082 is an 80V n-channel MOSFET driver IC that independently drives four n-channel mosfets in a full h-bridge configuration. </td>
+  <td></td></tr><table>
+  <tr><td><img src="h bridge.jpg" width=400>  </td>
+  <td><img src="h bridge1.jpg" width=400></td></tr></table>
+<tr><td><br>The topology chosen uses the hip4082 to provide a 60khz, low voltage, square-wave to drive a small isolation power transformer. The output of this transformer is rectified, filtered, and the high voltage inverted again to produce the desired low frequency (55hz) output waveform. The HIP4082 peak output drive current is 1.25A, which reduces the need for adding series gate resistors when driving medium to large mosfets.The hip4082 provides continuous on/off level-shift drive signals for the upper mosfets. Proper dead-time adjustment avoids simultaneous mosfet conduction when switching from an upper mosfet to a lower mosfet or vice-versa.</td><td></td></tr></table>
+
+
+<h2>Pin Descriptions </h2>
+<table align="left" border="1" bgcolor="#98AFC7"><b>
+  <tr>
+    
+  </tr>
+
+  <tr>
+    <td>PIN NUMBER </td>
+    <td>SYMBOL </td>
+    <td>DESCRIPTION </td>
+
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>BHB </td>
+    <td>  B High-side Bootstrap supply. External bootstrap diode and capacitor are required. Connect cathode of bootstrap diode and positive side of bootstrap capacitor  </td>
+
+  </tr>
+
+<tr>
+    <td>2 </td>
+    <td>BHI </td>
+    <td>B High-side Input. Logic level input that controls BHO driver (Pin 16). The pin can be driven by signal levels of 0V to 15V (no greater than VDD).  </td>
+
+  </tr>
+
+<tr>
+    <td>3 </td>
+    <td>BLI </td>
+    <td>B Low-side Input. Logic level input that controls BLO driver (Pin 14).  The pin can be driven by signal levels of 0V to 15V (no greater than VDD). </td>
+
+  </tr>
+<tr>
+    <td>4 </td>
+    <td>ALI </td>
+    <td>A Low-side Input. Logic level input that controls ALO driver (Pin 13).  The pin can be driven by signal levels of 0V to 15V (no greater than VDD).   </td>
+
+  </tr>
+  <tr>
+    <td>5 </td>
+    <td>DEL </td>
+    <td>Turn-on DELay. Connect resistor from this pin to VSS to set timing current that defines the dead time between drivers.  The voltage across the DEL resistor is approximately Vdd -2V. </td>
+
+  </tr>
+
+  <tr>
+    <td>6 </td>
+    <td>VSS </td>
+    <td>Chip negative supply, generally will be ground. </td>
+
+  </tr>
+
+  <tr>
+    <td>7 </td>
+    <td>AHI </td>
+    <td>A High-side Input. Logic level input that controls AHO driver (Pin 10).  The pin can be driven by signal levels of 0V to 15V (no greater than VDD). </td>
+
+  </tr>
+
+  <tr>
+    <td>8 </td>
+    <td>DIS </td>
+    <td>DISable input. Logic level input that when taken high sets all four outputs low. . The pin can be driven by signal levels of 0V to 15V (no greater than VDD).  </td>
+
+  </tr>
+
+  <tr>
+    <td>9 </td>
+    <td>AHB </td>
+    <td>A High-side Bootstrap supply. External bootstrap diode and capacitor are required. Connect cathode of bootstrap diode and positive side of bootstrap capacitor to this pin.  </td>
+
+  </tr>
+
+  <tr>
+    <td>10 </td>
+    <td>AHO </td>
+    <td>A High-side Output. Connect to gate of A High-side power MOSFET. <br> </td>
+
+  </tr> 
+
+</b></table>
+
+
+
+
+
+
+<table >
+
+<tr><td>
+  
+<h2><br>Lem-lA55p</h2>
+
+
+
+</td>   </tr>
+
+<tr><td>
+<p>LEM LA 55P has been used to sense the currents.
+Lem la55-p measures a.C. And D.C current up to 50A. 
+To get an accurate value, the hall effect sensor is used. 
+We use  lem current sensor (la-55p) because it is very precise and accurate which meets our requirement 
+
+IS is positive when I P flows in the direction of the arrow. Temperature of the primary conductor should not exceed 90°C. Dynamic performances (di/dt and response time) are best with a single bar completely filling the primary hole. In order to achieve the best magnetic coupling, the primary windings have to be wound over the top edge of the device. This is a standard model. For different versions (supply voltages, turns ratios, unidirectional measurements...), please contact us.</td>
+<td><img src="lem la55p1.jpeg" width="400"></td></tr>
+
+
+</table>
+
+<table >
+
+<tr><td>
+  
+<h2><b>Lem-lv25 p
+</b></h2>
+
+
+
+</td>   </tr>
+
+<tr><td>
+<p>LEM LV 25 has been used to sense the voltage.
+It can measure from v to 500v
+To get an accurate value, the hall effect sensor is used. 
+We use  lem volt544  because it is very precise and accurate which meets our requirement 
+
+IS is positive when I P flows in the direction of the arrow. Temperature of the primary conductor should not exceed 90°C. Dynamic performances (di/dt and response time) are best with a single bar completely filling the primary hole. In order to achieve the best magnetic coupling, the primary windings have to be wound over the top edge of the device. This is a standard model. For different versions (supply voltages, turns ratios, unidirectional measurements...), please contact us.</td>
+<td><img src="lem lv25.jpg" width="400"></td></tr>
+
+
+</table>
+
+
+<table >
+
+<tr><td>
+  
+<h2><b>
+OP_AMPLIFIER
+
+
+</b></h2>
+
+
+
+</td>   </tr>
+
+<tr><td>
+<p>The TLV2462 functions as a unity gain amplifier and drives a 100-Ω load against the supply ground. 
+Use rail-to-rail in- and output type OPAMP.
+the output can only drive the signal up to a maximum voltage level of 4.4 V.</td>
+<td><img src="op amplifier.jpg" width="400"></td></tr>
+
+
+</table>
+
+
+<table >
+
+<tr><td>
+  
+<h2><b>
+TOROIDAL TRANSFORMER
+
+
+</b></h2>
+
+
+
+</td>   </tr>
+
+<tr><td>
+<p>Toroidal transformers are transformers 
+which use magnetic cores with a toroidal (ring or donut) shape. 
+They are passive electronic components, consisting of a circular
+ ring or donut shaped magnetic core of ferromagnetic material such
+ as laminated iron, iron powder, or ferrite, around which wire is 
+wound.
+
+Although in the past, closed-core transformers often
+ used cores with a square shape, the use of toroidal-shaped cores 
+has increased greatly because of their superior electrical performance.
+ The advantage of the toroidal shape is that, due to its symmetry, the 
+amount of magnetic flux that escapes outside the core (leakage flux)
+ is low, therefore it is more efficient and thus radiates less 
+electromagnetic interference (EMI).
+
+Toroidal transformers are used in a wide range of
+ electronic circuits: power supplies, inverters, and amplifiers, 
+which in turn are used in the vast majority of electrical equipment: 
+TVs, radios, computers, and audio systems.</td>
+<td><img src="toroidal transformer.png"  width="400"></td></tr>
+
+
+</table>
+
+
+
+</body>
+</html>

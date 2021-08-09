@@ -1,0 +1,179 @@
+
+<html>
+<head>
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    
+
+
+*{
+
+  padding: 0;
+  margin: 0;
+
+
+}
+
+body
+{
+background-image: url(background4.jpg);
+background-size: cover;
+background-position: center;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+.menu-bar
+{
+  background: rgb(0,100,0);
+  text-align: center;
+  margin-left: 0;
+}
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+
+  color: #fff;   
+}
+.menu-bar ul li
+{
+   width: auto;
+   height: auto;
+   padding: 15px;
+   margin-left: 0;
+   
+}
+
+.menu-bar ul li a
+{
+  text-decoration: none;
+  color:#fff;
+}
+
+.active, .menu-bar ul li a:hover
+{
+  background: #2bab0d;
+  border-radius: 10px;
+}
+
+.menu-bar  .fa
+{
+
+  margin-right: 8px;
+}
+
+img{
+
+  height: auto;
+}
+
+  </style>
+  <title>Micro Invert</title>
+</head>
+<body>
+  <div class="menu-bar" style="margin-left: 0">
+<ul>
+  <li class="active"><a href="index.html"> <i class="fa fa-home" ></i>Home</a></li>
+  <li><a href="INTRODUCTION OF PROJECT.html"> <i class="fa fa-user" ></i>Introduction of Project</a></li>
+  <li><a href="DETAILS OF MAJOR COMPONENTS.html"> <i class="fa fa-microchip" ></i>Detail of Major Componenets</a></li>
+  <li><a href="PCB Design.html"> <i class="fa fa-clone" ></i>PCB Design</a></li>
+  <li><a href="Journey.html"> <i class="fa fa-angellist" ></i>Journey</a></li>
+  <li><a href="CONTACT US.html"><i class="fa fa-phone" ></i>Contact Us</a></li>
+
+
+
+</ul>
+</div>
+
+<table width=80% align="center">
+  <tr ><th width=20%><img src="iba logo.jpeg" width=100></th>
+           <th>   <h1> MICRO INVERTER PROJECT  </h1>
+            <small><h2 align="center">INSTRUCTOR: SIR ASIM ALI SAMEJO</h2></small>
+
+        </th> 
+  </tr>
+</table>
+
+<br><br><h1 align="left">Embedding Arduino Board:</h1>
+<table >
+
+<tr><td>
+The circuitry which we had followed was using the Arduino board as shown in the following PCB board. The following PCB board was designed by us, but when our instructor saw it, he instantly rejected it, because it was covering a large space on the board. Instead we can use just an embed microcontroller with all other arduino board circuitry. Its advantage was that it covers a very little space on the board as compare to the Arduino board. So we must have to use an embed microcontroller to save the space.</td></tr>
+<tr><td align="center"><img src="pcb1.jpg" width="600"></td></tr></table>
+<br><br>
+
+<table >
+
+<tr><td>
+Here is the following figure of PCB board, we can see that there is a huge difference in size between the “Arduino Board” and the embed microcontroller ATMega328P. The size of the board has been reduced significantly.</td></tr>
+<tr><td align="center"><img src="pcb2.jpg" width="600"></td></tr></table>
+
+<br><br>
+
+
+<table >
+
+<tr><td>
+After embedding the microcontroller we were confused that how we would upload the code and how it would work?
+Isn’t the Arduino board circuitry would mix up with the other circuitry of the board?
+Is there any difference between the pin numbers of a separate ATMega328p microcontroller and the “Arduino Board”?
+These were the few questions arising in our minds. Then our instructor told that the circuitry wouldn’t be mix up with the other circuitry and the code would be uploaded with the boot loader. And there is no difference between the pin configuration of the microcontroller and the “Arduino Board”. We don’t have to make changes in the code due to pin configuration. We can upload the same code as on the “Arduino Board” with no significant changes. It was confirmed after the printing of the board. In the following figure we uploaded the LED blinking code and one can see that the “Arduino Board” circuitry is working properly.
+Consequently, we have successfully embedded the “Arduino Board” in our circuitry.</td></tr></table>
+<br><br>
+
+
+<center><table align="center"><tr><td><img src="microinverter.jpg" width="600"></td></tr></table></center>
+
+
+<br><br><h1 align="left">ROUTING:</h1>
+<table >
+
+<tr><td>
+Routing was the biggest challenge of our project. It was so complex that most of the time we spent while doing routing. There were three IC’s (microcontroller, hip4082 and LM324) interconnected to each other and the four sensors (two current sensors and two voltage sensors) along with “Arduino Board” circuitry. It was a tough job to route them on a single layer (approximately impossible). There were many overlaps. Consequently we decided to make two layers PCB board. After a very hard work we succeeded in making the final PCB board.</td></tr>
+</table>
+<br><br>
+
+<center><table align="center"><tr><td><img src="pcb3.jpg" width="650"></td><td><img src="pcb4.jpeg" width="650"></td></tr></table></center>
+
+
+<br><br><h1 align="left">VOLTAGE SOURCES:</h1>
+<table >
+
+<tr><td>
+In our circuitry we have to use the three voltage sources in order to operate the different components, one for the microcontroller (5v), the second for the hip4082 IC (12v) and the third for the sensors (Dual voltage supply +15v and -15v). We embed the buck converter (12v input and 5v output) on the PCB board to operate the microcontroller. But we don’t have the dual power supply (+15v and -15v) to embed on the PCB board. Hence we used an external dual power supply in order to operate the sensors.
+The fourth input voltage source was to whom we have to convert into 220v AC output.
+</td></tr></table>
+<br><br>
+
+
+<center><table align="center"><tr><td><img src="pcb6.jpeg" width="700"></td></tr></table></center>
+
+
+
+<br><br><h1 align="left">INDUCTORS:</h1>
+<table >
+
+<tr><td>
+We need a 48mH inductor in LC filter but we don’t have the inductor of our desired value. The inductor of the desired value was also not available in the local market. So we were compelled to use an inductor of low value (2mH). Our instructor told us that it would only have effects on the distortions of the output sinusoidal waveform and it doesn’t effects the overall output. Its only effect that could be observed is the distortions in the output sinusoidal waveform.
+</td></tr></table>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

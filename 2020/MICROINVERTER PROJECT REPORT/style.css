@@ -1,0 +1,57 @@
+
+*{
+
+	padding: 0;
+	margin: 0;
+
+
+}
+
+body
+{
+background-image: url(background4.jpg);
+background-size: cover;
+background-position: center;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+.menu-bar
+{
+	background: rgb(0,100,0);
+	text-align: center;
+	margin-left: 0;
+}
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+
+  color: #fff;   
+}
+.menu-bar ul li
+{
+	 width: auto;
+	 height: auto;
+	 padding: 15px;
+	 margin-left: 0;
+	 
+}
+
+.menu-bar ul li a
+{
+	text-decoration: none;
+	color:#fff;
+}
+
+.active, .menu-bar ul li a:hover
+{
+	background: #2bab0d;
+	border-radius: 10px;
+}
+
+.menu-bar  .fa
+{
+
+	margin-right: 8px;
+}
