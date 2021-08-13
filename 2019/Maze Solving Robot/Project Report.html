@@ -1,0 +1,492 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+	   
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Maze Solving Robot)
+		</title>
+		
+   <style>
+   body {
+    background-color:EAE7E5;
+}
+  </style>
+	</head>
+	
+
+	<body>
+	
+	
+	
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					<b>Hammad Ahmed Khan </b>
+					
+					<b> <center>Shankar Das </center>  </b>
+					
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High-Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">Maze Solving Robot</div><br>
+				
+				
+				
+				
+				
+				<div id="assignments">
+				
+				
+				
+				
+<center><div class="w3-content w3-section" style="max-width:750px "  >
+  <img class="mySlides" src="1.jpg" style="width:100% " >
+   <img class="mySlides" src="2.jpg" style="width:100% " >
+    <img class="mySlides" src="3.jpg" style="width:100% " >
+	 <img class="mySlides" src="4.jpg" style="width:100% " >
+	
+</div></center>
+<p><center><b><font size="15">Project Overview</font></b></center></p>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+				
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+Our robot works on two steps: <br>
+The first is to drive through the maze and find the end of it. The second is to optimize that path so our robot can travel back through the
+maze, but do it perfectly without going towards any dead ends.<br>
+How does the robot find the end of the maze?<br>
+We have chosen a technique,i.e Left hand preferrence.When our robot finds multiple paths, it will go towards its left.<br>
+there are various possibilities of paths that our robot will face.
+If it faces a straight and left, it will chose left. If it faces a left and right, it will go the same.
+ But if it will face a right and straight, it will go straight. A dead end will make our robot to turn around from its position and go backward to the turn.<br>
+L = left turn<br>
+R= right turn<br>
+S= going straight past a turn<br>
+B= turning around<br>
+So let us apply this method on the simple maze. View the photos to see this method in action.<br>
+The yellowish green will be the robot. <br>
+<center><img src="MazePath.jpg" width="500" height="500" /></center> <br><br>
+Look at the photos for the correct path means shortest path.<br>
+LBL=S; <br>
+LBS=R; <br>
+ 
+ Final correct path=SRR; <br>
+ After solving the path it will follow this shortest path<br>
+ Our robot optimizes the path as it travels. The path is stored in an array and every time it goes to store a new move, it checks to see if the previous move was a "B", if it
+was then it optimizes the path.
+ 
+
+
+:<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+	
+<h2>Machenical Design</h2> 
+<center><img src="Machenical1.PNG" height="480" /><br></center>
+<br><br>
+<h2 id="C2">High Level Design</h2>    
+Following is our high level block diagram which is self defined about how our machine's internal operations are being done.<br><br>
+
+<br>
+
+<center><img src="HighLevel.PNG" height="480" /><br></center>
+<br><br>
+
+<h3>Description of Principle of Operations</h3>
+I would like to start from IR-sensors which senses the black line through an array of six,horizontally alligned sensors. 
+That signal is transmitted to our core-controlling body,the micro-controller which conveys orders to gear motors
+ for either left or right turn or going straight,depends upon the path and the algorithym that we have burned in our micro-controller.
+ Motors will go accordingly,for making a turn,one of the motors will stop moving and the machine will turn towards the side where 
+ motor is off.<br><br>
+<ul>
+
+<ul>
+
+<h3><b>Choice of Components</b></h3>
+<li>The Micro-controller (ATmega 32u4)</li><br>
+<li>Motor Driver IC (L293D)</li><br>
+<li>2 Micro Metal Gearmotors </li> <br>
+<li>Analog Reflectance Sensor Array </li> <br>
+<li>Pair of Wheels </li> <br>
+
+<li>Ball Caster</li> <br>
+<li>7.4V Battery (Rechargeable) </li> <br><br>
+</ul>
+
+<h3>Brief Description of Major Components</h3> <br>
+<b>The Micro-controller (ATmega 32u4)</b> <br>
+It has 44 I/O pins, following are the specifications. <br>
+
+<ul>
+<li>Complies fully with Universal Serial Bus Specification Rev 2.0</li>
+<li>Supports data transfer rates up to 12Mbit/s and 1.5Mbit/s</li>
+<li>Endpoint 0 for Control Transfers: up to 64-bytes</li>
+<li>Six Programmable Endpoints with IN or Out Directions and with Bulk, Interrupt or Isochronous Transfers</li>
+<li>Configurable Endpoints size up to 256 bytes in double bank mode</li>
+<li>Fully independent 832 bytes USB DPRAM for endpoint memory allocation</li>
+<li>
+<div class="table__cell">Program Memory Size 32 KB</div>
+<div class="table__cell">&nbsp;</div>
+</li>
+<li>
+<div class="table__cell">SRAM 2,560 KB</div>
+<div class="table__cell">&nbsp;</div>
+</li>
+<li>
+<div class="table__cell">Data EEPROM/HEF&nbsp;1024 (bytes)</div>
+<div class="table__cell">&nbsp;</div>
+</li>
+</ul>
+
+
+<b>Motor Driver IC (L293D)</b> <br>
+
+L293D is a typical Motor driver or Motor Driver IC which allows DC motor to drive on either direction. 
+L293D is a 16-pin IC which can control a set of two DC motors simultaneously in any direction.
+ It means that you can control two DC motor with a single L293D IC <br><br>
+ 
+ <b>Analog Reflectance Sensor Array</b><br>
+ This sensor module has 8 IR LED/phototransistor pairs mounted on a 0.375" pitch, making it a great detector for a line-following robot. 
+ Pairs of LEDs are arranged in series to halve current consumption, and a MOSFET allows the LEDs to be turned off for additional 
+ sensing or power-savings options. Each sensor provides a separate analog voltage output. <br><br>
+
+ 
+ <h3>Connectivity to components (Protocol)</h3>
+We have two gear motors, each have two connections,one of them is forward and the other one is reverse.
+That is why we are using four pins of Motor driver IC to connect with motors and four digital pins of micro-controller to connect with motor controller IC.
+According to our programming, we have declared variables(leftMotor1& rightMotor1) for forward pins of left motor and right motor respectively.
+Same is the case for backward pins.
+We have used four analog pins of micro-controller to recieve signals through IR-sensors. This is all we learnt throughout the making of this project.<br>
+Blue wires is the forward pins of motors.
+<center><img src="Connection.PNG"height="450"/></center>
+
+ 
+ <br>
+ <br>
+<h2 id="C3">Design</h2> 
+<h3> 	Electrical Schmetic </h3>
+<center><img src="Schematic.PNG"height="450"/></center>
+<br><br>
+
+<h3>Brief Description of Schematic </h3> <br>
+We have taken simple leonardo board from Sir Nadir Ali and we have did some amendments as per the requirement of our project.
+<ul>
+<li>We have added motor driver IC(L293D) which drives the two motors of the robot.
+<li>Since we are using 7.4v battery for motor driver IC but the requirement of micro-controller is 5v that's why we have 
+used 5v regulator IC which convert the 7.4v to 5v. 
+
+<li> We have given direct inputs in Motor driver IC from micro-controller by using 3,8,9,12 digital pins.
+
+</ul>
+
+ and 5v regulator IC which 
+convert the 7.4v of battery to 5v as per the requirement of microcontroller.  <br><br>
+
+<h3>	PCB Layout</h3> <br>
+<center><img src="PCBLayout2.PNG" height="500" /></center>
+<br><br>
+
+<h3>Challenges you faced in routing how you got around them</h3> <br>
+
+In the beginning we separately designed the pcb of motor controller IC(L293d) and leonardo board,
+ but after concerning with our instructor and as our project need provokes us,
+we redesigned a single pcb having both traits(L293D and leonardo one). But in doing this,
+ we faced the trouble of overlapping of routes which were solved by using zero ohm resistors.<br>
+ We have also faced problem regarding making of the longer routes as in our project, our digital pins have a prolong connection
+ with motor-controller IC which was solved by re-orienting the pins very nearest to the IC.<br>
+
+
+<h3>Bill of Material on taped on a Paper</h3>
+<center><img src="BOM.jpg" height="500" /></center> <br>
+
+<h3>Picture of Clean Printed Circuit Board</h3><br>
+
+<center><img src="PCB.jpg" height="500" /></center> <br>
+<h3>Picture of Populated Circuited Board<h3> <br>
+<center><img src="Solder1.jpg" height="500" /></center> <br>
+
+<h3>Procedure adopted to burn Bootloader</h3> <br>
+Following are the steps that one should follow when he/she is boot-loading their board. <br>
+<b> Step #1 </b> <br>
+First connect both AVR-ISP and USB mini data cables with board. <br>
+<center><img src="Step1.PNG" height="500" /></center> <br>
+
+
+<b> Step #2 </b> <br>
+Open the arduino IDE and do as per the instruction given in the following pictures. <br><br>
+<center><img src="Step2.PNG" height="500" /></center> <br>
+<b> Step #3 </b> <br><br>
+<center><img src="Step3.PNG" height="500" /></center> <br>
+<b> Step #4 </b> <br><br>
+<center><img src="Step4.PNG" height="500" /></center> <br><br>
+Finally the thing that we longed for was in our hands...A successfully bootloaded board.
+<center><img src="Boot.PNG" height="500" /></center> <br><br>
+
+<h3>Challenges you faced in Bootup and how you got around them</h3> <br>
+We did not face any challenge during boot-loading of our board. <br><br>
+
+	
+<h3>Picture of successfully operating circuit</h3> <br>
+<center><img src="functional1.PNG" width="600" height="500" /></center> <br><br>
+
+
+<h3>The Flow Code of our Software Design</h3> <br> 
+<center><img src="Flowchart2.PNG" width="600" height="500" /></center> <br><br>
+
+
+<h3>Diagram outlining main Functions </h3> <br>
+<center><img src="MainFunction.PNG" width="600" height="500" /></center> <br><br>
+
+<h3>Challenges we have faced in coding and how we got around them</h3> <br>
+
+First of all we have faced the declaration of variables that which variables is specific for forward and reverse pins of motors.
+ After that we have faced some issues in turning of the robot, we have controlled a smooth turning by changing the leap time(mentioned in the coding).
+ After troubleshooting and testing again and again finally we got the output.
+
+
+<h3>CAD Design of Enclosure  (Your design considerations)	</h3>  <br>
+<center><img src="Chassis.PNG" width="600" height="400" /></center> <br><br>
+
+<h3>CAD Design with Dimensions</h3>
+<center><img src="Dimention.PNG" width="500" height="500" /></center> <br><br>
+
+<h3>Picture of the final design </h3>
+<center><img src="ChassisPrint1.PNG" width="600" height="500" /></center> <br><br>
+
+<h3>Business model you can make with this product</h3>
+ Although our project is not going to help the community as this is a small prototype
+ of the bigger concept which is "obtaining the shortest path to the destination after passing
+ through several tangled and longer paths and returning through the simplest and the shortest one after acknowledgement".<br>
+ <b>Application</b> of this concept is in the rescuing department which includes the ambulances and the fire extinguishers.
+ As discussed, ambulance will take several puzzled and long paths but after
+ fetching the patient it will take the most simple and shortest path to get them to hospitals.<br><br>
+ 
+ 
+<br><br>
+<h3>Deligation of Tasks</h3>
+
+<center>
+<table style="width:70%">
+ 
+<tbody><tr>
+    <td></td>
+    <td> Shankar Das  </td> 
+	<td> Hammad Ahmed </td> 
+  </tr>
+  <tr>
+    <td> review of literature/datasheets</td>
+    <td> 60%</td> 
+	<td> 40%</td>
+  </tr>
+   <tr>
+    <td> Selection of components</td>
+    <td> 50%</td> 
+	<td> 50%</td>
+  </tr>
+   <tr>
+    <td> design of electrical circuit <br> and PCB Layout</td>
+    <td> 60%</td> 
+	<td>40%</td>
+  </tr>
+   
+    
+     <tr>
+    <td> Writing firmware</td>
+    <td> 60%</td> 
+	<td> 40%</td>
+  
+  </tr>
+    <tr>
+   
+    <td> testing/debugging of <br> Hardware and Software</td>
+    <td> 50%</td> 
+	<td> 50%</td>
+  
+  </tr>
+    <tr>
+    <td> Design of Chasis</td>
+    <td> 20%</td> 
+	<td> 80%</td>
+  </tr>
+</tbody></table>
+</center>
+
+
+
+
+ <h3>Intellectual Properties and Ethics Considerations</h3>
+<br> First of all we have Referred several sites but Instructables  was most helpful in comparison to all. In that site they have discussed every minute aspect regarding the machine. 
+ All those which were pre-requisites of our project,we have taken those from Instructables except the Printed Ciruit Board.
+ 
+ <h3>Cost of Project </h3> <br>
+<center>
+<table style="width:70%">
+ 
+<tbody><tr>
+    <td>Components</td>
+    <td> Cost (PKR) </td> 
+	 
+  </tr>
+  <tr>
+    <td>2 Micro Metal Gearmotors</td>
+    <td> 1000</td> 
+	
+  </tr>
+   <tr>
+    <td> QTR IR_Sensors</td>
+    <td> 1550</td> 
+
+  </tr>
+   <tr>
+    <td> Ball Causter</td>
+    <td> 400</td> 
+
+  </tr>
+   
+    
+     <tr>
+    <td>Chassis</td>
+    <td> 700</td> 
+	
+  
+  </tr>
+
+    <tr>
+    <td> Pair of Wheel</td>
+    <td> 600</td> 
+  </tr>
+  
+    
+  </tr>
+    <tr>
+    <td>7.4V Lipo Battery</td>
+    <td> 400</td> 
+  </tr>
+     
+  </tr>
+   
+  
+    </tr>
+    <tr>
+    <td> The Micro-controller (ATmega 32u4))</td>
+    <td> 300</td> 
+  </tr>
+   <tr>
+    <td> PCB bill of materials</td>
+    <td> 400</td> 
+  </tr>
+  
+  
+  
+ 
+</tbody></table>
+</center>
+<br>
+<h3>Results</h3> <br>
+Firstly our robort solved the whole maze and after that it has follow the shortest path.<br>
+It is left path preference robot.<br>
+<p align="justify" class="serif"> <center> <video src="Project.mp4"width="600" height="400" controls></video> </center> </p>
+
+
+<br>
+ 
+ <h3>Reference you have used in to implement the project</h3> <br>
+<font color="Blue"> <a href="https://www.instructables.com/id/Maze-Solving-Robot/.htm">https://www.instructables.com/id/Maze-Solving-Robot/</a> <br>
+ <a href="https://www.mouser.com/datasheet/2/268/7766s-1065155.pdf.htm">https://www.mouser.com/datasheet/2/268/7766s-1065155.pdf</a> <br>
+ <a href="https://www.elprocus.com/infrared-ir-sensor-circuit-and-working/.htm">https://www.elprocus.com/infrared-ir-sensor-circuit-and-working/</a> <br>
+ <a href="https://www.pololu.com/product/960.htm">https://www.pololu.com/product/960</a> <br>
+ 
+ </font>
+
+<br><br>
+
+<h2 id="C6">Appendix</h2> 
+<br><br>
+
+
+
+<h3> Zip file containing source code</h3> <br>
+
+ <a href="Source_Code.zip" download>
+<font color="Blue">click here to download Arduino code</font></a>
+
+<h3>Zip file containing sch and brd files</h3> <br>
+
+<a href="Board_and_Schemetic.zip" download>
+<font color="Blue">click here to download Eagle file </font></a>
+
+<h3>Zip file containing cad files </h3> <br>
+
+<a href="Chassis.zip" download>
+<font color="Blue">click here to download Solid work file of Chassis</font></a>
+
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+ We have learnt various valuable skills like PCB designing(through Eagle)
+, Chasis making(through Solid works) and hardware programming(through Arduino).We have learnt how a micro-controller works,through a comprehensive reading of their data sheets.
+
+
+
+<br><br><br><br><br><br><br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>
