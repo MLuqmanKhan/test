@@ -1,0 +1,568 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					<strong> Zaheer Khalid & Khalid Hussain </strong>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<div id="main-container">
+				<h1 style="text-align: center;"><strong>MPPT Solar Charge Controller</strong></h1>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1"><strong>Introduction</strong></h2>  
+The Objective of this project is to design a device to prevent batteries from over-charging and increase batterey life.
+ A normal 12V-14V rated Solar Panels produce 16V-18V at peak sun. The Maximum Power Point Tracking Solar Charge Controller will 
+ regulate the output voltage for effective charging of batteries. It also helps prevent backflow of current from batteries to solar
+ panels at night. MPPT solar charge controller monitors the voltage and current output of the solar panel and determines the 
+ voltage that the panel will produce at the maximum efficiency.
+ <br>  <br>
+
+
+<center><img src="s-l800.jpg"/><br></center><br><br>
+<br><br>
+<h2><strong>Project Execution Plan</strong></h2>
+<center><img src="PE.png" height="270"/></center><br><br><br>
+<h3><strong>Distribution of Tasks</strong></h3>
+<p>This project is a job of Team-work. I and my project memeber have different skills. So, we'll divide tasks according to our skills. The skill in which he's master, he'll lead in those tasks and I'll lead those tasks in which I've prominenet skill. Here is the table explaining division of jobs on the basis of our skills.</p>
+<br><center><table style="height: 184px; width: 721px;">
+<tbody>
+<tr>
+<td style="width: 320px; text-align: center;"><strong>Tasks</strong></td>
+<td style="width: 232px; text-align: center;"><strong>Khalid Hussain</strong></td>
+<td style="width: 155px; text-align: center;"><strong>Zaheer Khalid</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">Literature Review</td>
+<td style="width: 232px; text-align: center;">&nbsp;</td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">Design of Schematic</td>
+<td style="width: 232px; text-align: center;">&nbsp;</td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">PCB Designing</td>
+<td style="width: 232px; text-align: center;"><strong>Yes</strong></td>
+<td style="width: 155px; text-align: center;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 320px;">Hardware Implementation</td>
+<td style="width: 232px; text-align: center;"><strong>Yes</strong></td>
+<td style="width: 155px; text-align: center;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 320px;">Software Implementation</td>
+<td style="width: 232px; text-align: center;">&nbsp;</td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">Troubleshooting</td>
+<td style="width: 232px; text-align: center;"><strong>Yes</strong></td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">Design of Enclosure</td>
+<td style="width: 232px; text-align: center;"><strong>Yes</strong></td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td style="width: 320px;">Report Writing</td>
+<td style="width: 232px; text-align: center;">&nbsp;</td>
+<td style="width: 155px; text-align: center;"><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table> </center>
+<h2 id="C2"><strong>High Level Design</strong></h2>
+<p>Here is the Block Diagram for the my project. I've done some changes while implementing this block diagram idea. But major idea is the same.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<center><img src="BD.PNG" height="480" /><br></center>
+<br><br>
+<h3><strong>Description of Principle of Operations</strong></h3>
+<p>In this project, we've current and voltage sensors at input and output terminals which will constantly give input results to our Micro-Controller. On our Micro-Controller, we've programmed algorithms of Maximum Power Point Tracking Phenomenon. Micro-Controller will generate PWM (Pulse Width Modulatin) signal to control Voltage by using MOSFETs. MOSFETs will switch continuously due to PWM signal to control and regulate voltages. This operation of MOSFETs is actually the Phenomenon of D-Class Amplifiers.</p>
+<h3><strong>Choice of Componenets/Bill of Material</strong></h3>
+<ul>
+<li>
+<p><strong>ATMEGA 32u4 (Micro-Controller)</strong><br />ATMEGA-32u4 is a powerful micro controller which have a USB interface inside it. It's the major reason that I preffered ATMega-32u4 over other micro controllers. Moreover, these are the major feature which this micro controller have.</p>
+<ul>
+<li>32K bytes of In-System Programmable Flash with Read-While-Write capabilities</li>
+<li>1K bytes EEPROM</li>
+<li>2.5K bytes SRAM</li>
+<li>26 general purpose I/O lines (CMOS outputs and LVTTL inputs)</li>
+<li>32 general purpose working registers</li>
+<li>four flexible Timer/Counters with compare modes and PWM</li>
+<li>one more high-speed Timer/Counter with compare modes and PLL adjustable source</li>
+<li>one USART (including CTS/RTS flow control signals)</li>
+<li>a byte oriented 2-wire Serial Interface</li>
+<li>a 12-channel 10-bit ADC with optional differential input stage with programmable gain</li>
+<li>an on-chip calibrated temperature sensor</li>
+<li>a programmable Watchdog Timer with Internal Oscillator</li>
+<li>an SPI serial port</li>
+</ul>
+</li>
+</ul>
+<ul> <br>
+<li><strong>IR 2104 (Half-Bridge Driver)&nbsp;</strong> <br>A gate IR2104 driver is a power amplifier that accepts a low-power input from a controller IC and produces a high-current drive input for the gate of a high-power transistor such as a power MOSFET.</li>
+</ul><br>
+<center><img src="Picture2.PNG" height="350" /></center>
+<br> <ul>
+<li><strong>INA 213 (Current Shunt Monitors)&nbsp;</strong> <br>INA213 is used as Current Shunt Monitors which is used to sense current through a shunt resistor in a circuit.</li>
+</ul>
+<center><img src="Picture1.PNG" height="350" /></center>
+<br>
+<h2 id="C3"><strong>Design</strong></h2> 
+<p>Design of Project Electrical Scematic Design, PCB Board Design, Software Design and Enclosure Design for the Project. Following is the detail of design of Project.</p>
+<h3><strong>Electrical Schematic Design</strong></h3
+<p>I designed the schematic for my project on Eagle Software. During the schematic design the major concern was the appropriate pin selection of different ICs. I'm using ATMega32u4 Micro-Controller IC. After studying its datasheet, I connected my sensors and actuators very carefully. Moreover during the schematic design, power supplies to your components is a critical matter. Some ICs need 5V and some need 12V. I provided carefully each IC its required voltage.</p>
+<p>I've explained the phenomenon of my project above. Here, you can see the image of my electrical schematic zooming by hovering cursor over it.&nbsp;</p>
+<p>I'm sending sensors data to Micro-Controller through analogue pins and receiving actuators data through digital pins. Micro-Controller is sending PWM Signal to control voltage and feeding information to 16X2 LCD.&nbsp;</p>
+<p>I'm using Voltage Regulator circuit to convert 12V supply into 5V output for components.&nbsp;</p>
+<p>The major portion of circuit is MPPT Charge Controller Circuit. It has voltage divider circuit for voltage sensing and a current shunt monitor for current sensing at input. It has Half-Bridge Driver IC which receives PWM signal from Micro-Controller and amplifies it for Power MOSFETs. Power MOSFETs switch accordingly the duty cycle of PWM signal and regulate the voltage. And then we've current and voltage sensors at output.</p>
+<p><strong>Hover the cursor over the below image to see zoomed details of Electrical Scematic.</strong></p>
+<p>&nbsp;</p>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 150px;
+  height: 100px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 450px;
+  height: 300px;
+}
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+</head>
+<body>
+<div class="img-zoom-container">
+  <img id="myimage" src="Untitled3.png" height="450">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+
+</body>
+</html>
+<h2><strong>PCB Layout</strong></h2>
+<p>Here is the PCB layout image of my circuit Board.</p>
+<p>&nbsp;</p>
+<center><img src="PCB.PNG" height="600" /></center>
+<h4><strong>Challenges faced while Routing</strong></h4>
+<p>We faced many challenges while routing of Board file. The major issue of overlapping lines. We resolved this issue by using <strong>0&Omega; </strong>resistors in SMD and DIP packages. For some DIP comonents we've to increase drills diameter. The major challenge for us to sort out a maze of lines in a well-sorted way. This job gave us really a tough time. We used appropriate width of lines by keeping in mind the amount of current flowing through the lines.</p>
+<h4><strong>Clean Printed Circuit Board</strong></h4>
+<center><img src="CPCB.jpg" height="600" /></center><br>
+<h4><strong>Populated Printed Circuit Board</strong></h4>
+<center><img src="PPCB.jpg" height="600" /></center><br>
+<h4><strong>Bootloader Burning Operation</strong></h4>
+<p>I burnt bootloader into my Controller Board using SPI Header. I just connected it with my PC, opened Arduino IDE and uploaded a simple program to burn bootloader. After getting my board functional, I tested it for LED blinking program and it resulted successfully.</p>
+<br><center><img src="boot2.jpg" height="550" /></center><br>
+<h3><strong>Software Development</strong></h3>
+<h4><strong>Flow Chart of Software</strong></h4>
+<br><center><img src="Algorithm.jpg" height="450" /></center><br>
+<h4><strong>Challenges faced in Coding</strong></h4>
+<p>I was actually using source code from soldernerd.com website. This code was developed for Arduino UNO Board. I've to implement this code on Arduino Leonardo Board, so made some changes in Timers and Registeers selection and their pre-Scalar adjustment. I used Timer2 of ATMega32u4 which is a 16 bit Timer. I adjusted pre-scalar to get my required output.</p>
+Describe the structure of your software. In a pictorial format you may describe the flow of your algorithm and how you have used the functions to implement the code in an efficient way.
+<br><br>
+<h3><strong>Design of Enclosure/Casing</strong></h3>
+<p>I designed the casing of my project on Solid Works Software. I measured proper dimensions for my Circuit Board, LCD and Connectors and then designed according to my requirements.</p>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="snip3.png" style="width:100%">
+  <div class="text">Frame of the Enclosure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="snip2.png" style="width:100%">
+  <div class="text">Top Side of the enclosure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="snip1.png" style="width:100%">
+  <div class="text">Bottom Side of the Enclosure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="Side.jpg" style="width:100%">
+  <div class="text">Side View of Printed Enclosure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="Top.jpg" style="width:100%">
+  <div class="text">Top Side of Printed Enclosure</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="Bottom.jpg" style="width:100%">
+  <div class="text">Bottom Side of Printed Enclosure</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>  
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+<br>
+<br><br>
+<h2><strong>Results</strong></h2>
+<p>After populating my circuit board, I attempted many times to get my board functional. On my 21st attempt, I got successful results. I troubleshooted the code for my circuit a lot to get my desired outputs.</p>
+<p>Here you can see the image of my fully functional circuit.</p>
+<br><center><img src="fb.jpg" height="650" /></center><br>
+<br>
+<h4><strong>Final Successful Attempt Video</strong></h4>
+<p>Here is the video of my final successful attempt.</p><br>
+<!DOCTYPE html>
+<html>
+<body>
+
+<center><iframe width="900" height="550" src="https://www.youtube.com/embed/_gIkGaK3SXY">
+</iframe></center>
+
+</body>
+</html>
+<br><br>
+<h2><strong>Business Model</strong></h2>
+<p>This Project can be implemented on commercial level. The basic purpose of this project is to conserve battery life. We can see many equipments where we use rechargeable batteries. This Charge controller can be used in vehicles, big machines, small electronic components like laptops where we charge batteries. By varying power rating of this project, we can use it on any scale.</p>
+<p>In Pakistan, we can implement this idea for villages where there are no electric power supply lines. People are attracted to rapidly growing Solar Panels technology for power generation, but they are afraid to invest money on Solar Panels Power Generation Project due to very low life of Lithium-Ion Batteries. By improving the power rating of my MPPT Solar Charge Controller circuit, we can give the rural areas of Pakistan a good hope to invest on Solar Panels technology and batteries to save power for night. This MPPT Solar Charge Controller will actually increase battery life to some extent.</p>
+<br><br>
+<h2><strong>Appendix</strong></h2>
+<p>My project is an open source work. You can get benefit from my work and update it for your requirement. I'll be thankful for your positive feedbacks and suggestions.&nbsp;</p>
+<p>&nbsp;</p>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><strong>Click on the logo below to download the Schematic and Board files for the circuit:</strong><p>
+
+<a href="Schematic & Board Files for MPPT Solar Charge Controller Circuit.zip" download="w3logo">
+  <img src="Schematic.jpg"  width="100" height="100">
+</a>
+
+
+</body>
+</html>
+<br><br>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><strong>Click on the logo below to download the Source Code for the circuit:</strong><p>
+
+<a href="Source Code for MPPT Solar Charge Controller Circuit.zip" download="w3logo">
+  <img src="sourcecode.jpg" width="100" height="130">
+</a>
+
+
+</body>
+</html>
+<br><br>
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><strong>Click on the logo below to download the CAD Design Files for the Enclosure:</strong><p>
+
+<a href="Enclosure Design-SolidWorks Files.zip" download="w3logo">
+  <img src="sw.jpeg"  width="100" height="100">
+</a>
+
+
+</body>
+</html>
+<br><br>
+<h2><strong>References</strong></h2>
+<p>I got help from these sources and persons. I'm providing their links so you may utilize their work.</p>
+<p><strong><span style="color: #0000ff;"><a style="color: #0000ff;" title="Soldernerd.com " href="https://soldernerd.com/mppt-solar-charger/">https://soldernerd.com/mppt-solar-charger/</a></span></strong></p>
+<p><strong><span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.instructables.com/id/ARDUINO-SOLAR-CHARGE-CONTROLLER-Version-30/">https://www.instructables.com/id/ARDUINO-SOLAR-CHARGE-CONTROLLER-Version-30/</a></span></strong></p>
+<p>&nbsp;</p>
+<p><strong>Dr. Muhammad Asim Samejo (Assistant Professor at Sukkur IBA University,Pakistan)</strong></p>
+<p><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="Dr. Muhammad Asim Samejo's Profile" href="http://www.iba-suk.edu.pk/faculty/details/INS-0011">http://www.iba-suk.edu.pk/faculty/details/INS-0011</a></strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Nadir Ali (Fab Lab Attendant at Sukkur IBA University, Pakistan)</strong></p>
+<p><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="E-mail Address" href="mailto:nadir.ali@iba-suk.edu.pk">nadir.ali@iba-suk.edu.pk</a></strong></span></p>
+<p><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="Research Gate Profile" href="https://www.researchgate.net/profile/Nadir_Ali8">https://www.researchgate.net/profile/Nadir_Ali8</a></strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Engr. Aizaz Ali Larik (Lab Engineer at Sukkur IBA University,Pakistan)</strong></p>
+<p><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="Engr. Aizaz Ali's Profile" href="http://www.iba-suk.edu.pk/faculty/details/INS-0424">http://www.iba-suk.edu.pk/faculty/details/INS-0424</a></strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Sagheer Abbas Shah ( Undergraduate Electrical Engineering Student at Sukkur IBA University, Pakistan)</strong></p>
+<p><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="E-mail Address" href="mailto:sagheer.be18@iba-suk.edu.pk">sagheer.be18@iba-suk.edu.pk</a></strong></span></p>
+<br><br>
+<h3 style="text-align: left;"><strong>Contact Us</strong></h3>
+<p>You can contact us to get any sort of help related to this project.</p>
+<p>&nbsp;</p>
+<p><strong>Zaheer Khalid (Undergraduate Electrical Engineering Student at Sukkur IBA University, Pakistan)</strong></p>
+<p>Email:&nbsp;<span style="color: #3366ff;"><strong><a style="color: #3366ff;" title="E-mail Address" href="mailto:zaheer.be18@iba-suk.edu.pk">zaheer.be18@iba-suk.edu.pk</a></strong></span></p>
+<p><span style="color: #000000;">Contact:<span style="color: #339966;">&nbsp;<strong><a style="color: #339966;" title="Cell Number" href="+92 342 9517366&nbsp;">+92 342 9517366&nbsp;</a> </strong></span></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"><strong>Khalid Hussain (Undergraduate Electrical Engineering Student at Sukkur IBA University, Pakistan)</strong></span></p>
+<p><span style="color: #000000;">Email:&nbsp;<span style="color: #3366ff;"><strong><a style="color: #3366ff;" title="E-mail Address" href="mailto:khalidhussain.be17@iba-suk.edu.pk">khalidhussain.be17@iba-suk.edu.pk</a></strong></span></span></p>
+<br><br>
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>
