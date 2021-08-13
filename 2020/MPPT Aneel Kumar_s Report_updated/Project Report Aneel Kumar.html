@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MPPT Solar Charge Controller</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="container-fluid">
+
+	<div class="row">
+
+    <div class="col-1 order-first " id="box">	</div>
+    <div class="col-1 order-last " id="boxR">	</div>
+    
+
+    <div class="col-10 container-fluid">
+
+    <div class="w-100 text-center my-5" style="">
+        <h1 class="align-middle">Project Report by Aneel Kumar & M. Javed</h1>
+    </div>
+
+    <ul class="nav justify-content-center my-5 ">
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#intro">Introduction</a>
+        </li>
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#PEP">Project Execution Plan</a>
+        </li>
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#TD">Task Distribution</a>
+        </li>
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#HLD">Circuit Design</a>
+        </li>
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#RST">Results</a>
+        </li>
+
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#REFS">Reference</a>
+        </li>
+
+        <li class="nav-item border-right">
+            <a class="nav-link font-weight-bold" aria-current="page" href="#APP">Appendix</a>
+        </li>
+
+
+    </ul>
+
+
+
+    <main role="main" class="container">
+    	<div id="page-title">MPPT Solar Charge Controller</div>
+    	<br><br>
+
+        <div id="intro" >
+            <h3>Introduction</h3>
+            <p>An MPPT, or maximum power point tracker is an electronic DC to DC converter that optimizes the match between the solar array (PV panels), and the battery bank or utility grid. To put it simply, they convert a higher voltage DC output from solar panels (and a few wind generators) down to the lower voltage needed to charge batteries.
+                 Most PV panels are built to put out a nominal 12 volts. The catch is "nominal". In actual fact, almost all "12-volt" solar panels are designed to put out from 16 to 18 volts. The problem is that a nominal 12-volt battery is pretty close to an actual 12 volts - 10.5 to 12.7 volts, depending on state of charge. Under charge, most batteries want from around 13.2 to 14.4 volts to fully charge. So to cope with this problem, a charge controller is required.
+                To work on this amazing project, Aneel Kumar & Muhammad Javed Worked in team and had a very vast learning experience under the supervision of respected Dr. Asim Samejo.</p>
+        </div>
+
+        <div class="m">
+            <h3>Design Requirements</h3>
+            <p>
+                Our design requirement was that it should be as much compact as we can make it. Also, we must have main board and microcontroller board adjusted on each other. For that we had to make a main BCB board of MPPT Solar charge controller and a PCB board of Arduino Leonardo to control the main circuit.
+            </p>
+        </div>
+
+
+        <div>
+            <h3>Sample Image of Required Design</h3>
+            <p>While designing the circuit, a rough sketch was needed so that we can refer to a particular design and idea. After thinking a lot on this, we came up with a sketch that our project should look like this.</p>
+
+            <img src="./1.PNG" class="img-fluid mx-auto d-block" alt="Sample Image of Required Design">
+
+            <p>Seeing this design we had in mind that in the enclosure will contain the PCB boards inside it and it will look presentable.</p>
+
+        </div>
+
+        <div>
+            <h3 id="PEP">Project Execution Plan</h3>
+            <p>Since it was a semester project, so we had 4 months to complete our project. We dived this duration into month wise work progress as in following pattern.</p>
+            <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Literature Review</td>
+                        <td class="bg-dark"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Preparation of Scheme / Model</td>
+                        <td></td>
+                        <td class="bg-dark"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Implementation of Scheme / Model</td>
+                        <td></td>
+                        <td></td>
+                        <td class="bg-dark"></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Final Design & Write-up</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bg-dark"></td>
+                    </tr>
+ 
+
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+        <div>
+            <h3 id="TD">Task Distribution</h3>
+            <p>Keeping above work progress in mind, we divided the tasks in team so that we can work more effectively to reach our target. The division of this work is given below:</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Assigned Person</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Literature Review </td>
+                        <td>Javed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Components & its Info</td>
+                        <td>Javed</td>
+                    </tr>
+                    <tr>
+                        <td>schematic desiging & Routing </td>
+                        <td>Aneel</td>
+                    </tr>
+                    <tr>
+                        <td>PCB Population</td>
+                        <td>Aneel</td>
+                    </tr>
+                    <tr>
+                        <td>Software Implemention</td>
+                        <td>Collective Task</td>
+                    </tr>
+                    <tr>
+                        <td>Testing And Troubleshooting</td>
+                        <td>Collective Task</td>
+                    </tr>
+                    <tr>
+                        <td>Case Designing</td>
+                        <td>Javed</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td>Collective Task</td>
+                    </tr>
+  
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <h3 id="HLD">High Level Design</h3>
+            <p>For understanding the high level designing of this project, let’s have a look on following diagram.</p>
+            <img src="./3.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+            <p>Voltage is coming from solar panel and is being fed to buck converter, voltage sensor and current sensor. Buck converter steps down the voltage. Leonardo board assigns the suitable voltage for charging of battery which is being fed by the buck converter. This information goes to the Leonardo board which then displays this info on LCD. We can connect load with this battery also.</p>
+        </div>
+
+        <div>
+            <h3>Components Used:</h3>
+            <ol>
+                <li>
+                    <b>1.44’’ 128x128 TFT LCD</b>
+                    <p>
+                        This Color TFT LCD display has 128 x 128 resolution and 262 color, it uses SPI interface to communicate with controller such Arduino, it is the best upgrading of the Nokia5110
+                    </p>
+                    <img src="4.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+                </li>
+                <li>
+                  <b>MOSFETs</b>
+                  <p>MOSFETs are tri-terminal, voltage-controlled, high input impedance devices which form an integral part of vast variety of electronic circuits.
+                    It is also used for switching as well as signal amplifications.
+                    </p>
+                </li>
+                <li><b>Voltage Sensors</b></li>
+                <li><b>Current Sensor</b></li>
+                <li><b>Buck Converter</b></li>
+                <li><b>Arduino Leonardo</b></li>
+                <li><b>Inductor</b></li>
+                <li><b>Capacitors</b></li>
+                <li><b>Resistors</b></li>
+                <li><b>Voltage Regulators</b></li>
+            </ol>
+        </div>
+
+
+        <div>
+            <h3>PCB Schematics:</h3>
+            <p>Now for designing PCB, we used Eagle software. The boards of micro-controller and of main circuit had to be designed separately. 
+                Those designs are given below:</p>
+                <ol>
+                    <li><b>Arduino Leonardo Board</b></li>
+                    <img src="5.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+                    <li><b>MPPT Solar Charger Circuit </b></li>
+                    <img src="6.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+
+                </ol>
+        </div>
+
+
+        <div>
+            <h3>Troubleshooting we faced during Routing:</h3>
+            <p>Having schematic of controller board and main Board separately, 
+                when we started to route our boards, the first issue we faced was that how 
+                should we route two boards in a way that we can connect them easily, so what 
+                we do was that we used two connectors to connect controller board with main board 
+                in a way that main board is placed on controller board. The next thing that troubled us was how route these two boards, so after routing and derouting the board around 4 to 5 times, we got a direction and started to route controller board by taking reference to Atmega238P and connectors in main board. When we have routed many of components, one more issue we faced was the components that were left could have a possible path to route them, 
+                so there we used resistors of 0 ohms to provide path to those components. </p>
+        </div>
+
+        <div style="text-align: center;">
+            <h3>PCB Layout:</h3>
+            <p>After routing, we got our final PCB layouts. Those layouts are shown below:</p>
+            <img src="7.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+            <b  >PCB Layout of Arduino Leonardo</b>
+            <img src="8.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+            <b  >  PCB Layout of MPPT Solar Charger</b>
+           
+        </div>
+
+        <div>
+            <h3 style="text-align: left;">Milling Process:</h3>
+            <p style="text-align: left;">After the finishing of these boards, SRM files were generated to get our 
+                PCB boards milled by SRM-20 machine available in our fablab</p>
+                <img src="9.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+              <p> Above shown picture was captured while milling was in process.</p>
+            </div>
+
+        <div style="text-align: center;">
+            <h3 style="text-align: left;">Fabricated PCB:</h3>
+            <p style="text-align: left;">After the milling process, we finally got our PCB boards in our hands. </p>
+            <img src="10.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+             <p>PCB Board of Arduino Leonardo</p>
+             <img src="11.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+             <p>PCB Board of MPPT Solar Charge Controller</p>
+        </div>
+        <div>
+            <h3>Bill of Material:</h3>
+            <p>After this process, we were given components to populate the PCBs.</p>
+            <img src="12.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+
+        </div>
+        <div style="text-align: center;">
+            <h3 style="text-align: left;">Populated PCB:</h3>
+            <p style="text-align: left;">After the successful mlling of PCBs, now the next task was to populate them with components.
+                 That was don through soldering. The soldered PCBs are shown below:</p>
+                 <img src="13.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+                 <p>Populated PCB of MPPT</p>
+                 <img src="14.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+                  <p>Populated PCB of Arduino Leonardo</p>
+
+
+        </div>
+        <div>
+            <h3>Procedure adopted to burn Bootloader:</h3>
+            <p>We were using bootloader connector which was connected to PC through USB port, 
+                Then we opened the Arduino program and write the bootloader program there,
+                 which was then uploaded to the controller board.</p>
+                 <img src="15.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+
+        </div>
+        <div>
+            <h3>Testing of LCD:</h3>
+            <p>Now that we built our micro-controller and successfully bootloaded it, so that was he time for testing.
+                 We started with testing of LCD with a simple Hello World display program.</p>
+                 <p>The results if that test is shown below;</p>
+                 <img src="16.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+
+        </div>
+        <div>
+            <h3>Build-up Circuit:</h3>
+            <p>After the successful testing of LCD ,now was the time to build our circuit 
+                in a proper manner and then test it. </p>
+                <img src="17.PNG" class="img-fluid mx-auto d-block" alt="High Level Design">
+             <p>Above picture shows the testing ofour main circuit with Arduino Leonardo. 
+                 For running of Leonardo board, 5volts were needed. We gave 12volts and used
+                  LM7805 voltage regulator which converts 5volts from 12volts. Another voltage 
+                  regulator was used to convert 5volt into 3v3 volts which was used by LCD.
+                   Another 12 volts were applied to circuit which was is requirement to run. 
+                   For solar panel reference voltage, we used a variable power  supply and gave
+                    17 volts to the circuit. 
+                So, that’s how we implemented our main circuit
+                </p>
+
+        </div>
+        <div>
+            <h3>Coding:</h3>
+            <p>Code was designed according to our circuit requirement which is attached iin the zip file.</p>
+        </div>
+        <div id="RST">
+            <h3>Results:</h3>
+            <p>Attachment of video.</p>
+        </div>
+        <div>
+            <h3>Cost of the Project</h3>
+            
+              
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Components</th>
+                    <th scope="col">Cost</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Atmega328u4</td>
+                    <td>700</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Crystal Oscillator</td>
+                    <td>10</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Capacitors</td>
+                    <td>5xQuantity</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Resistors</td>
+                    <td>10/12</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Diodes</td>
+                    <td>6</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>BJTs</td>
+                    <td>5</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>MOSEFTs</td>
+                    <td>40</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>LEDs</td>
+                    <td>5</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>LCD</td>
+                    <td>1000</td>
+                    </tr>
+                    
+                
+                </tbody>
+              </table>
+              <p>So, our project will cost around 2000/-</p>
+        </div>
+        <div>
+            <h3>Commercialization Aspects:</h3>
+            <p>The MPPT Charge Controller can also be used as a BUSINESS MODEL as people in many far 
+                flung areas are still deprived of the basic need of electricity, so if this charge 
+                controller is used in these areas, it will help the people to at least use a bulb at 
+                night or also they can used it for charging purposes of phones etc. Also, It can also 
+                be sale to the companies who use batteries as there backup for electricity as this charge
+                 controller will help them to increase the life of batteries. Also it is a cheap product
+                  that everyone can 
+                find it affordable as compared to other means of controlling battery systems.</p>
+        </div>
+        <div>
+            <h3>Conclusion:</h3>
+            <p>That was all  from us. A little effort to apply the knowledge we gained through this subject.
+                In the end we want to express our gratitude to sir Asim Samejo for guiding us through all manners. From providing helping material to providing components to always having a visionary thought and for being always available for help.
+                We also want to thank Mr. Aizaz Ali Larik and Mr. Nadir Ali for always being there for us. They helped us in every manner they could. Without the helping hands of these gentlemen, this project would have much more difficult and much more challenging for us.
+                </p>
+        </div>
+        <div>
+        	 <video style="width: 100%; height: 30%;" controls>
+                <source src="./video.mp4" type="video/mp4">
+
+              </video> <br>
+            <h3 id="REFS">Reference:</h3>
+            
+            <a href="https://soldernerd.com/mppt-solar-charger/" target="_blank">https://soldernerd.com/mppt-solar-charger/</a>
+        </div>
+        <div style="text-align: left;">
+            <h3 id="APP">Appendix:</h3>
+            <p>Zip File:
+            <a href="completecircuitofmmpt.zip">Complete Circuit of MMPT</a> <br><br>
+
+            <p style="text-align: center;">Report Submitted on Time	....................... </p>
+            <p style="text-align: center;">Matlab Profeciency	.......................</p>
+        </div>
+    
+    </main><!-- /.container -->
+
+
+</div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+
+
+</div>
+
+
+
+<script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

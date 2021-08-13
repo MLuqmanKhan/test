@@ -1,0 +1,472 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Bilal Ahmed!)
+		</title>
+	</head>
+	
+	<body>
+
+
+<body bgcolor="#C0C0C0">
+
+
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					<b> Bilal Ahmed</b>
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">1.Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">2. Project Overview</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">3. Schematic Diagram Explanation</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">4. Project Strategy</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">5. Components in Details</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">6. Electronic Circuit</a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C7">7. Challenges</a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C8">8. Prototype Discussion</a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C9">9. Commercial Importance</a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C10">10. Conclusion Summary</a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C11">11. References </a></div><div class="separator"></div>
+                                        <div class="link"><a href="#C12">12. Acknowledgement </a></div><div class="separator"></div>
+
+                                              </div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">DIY Oxygen Concentrator</div>
+				<div id="assignments">
+
+
+<br><br>
+<h2 id="C1"><b>Introduction</b></h2>  
+An oxygen concentrator is a type of medical device used for delivering oxygen to individuals with breathing-related disorders.:<br>
+Individuals whose oxygen concentration in their blood is lower than normal often require an oxygen concentrator to replace that oxygen.</br>
+Oxygen concentrators filter surrounding air, compressing it to the required density and then delivering purified medical grade oxygen  </br>
+into a pulse-dose delivery system or continuous stream system to the patient. </br>
+There are several technologies available for generating air enriched in oxygen, including air separation by fractional distillation,
+electrolysis and pressure swing adsorption. </br>
+From these methods pressure swing adsorption has the lowest infrastructure cost and complexity and was selected for the generation of oxygen
+in a patient care scenario (10 – 60 l/min).</br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+
+<br><br>
+
+
+
+<h2 id="C2"><b>Project Overview</b></h2>  
+The aim of this project is to construct oxygen concentrators with minimal technical requirements. </br>
+The purpose of this project to model the prototype of oxygen concentrator in relatively simple environments using common materials.</br>
+Basically PSA (pressure Swing Adsorption) technique, is used to extract O2 from surrounding air.O2 concentrator basically of two type:</br>
+<b>1)	1-column setup:</b>In general, it consists of one column (one Zeolite Bed) </br>
+<b>2)      2-coulumn setup:</b>In general, it consists of two column (two Zeolite Bed)</br>
+We have worked on 2-coulumn setup, because of optimal capacity of concentrated Oxygen and to get closer to commercial device in term of capacity (production rate) and size.</br>
+In addition, the prosed production rate of this project is to get above 90% oxygen in outlet stream (1-3 l/min) using pressuring air (2-3 bar) in input.</br>
+<center><img src="work.JPG" height="300" /><br></center>
+We would recommand you to goes through these links, to know more about this project</br>
+<b><a href="https://github.com/oxycon/ProjectApollo">GitHub.com</a>, <a href="https://www.reddit.com/r/lampwork/comments/jz2xno/oxygen_concentrator_setup/">Rreddit.com </a>, <a href="https://ethz.ch/en/news-and-events/eth-news/news/2020/04/cost-effective-oxygen-concentrators.html">ethz.ch/en website</a> and <a href="http://oxygenator.geprojects.tech/phpbb/">oxygenator.Forum</a></b></br>
+
+ 
+
+<br><br><br><br>
+<h2 id="C3"><b>Schematic Diagram Explanation</b></h2> 
+<center><img src="1st pic.JPG" height="300" /><br></center>
+In Pressure Swing Adsorption (PSA), pressurised air is feed into the column(filled with zeolite).The Zeolite is a microporous or molecular sieves material,</br>
+which selectively captures the nitrogen from the airstream and oxygen enriched air leaves the column.As soon as the Zeolite is saturated with </br>
+nitrogen, the column is vented to release the nitrogen.Then the column is ready for a second cycle, and in switched (loading/venting) operation</br>
+can produce a quasi-continuous stream of oxygen enriched air.Simultanously the process is going on. </br>
+
+
+
+
+<br><br>
+
+
+
+<br><br>
+<br><br>
+<h2 id="C4"><b>Project Strategy</b></h2> 
+Basically we have divided the whole project into three stages.In first stage we have completed the the electronics circuit, including fabrication of PCB Board and implementation of arduino coding
+to check the safe operation of electronics components.In second stage to design small porous type membrane for air filtration purpose inside each zeoilte containers. </br>
+In third stage to assembled all the components.
+
+<br><br>
+
+<br><br>
+
+<br><br>
+<h2 id="C5"><b>Components in Details</b></h2> 
+
+<b>1. Power Supply:</b></br>
+We have used two separate power supply to provide 12V for air compressor and 24V for pneumatic valve </br>
+<center><img src="24V.JPG" height="300" /><br></center>
+                     
+<br>            <u>     220V/24V(DC) Power supply</u></br>
+
+
+<center><img src="12v supply.JPEG" height="300" /><br></center>
+<u>220V/12V(DC) Power supply</u></br>
+<br></br>
+<b>2.Oil free air compressor:</b></br>
+We have worked with a small,oil-free and cheap air-compressor(usually used in tyre shop).Having pressure of range 2-3 bar.</br>
+The main advantage of oil-free compressor is that, the oxygen enriched air leaving the unit will have the same purity (oil/toxins) </br>
+as the air feed to the concentrator.</br>
+<center><img src="Compressor.JPEG" height="300" /><br></center>
+<u>Oil-free Compressor</u></br>
+<br></br>
+<b>4.Pressure Gauge:</b></br>
+We haved used Pressure Gauge to measures the compressed air pressure at the input side, so to loook out the operated pressure and to avoid any damage to Zeolite Container. </br>
+
+<center><img src="pressure gauge.JPG" height="300" /><br></center>
+<br><u>pressure gauge</u></br>
+<br></br>
+
+
+
+
+
+<b>5. Relay Module:</b></br>
+We haved worked with 4-Channel Relay Module for the safe operation of air-compressor and valves switching purpose </br>
+<center><img src="Module.JPG" height="300" /><br></center>
+<br><u>4-Channels Relay Module</u></br>
+<br></br>
+
+<b>6.Two 3-way pneumatic valves</b></br>
+We have used two pneumatic valves, to feed compressed air into one of the zeolite container and at the time to refuel the other nitrogen contaiminated zeolite container, as mentioned in schematic digram.</br>
+We have worked with " VT3O7V-5G1-01" Model.The link of data sheet is mentioned below:</br>
+<b>Click <a href="https://www.smcpneumatics.com/VT307V-5G1-01-F.html">here</a></b>
+
+<center><img src="valve.JPG" height="300" /><br></center>
+<u>Soliend Valve</u></br>
+<br></br>
+
+<b>7.Two Zeolite bed/container:</b></br>
+The proposed dimension of each zeolite container for this prototype would have(Lenght=6" and Dimension=2.5")</br>
+So to filled with zeolite. </br>
+<center><img src="container.jpg" height="300" /><br></center>
+<u><br> Zeolite Bed</u></br>
+
+<br></br>
+<b>8.Zeolite Materials:</b></br>
+The proposed zeolite material for this prototype would be (each column. 300-500g LiX).</br>
+To adsorb nitrogen from the air in pressure swing adsorption (PSA) processes while allowing the oxygen to pass through the system. </br>
+The columns filled with a material called Lithium X-zeolite. The material has very small pores and a special chemical structure, </br>
+so that the oxygen molecules in the air pass through, but the nitrogen molecules remain trapped because the molecular size of Nitrogen is larger as compared to Oxygen size to pass the zeolite materials.The membrane enables them to separate molecules of different sizes.</br>
+It is, therefore, sufficient to force air through the column in pulses to enrich the oxygen in the gas mixture.</br>
+The links below lead to information on some of standard zeolite products:</br>
+
+<b><a href="https://www.eurecat.com/zeolite-molecular-sieve.php">eurecat.com</a></b> </br>
+<b><a href="https://www.tosoh.com/our-products/advanced-materials/zeolites-for-molecular-sieves">tosoh.com/molecular-sieves</a></b></br>
+<b><a href="https://www.intechopen.com/books/zeolites-useful-minerals/industrial-zeolite-molecular-sieves">intechopen.com/zeolites</a></b></br>
+<br></br>
+
+<center><img src="Sieve.jpg" height="300" /><br></center>
+<u><br> Molecular Sieves(LiX)</u></br>
+<br></br>
+<b>9.PCB Board:</b></br>
+We haved worked with Attiny44 microcontroller, so to avoid manually operation of the the oxygen concentrator.</br>
+<center><img src="pinconfig.png" height="300" /><br></center>
+<u><br> Attiny44 Pin Configiuration</u></br>
+
+<center><img src="Capture.PNG" height="700" /><br></center>
+<u><br> PCB Schematic Diagram (Eagle Software):</u></br>
+<b>pin description:</b></br>
+VCC - Supply voltage.</br>
+
+GND – For grounding pins.</br>
+
+PORTB(PB3:PB0) – Port b is a 4-bit bi-directional input and out put port.in that PB3 which has RESET capacity also it is used as an input or output pin.</br>
+
+PORTA(PA7:PA0) - Port a is 8-bit bi-directional input or output buffers have symetrical direction.</br>
+
+
+<b><u>connection reuirment of a attainy programmig:</b></u></br>
+six wires isp programming</br>
+
+SCK(serial clock):programming clock,generated by the In-system programmer(Master)</br>
+
+MOSI(Master Out-Slave IN):Communication line from In-system Programmer to target AVR being programmed</br>
+
+MISO(Master in-Slave Out):Communication line target Avr to in system programmer</br>
+
+GND(common ground):it connect to the ground</br>
+
+RESET:to enable in-system programming</br>
+
+VCC:to allow simple programming of targets operating at any voltage,the in-system programmer can draw power from the target .</br>
+<b>LED circuit diagram:</b></br>
+For the resistor calculation ,I used resistor calculator and I get the result is 470 Ohm then I use two 499 ohm resistor because I am adding two LED in this circuit.</br
+
+ 
+<center><img src="block diagram.PNG" height="300" /><br></left>
+<u><br> PCB Final Routing Design (Eagle Software)</u></br>
+<center><img src="bilal_traces.PNG" height="700" /><br></center>
+<u><br> PCB traces </u></br>
+<center><img src="components.JPG" height="400" /><br></center>
+PCB components</br>
+<center><img src="components bill.JPG" height="400" /><br></center>
+<br><u>PCB Components (Eagle Sotware)</u></br>
+
+<center><img src="pcb fab.JPG" height="400" /><br></center>
+<u>Printed PCB </u></br>
+
+
+<center><img src="attiny44.JPG" height="400" /><br></center>
+<u> PCB with all components soldered</u></br>
+
+<center><img src="boostload.JPG" height="400" /><br></center>
+<u>Succesfully Bootloading </u></br>
+
+<center><img src="code burn.JPG" height="400" /><br></center>
+<u>Succesfully Uploaded Arduino Sketch(Project Code) </u></br>
+<br></br>
+
+
+
+<b>10.Oxygen storage container:</b></br>
+To store the oxygen rich air.</br>
+<center><img src="O2 tank.JPG" height="300" /><br></center>
+<u>Oxygen Humidifier Tank</u></br>
+
+<br><br>
+
+<br><br>
+<h2 id="C6"><b>Electronic Circuit</b></h2> 
+In an electronic circuit, the 220/12V(DC) power supply is connected with an oil-free air compressor, the 220/24(DC) supplied 24V(DC) to the pneumatic valves </br>
+through 4-Realay Module. The PCB is connected with with PC, so you don't need to supply 5V(DC) separately to the the PCB Board.Then succesfully uploaded Arduino code on PCB Board,</br>
+as per  requirement.I have used 3 channels of Relay Module.</br>
+At channel-1 the valve-A is connected, with channel-2 valve-B is connected and with channel-3 air-compressor is connected.</br>
+During cycle-1(for 5 seconds) the valve-A fuel compressed air into the container-A and at the same same valve-B refuel the container-B and vice versa.<br>
+We set delay of 3 seconds to control the operation of air-compressor (just to check the function of relay-Module and for safe operation of the circuit).</br>
+But in general, the process is going simultanouslly.</br>
+
+
+<br><br>
+<br><br>
+<h2 id="C7"><b>Challenges</b></h2>
+We experienced many challenges during the construction of Oxygen Concentrator.As like to understand the functionality, safe operation and assembling of the components.</br>
+The main problem was that, we have not any idea about this Biomedical  device.  We can't take any risk during the whole process because of </br>
+the components high price, due to unavailibility of the components in local market. To overcome these challenges we have adopted following  procedures:</br>
+First of all,we have gone through the Literature Review,watched many videos and visited many websites i.e </br>
+<a href="https://github.com/oxycon/ProjectApollo">GitHub.com</a>,<a href="https://www.reddit.com/r/lampwork/comments/jz2xno/oxygen_concentrator_setup/">Rreddit.com </a> and <a href="https://ethz.ch/en/news-and-events/eth-news/news/2020/04/cost-effective-oxygen-concentrators.html">ethz.ch/en website</a></br>
+
+
+Secondly,we have second use cpmponents so we were confused alot about the functionality of the pneumatics valves, but when searched alot and found the datasheet of </br>
+relevant components and after studied the the data-sheet we learned that the openning and closing of the valves is an internal function of the valve, </br>
+so we got that we have to just to perform the switching of valves rather than to control their functionality.</br>
+In addition of that, we watched related videos to know about the assembling and safe operation of an electronics circuit which hepled us a lot.</br>
+We helped from DVM(Digital Voltmeter) to enssure healthy and equipmentment safety, rather than to Swich-ON directly.</br>
+
+
+
+
+
+<br><br>
+<h2 id="C8"><b>Prototype Discussion</b></h2>
+Basically we have construct an Electronics Cicuit of Oxygen Concentrator.It includes the Power Supply, Relay Module, Pneumatic Valves,PCB Attiny44(Microcontroller) </br>
+and Logic Making.Unfortunatelly, due to the situation of Second-Wave of COVID-19 we can't received the Zeolite Materials and closing of all educational Instituitions in Pakistan.</br>
+So we were unable to finish the project, so far we have done 60-70% work on the project.</br>
+We would like to mention that we have complete understanding of this project and would like to work on this project in near future.</br> 
+<b>The youtube link of our project is mentioned below:</b></br>
+<embed style=width:"720px; height:450px;" src="https://www.youtube.com/embed/wimHkc2tk1E"></embed></br>
+
+
+
+
+
+<br><br>
+
+
+<br><br>
+
+
+<h2 id="C9"><b>Commercial Importance</b></h2>
+The cost of this project is much lower as compared to commercial Portable Oxygen Concentrator.</br>
+This prototype can yields enough capacity to serve patients with concentrated oxygen.
+However, this prototype may not be able to cover the current demand, but DIY solutions may help to treat patients suffering from COVID-19 induced pneumonia.</br>
+
+
+
+
+<h2>Cost Estimation</h2>
+
+<table style="width:70%">
+  <tr>
+    <th>Parts</th>
+    <th>Cost per Unit in Rs.</th> 
+    <th>Sources</th>
+  </tr>
+  <tr>
+    <td>Arduino Unit</td>
+<td>800</td>
+
+<td><a href="https://hallroad.org/arduino-uno-r3-in-pakistan.html">Buy Here</a></td>
+
+</tr>
+<tr>
+    <td>6 Channel 5V Relay Module</td>
+<td>500</td>
+
+
+<td><a href="https://hallroad.org/arduino-uno-r3-in-pakistan.html">Buy Here</a></td>
+
+</tr>
+  <tr>
+    <td>Wiring</td>
+<td>100</td>
+<td></td>
+</tr>
+  <tr>
+
+<td>12V oil-free Air Compressor</td>
+<td>1200</td>
+<td>
+
+<a href="https://www.daraz.pk/products/12v-air-compressor-250-psi-i120630448-s1275532504.html?spm=a2a0e.searchlist.list.3.7076222d9RBetr&search=1">Buy Here</a></td>
+
+</tr>
+  <tr>
+<td>24V Soliend Valves</td>
+<td>10000</td>
+
+
+<td><a href="https://www.smcpneumatics.com/VT307V-5G1-01-F.html">Buy Here</a></td>
+
+</tr>
+  <tr>
+
+<td>Zeolite Material</td>
+<td>8000</td>
+<td><a href="https://dir.indiamart.com/impcat/zeolites.html">Buy Here</a></td>
+</tr>
+  <tr>
+<td>2x Zeolite Casing</td>
+<td>11000</td>
+<td><a href="Hydrocontrol Schweiz Filterzentrale.ch">Buy Here</a></td>
+</tr>
+  <tr>
+
+<td>T & In-Line Connector</td>
+<td>700</td>
+<td><a href="https://www.ebay.co.uk/itm/NYLON-PNEUMATIC-STRAIGHT-HOSE-TUBE-INLINE-PUSH-FIT-CONNECTOR-AIR-LINE-AIRLINE/224066408784?_trkparms=aid%3D1110006%26algo%3DHOMESPLICE.SIM%26ao%3D1%26asc%3D20160323102634%26meid%3Db0ad3147726b4201bb7a701f6bd2d2a4%26pid%3D100623%26rk%3D4%26rkt%3D5%26mehot%3Dpp%26sd%3D321632323070%26itm%3D224066408784%26pmt%3D1%26noa%3D1%26pg%3D2047675%26algv%3DDefaultOrganic&_trksid=p2047675.c100623.m-1">Buy Here</a></td>
+
+</tr>
+  <tr>
+
+<td>Oxygen Storage Tank</td>
+<td>700</td>
+<td><a href="https://nbjiahua.en.made-in-china.com/product/ISyEjbvBwZVn/China-Oxygen-Humidifier-Bottles-150ml-Diss-Connection.html">Buy Here</a></td>
+
+</tr>
+  <tr>
+<td>Pneumatic Air Tubing</td>
+<td>1000</td>
+<td><a href="https://www.amazon.co.uk/gp/product/B008MO66FO">Buy Here</a></td>
+
+</tr>
+  <tr>
+<td>Total Amount</td>
+<td>34000</td>
+<td></td>
+
+
+
+
+
+
+
+  </tr>
+  <tr>
+    
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
+<br><br>
+
+<br><br>
+<h2 id="C10"><b>Conclusion Summary</b></h2>
+This new 2-column prototype uses a small oilfree compressor to compressed surronding air.</br>
+We have used limited number of required 3-way solenoid valves to two although we are using two filled zeolite columns.</b>
+The valves are switched with a 4 channel-relay module, through Attiny44 microcontroller which can be programmed easily without any further technical knowledge.</br>
+In short, this project is incomplete as mentioned above.But the details of oxygen concentrator are discussed in details.</br>
+We hope this would be great motivation for students and other also.</br>
+
+<h2 id="C11"><b>References</b></h2> 
+Below are some citations:</br>
+<a href="https://github.com/oxycon/ProjectApollo"</a> github.com/oxycon/ProjectApollo</br>
+<a href="https://www.reddit.com/r/lampwork/comments/jz2xno/oxygen_concentrator_setup/"</a>www.reddit.com<br>
+<a href="https://reprap.org/wiki/RepRap"</a>reprap.org </br>
+<a href="https://www.eurecat.com/zeolite-molecular-sieve.php"</a>eurecat.com </br>
+<a href="https://pakoxygen.com/medical-oxygen/"</a> pakoxygen.com</br>
+<a href="https://www.ou.edu/class/che-design/a-design/projects-2005/Portable%20Oxygen%20Device-Presentation.pdf"</a> www.ou.edu/class/che-design/a-design/projects</br>
+<a href="https://www.youtube.com/watch?v=1vQ11DoH6u0"</a> www.youtube.com/watch</br>
+<a href="http://merezha.ukrintei.ua/wp-content/uploads/2020/04/IMG_375.jpg"</a>merezha.ukrintei.ua/wp </br>
+<a href="https://www.cmu.edu/bme/Academics/Undergraduate%20Programs/Resources/design/2017Everair.pdf"</a> www.cmu.edu</br>
+<a href="https://ethz.ch/en/news-and-events/eth-news/news/2020/04/cost-effective-oxygen-concentrators.html"</a> ethz.ch/en/news-and-events</br>
+
+<br></br>
+
+
+<br><h2 id="C12"><b>Acknowledgement</b></h2></br>
+We would like to specially thank Dr. Asim Samejo for his guidance and assistance along this entire process, as well as our FABLAB 
+assistant's, Engr. Azmat Hussain and Engr. Nadir Ali for his continuous help. We would also like to thank LAB Instructor Engr.Aizaz Larik 
+for providing us the information and context we need to best achieve the goals of the project.</br>
+
+
+
+
+
+<br></br>
+
+
+
+
+
+
+
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>
+
+
+
+
