@@ -1,0 +1,282 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Introduction to Embedded Systems Project Report - (Your name here!)
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+					Abdul Jalil Ahmad<br>
+	                                Rehan Abdul Waheed
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">PCR Thermocycler</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+The polymerase chain reaction (PCR) is arguably the most powerful laboratory
+technique ever invented. The ease with which it can be done, the relatively low cost,
+and it’s unique combination of specificity and sensitivity coupled with great flexibility
+has led to a true revolution in genetics. PCR has opened doors to areas hidden to all but
+a few for most of the history of genetics. Yet, along with the everyman power of PCR has
+come a tacit assumption that everyone knows how to do it and understands it. My
+experience is that this is not the case. There is a great deal about PCR that most
+practitioners do not know and many other things that they should know better than
+they do. The advent of kinetic, or Real-Time PCR has served to add yet another
+dimension to this cognitive dissonance, particularly in the realms of experimental as well
+as primer and probe design along with optimization of experimental conditions.
+Moreover, as correctly pointed out by Bustin [1] “The comparative ease and rapidity
+with which quantitative data can be acquired using real-time RT-PCR assays has
+generated the impression that those data are reliable and can be subjected to objective
+analysis.” What has occurred in fact is an even higher level of sophistication that has
+either been taken for granted or ignored entirely:<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+<p>Below is the sample image of our final design.<br>	
+<center><img src="WhatsApp Image 2020-12-29 at 12.01.06 AM.jpeg"/><br></center><br><br>
+<p>Our purpose was to designe a machine which follows a series of cycles to achieve the required results. PCR is a common tool used in medical and biological research labs. It is used in the early stages of processing DNA for sequencing, for detecting the presence or absence of a gene to help identify pathogens during infection, and when generating forensic DNA profiles from tiny samples of DNA.The most important parameter of PCR machine is temperature, beacuse for a thermocycle you need to maintain some special ranges. As teamwork is the ability to work together towards a common vision, So I Abdul jalil ahmad and my patner Rehan Abdul Waheed,worked collectivly in the designing and manufacturing of PCR machine.</p><br><br>
+<br>
+<center><img src="maker_and_kit5.jpg" height="480" /><br></center>
+<br><br>
+<h2 id="C2">High Level Design</h2>    
+<p> Given below in the detail information of the components along with their snaps.</p><br><br>
+
+<br>
+
+<img src="WhatsApp Image 2020-12-29 at 12.01.42 AM.jpeg" height="200" width="150" /> 
+<img src="WhatsApp Image 2020-12-29 at 12.01.56 AM.jpeg" height="200" width="150" /> 
+<img src="WhatsApp Image 2020-12-29 at 12.01.57 AM.jpeg" height="200" width="150" /> 
+<img src="WhatsApp Image 2020-12-29 at 12.01.58 AM.jpeg" height="200" width="130   	" /> 
+<img src="WhatsApp Image 2020-12-29 at 12.01.38 AM.jpeg" height="200" width="200" />
+<img src="PeltierElementBeschrieftet.png" height="200" width="200" />  
+<img src="unnamed.jpg" height="200" width="200" />  
+<br><br>
+<ul>
+<li>The Cooling Fan</li><br><br>
+<li>Heat Sink</li><br><br>
+<li>Sample Holder </li> <br><br>
+<li>DC Power Supply</li> <br><br>
+<li>PWM Motor Driving Shield</li> <br><br>
+<li>Piltiers</li> <br><br>
+<li>8pin Lcd</li> <br><br>
+</ul>
+<br><br>
+<h2>Deligation of Tasks</h4>
+<table style="width:100%">
+  <tr>
+    <th>Task</th>
+    <th>Name</th> 
+   
+  </tr>
+  <tr>
+    <td>Literature review</td>
+    <td>Combined</td>
+    
+  </tr>
+  <tr>
+    <td>PCB Software Design</td>
+    <td>Rehan Abdul Waheed</td>
+    
+  </tr>
+  <tr>
+    <td>PCB Soldering</td>
+    <td>Abdul Jalil</td>
+   
+  </tr>
+<tr>
+    <td>Ardunio Programming</td>
+    <td>Rehan Abdul Waheed</td>
+   
+  </tr>
+<tr>
+    <td>Components Assembly</td>
+    <td>Combined</td>
+   
+  </tr>
+<tr>
+    <td>Documentation</td>
+    <td>Abdul Jalil</td>
+   
+  </tr>
+<tr>
+    <td>Programming logic</td>
+    <td>Rehan Abdul waheed</td>
+   
+  </tr>
+<tr>
+    <td>Sensors Installment</td>
+    <td>Rehan Abdul Waheed</td>
+   
+  </tr>
+<tr>
+    <td>Components Design and Arrangement</td>
+    <td>Abdul Jalil</td>
+   
+  </tr>
+<tr>
+    <td>PCB Debugging</td>
+    <td>Abdul Jalil</td>
+   
+  </tr>
+</table>
+<br><br>
+ 
+ <h2>Intellectual Properties and Ethics Considerations</h4>
+<p>The sites and the sources which we visited are given</p>
+<p><a href="https://sfvideo.blob.core.windows.net/sitefinity/docs/default-source/biotech-basics/the-polymerase-chain-reaction.pdf?sfvrsn=7493407_4">Visit Integrated DNA Technologies.net!</a></p> 
+ <p><a href="https://www.sciencelearn.org.nz/resources/2347-what-is-pcr">Visit Sciencelearn.org!</a>
+ <p><a href="https://github.com/hisashin/NinjaPCR">Visit Gitgub.org!</a></p></p><P>After a series of hardwork and struggle we achived successful compilation of thermocycler.So, it has copy right reserves.However , you can use it by mentioning our names in your project/report.</p> <br>
+ 
+<h2>Bill Of Materials</h2>
+ <center><img src="bom1.jpg" height="480" /><br></center>
+<br><br><br><br>
+<h2 id="C3">Design</h2> 
+The Design process has several layers to it. Electrical Design, Software Design, Final Hardware Assembly
+Which are elaborated below. <br><br>
+<h3>Electrical Circuit</h3>
+<center><img src="WhatsApp Image 2020-12-29 at 12.18.05 AM.jpeg" height="480" /><br></center><br><br>
+Here is our elcetrical circuit of PCR. For the demonstration purpose we used arduio uno sheild. Bill of material is mentioned above. Our fulfill operation of PCR is very much dependent on exact proposed values of components. The values of components was set up after plenty of hit and trail method.<br>
+<br><br>
+<h4>PCB Layout</h4>
+<p>Here is the pcb layout in eagle software.</p><br><br>
+<center><img src="20201230_224138.jpg" height="480" /><br></center><br><br>
+Here is the snap of manufacturing of pcb in roland machine.
+<br><br>
+<img src="WhatsApp Image 2020-12-29 at 12.09.35 AM.jpeg" height="400" width="400" />
+<img src="WhatsApp Image 2020-12-29 at 12.09.59 AM.jpeg" height="400" width="400" /><br><br>
+<p>Here is the our final pcb after traces and drills.</p>
+<img src="WhatsApp Image 2020-12-29 at 12.09.26 AM.jpeg"  height="400" width="400" />
+<img src="WhatsApp Image 2020-12-29 at 12.09.49 AM.jpeg" height="400" width="400" /><br><br>
+<p>Now, here comes the most interesting job, that was soldering the micro components on PCB. I never done soldering before on such micro scale,but we had to do that. here are some glipmse of soldering</p><br>
+<img src="20201130_170033.jpg"height="400" width="400" /> 
+<img src="20201130_165910.jpg" height="400" width="400" /> 
+<p>Here is the snap of boot up IC</p><br>
+<center><img src="WhatsApp Image 2020-12-30 at 10.47.40 PM.jpeg" height="400" width="400" /><br></center><br>
+<p>Here is the snap of  successful boot up IC</p><br><br>
+<center><img src="WhatsApp Image 2020-12-30 at 10.47.41 PM.jpeg"height="400" width="400" /><br></center><br>
+<p>After the job of several hours we got a fully solded PCB</p><br><br>
+<center><img src="20201130_171502.jpg"  height="400" width="400" /></center><br>
+
+<h2>TroubleShooting Of PCB</h2>
+<p>As you can see clearly that their is an external wire in pcb</p><br><br>
+<center><img src="20201205_014702.jpg" height="400" width="400" /><br><br></center>
+<p> this is because we forgot to connect the IC connections with the header.Since it was our first hand experience soldering over two layer PCB, so what we did, we didn't connect the top and bottom layer of PCB throughly,Because we thought that by just putting a piece of wire in via could connect both sides but we were wrong, So in order to improve our mistake, we performed connectivity test for each via. during connectivity test we found my short connections. So we separat their paths by dispatching the solder wire between them. In this way we got a working PCB in our hands. </p><br><br>
+
+
+<h2>Software Development</h2>
+<p>Our Program logic is based on the given mechanism</p><br>
+<img src="PCR_ART_WhatIsPCR_PCR-StagesDiagram.jpg" height="400" width="400" />
+<img src="pcr_protocol_pcr_steps_figure.jpg" height="400" width="400" />
+<img src="Diagrammatic-representation-of-the-steps-of-PCR-reaction-for-the-in-vitro-amplification.png" height="400" width="400" />
+<br><br>
+<h2>Design of finished Product</h2>
+<p>Here is the desing of complete enclosure.Initially, we proposed a horizontal rectangle shape box for our enclosure but the drawback was that we couldn't had a very clear view inside the circuit.So, we again put a deep eye over it and came up with a cube. Now as you can see that there is a very fine place for the placement of samples. </p><br><br>
+<img src="Screenshot (441).png" height="400" width="400" />
+<img src="WhatsApp Image 2020-12-29 at 12.01.06 AM.jpeg" height="400" width="400" /><br><br>
+<p>Along with 2D design,We also made a 3D model of enclousre. Snaps are attached below. But the problem was that , for 3D printing of enclosure;we need to had 2 days, but we were running out of time.That's why we printed 2D model in laser cut machine.</p><br><br>
+<center><img src="Screenshot (437).png" height="400" width="500" /></center>
+<br><br>
+<br><br>
+<h2 id="C4">Results</h2> 
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+ <br><br>
+<br><br>
+
+<br><br>
+
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+The most important thing which we learned in this project, is project managment.Secondly, we learned practical skills like, how your imaginations turn into reality.we learned how to work in a pair. After that, we learned designing of PCB. Before that we didn't play a lot with the PCB's. In PCB, the selection of component is the most important part. The best way to choose a suitable component in your PCB is datasheet. Use datasheet effectivly, Because it will provide you each and every minor details for your wanted results. In our case, we used  datasheet a lot beacuse particularly thermistor was not reading the temparture properly, after studing the datasheets we deduced that we were using a wrong values of resistors. After that we got our desired results. Bootloader was run on its first attempt but failed to run usb port. PC was not recognizing the port. This was the most critical point of our project. We took help from some relevent person's but they also hands up in front of this monster hurdle. At that moment we were very worried about our project. After Spending a big amount of work in PCB Connectivity test we got to know that our IC was short. A human eye couldn't detect that but connectivity test recognised that. So very precisely and carefully we successfully separted the IC's path from each other. The Snaps of before and after trobleshooting are given below.<br><br>
+  <br><br>
+<img src="20201130_171502.jpg"  height="400" width="400" />
+<img src="20201205_014702.jpg" height="400" width="400" /><br>
+
+
+<br><br>
+<h2 id="C6">Appendix</h2> 
+<p> Here is our downloadable stuff</p><br><br>
+
+<p>Click on the thumbnails to download the files:<p><br>
+<p>PCB files</p>
+
+<a href="PCB Eagle for PCR" download>
+  <img src="download.jpg" alt="pcr_brd" width="104" height="142">
+</a>
+
+<p> Ardunio File</p>
+
+<a href="PCR" download>
+  <img src="download (2).jpg" alt="Ardunio_files" width="104" height="142">
+</a>
+
+<p>Enclosure File</p>
+
+<a href=pcr box" download>
+  <img src="download3.png" alt="solidworks" width="104" height="142">
+</a>
+
+
+
+<br><br>
+<P>Given below is the bill of material along with their commercial cost</p><br><br>
+<img src="Capture.JPG" height="500" width="800" /><br><br>
+
+
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>
