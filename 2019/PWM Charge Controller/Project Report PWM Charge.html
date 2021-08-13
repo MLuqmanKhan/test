@@ -1,0 +1,345 @@
+<html>
+  <body style="background-color:powderblue;">
+   <font color="white">
+
+	<head>
+		
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	thead {color:white;}
+	tbody {color:white;}
+
+	table, th, td {      border: 1px snow;     border-collapse: separate; 	}
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						PWM Charge Controller 
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+			              PROJECT REPORT
+			     By Fatima Zehra & Sadia Iftikhar
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C10">Project Execution Plan</a></div><div class="separator"></div>
+					<div class="link"><a href="#D1">Task Distribution</a></div><div class="separator"></div>
+					<div class="link"><a href="#A5">Built-up Circuit</a></div><div class="separator"></div>
+					<div class="link"><a href="#A5">Reference</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">PWM Solar Charge Controller</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+A solar charge controller is a regulator for your solar battery that prevents it from overcharging. Batteries are rated for voltage capacity, and exceeding that voltage can lead to permanent battery damage and loss of functionality over time. Solar charge controllers act as a gate to your battery storage system, making sure damage doesn’t occur from overloading it.With a PWM controller, your solar panel system and your home battery need to have matching voltages. In larger solar panel systems designed to power your whole home, panel and battery voltage aren’t typically the same.  As a result, PWM controllers are more suited for small DIY solar systems with a couple of low voltage panels and a small battery.:<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+<img src="http://latex.codecogs.com/svg.latex?" border="0"/>	
+<center><img src="pwm.PNG"/><br></center><br><br>
+<p>In solar power system, charge controller is the heart of the system which was designed to protect the rechargeable battery.The Advantages of Pwm arge controller include Higher Charging efficiency,longer battery life,Reduces battery overheating, Minimizes stress on the battery and Ability to desulfate it. This charge controller can be used for charging batteries, solar home system and also solar lantern in rural areas. Sadia Iftikhar and Fatima Zehra Alvi worked collectively to make this pwm charge controller.</p><br><br>
+
+<br><br>
+<h2 id="C7">Design Requirment </h2>
+Our design requirment is that it should be as much compact as we can make it.Also, we must have main board and microcontroller board adjested on each other.
+
+<br><br>
+<h2 id="C9">Sample Image of required Design</h2>
+we are having this sketch of pwm charge controller in our mind.<br><br>
+<center><img src="mech.PNG" height="480" /><br></center>
+<br><br>
+<h2 id="C10">Project Execution Plan</h2>
+<table>
+<tr> 
+<th>Week</th>
+<th>What we are goin to do in it</th>
+ </tr> 
+<tr> 
+<td>Week 1-2</td> 
+<td>Literature Review</td>
+ </tr>
+ <tr>
+ <td>week 3-4</td> 
+<td>Finding components</td>
+ </tr> 
+<tr> 
+<td>Week 5-6</td> 
+<td>Schematic Designig & Routing</td>
+ </tr>
+ <tr>
+ <td>week 7-9</td> 
+<td>PCB board Fabrication & Population</td>
+ </tr>
+<tr> 
+<td>Week 10</td> 
+<td>Software Implementation </td>
+ </tr>
+ <tr>
+ <td>week 11-12</td> 
+<td>Testing And Troubleshooting </td>
+ </tr>
+<tr> 
+<td>Week 13</td> 
+<td>Case Designing </td>
+ </tr>
+ <tr>
+ <td>week 14</td> 
+<td>Documentation </td>
+ </tr>
+<tr>
+ <td>week 15</td> 
+<td>Finalizing </td>
+ </tr>
+</table>
+
+
+<br><br>
+<h2 id="D1">Task Distribution</h2>
+<table>
+<tr> 
+<th>Task</th>
+<th>Assigned Person</th>
+ </tr> 
+<tr> 
+<td>Literature Review </td> 
+<td>Fatima </td>
+ </tr>
+ <tr>
+ <td>Components & its Info</td> 
+<td>Sadia</td>
+ </tr> 
+<tr> 
+<td>schematic desiging & Routing </td> 
+<td>schematic assigned to Fatima & Routing to sadia </td>
+
+ </tr>
+ <tr>
+ <td>PCB Population</td> 
+<td>Collective Task</td>
+ </tr>
+<tr> 
+<td>Software Implemention</td> 
+<td>collective task </td>
+ </tr>
+ <tr>
+ <td>Testing And Troubleshooting</td> 
+<td>Sadia</td>
+ </tr>
+<tr> 
+<td>Case Designing</td> 
+<td>Fatima</td>
+ </tr>
+ <tr>
+ <td>Documentation</td> 
+<td> Fatima</td>
+ </tr>
+</table>
+<br><br>
+<h2 id="C2">High Level Design</h2>    
+This section should be just a high level diagram which explains the main components of your project and how they are integrated.<br><br>
+Here you should layout the design specifications and components which you should choose as per requirements. <br><br>
+<br>
+<center><img src="block.PNG" height="480" /><br></center>
+<br><br>
+<h2 id="D2">Description of Principle of Operations</h2>
+<ul>
+<li>The Micro-controller</li>
+The heart of the charge controller is Arduino nano board. The Arduino MCU senses the solar panel and battery voltages. According to these voltages, it decides how to charge the battery and control the load.Including PWM (pulse width modulation) is a tecnique by which we simply control a digital output signal by switching it on and off very quickly, by varying the width of the on/off duration, it will give the effect of varying the output voltage.
+<br><br>
+<li>MOSFETs</li>
+In my charge controller I used a MOSFET, controlling the power flow from solar panel to battery .I used it  for switching between solar panel and battery.
+<br><br>
+<li>I/O Modules </li> <br><br>
+<li>Other Discrete Components </li> <br><br>
+</ul>
+<h2>Component list</h2>
+Here is the list of Components used in the project
+<ul><h5>Controller Board</h5></ul>
+<ul>
+<li>Arduino Nano (ATmega328P)</li>
+<li>Crystal Oscillator </li>
+<li>Capacitor (22px2,0.1,10ux2)</li>
+<li>push button</li>
+<li>AVR -SPI</li>
+<li>LEDs (RED & GREEN)</li>
+<li>Resistor (499x2,10)</li>
+<li>Header (6x01,7x01)</li>
+<li>FTDI</li>
+</ul>
+<br><br>
+<ul><h5>Main Board</h5></ul>
+<ul>
+<li>MOSFEts(IRF540)</li>
+<li>Diodes (IN$001x3,IN4007x2,Zener diode (IN5158))</li>
+<li>BJT (BCS547x5)</li>
+<li>Resistors (100x2,10x4,1Mx2,1K,220,680,820)</li>
+<li>Capacitors (47uF, 1uFx2)</li>
+<li>Connectors (6x1,7x1,2x1)</li>
+</ul>
+<br><br>
+
+<h2>PCB schematic</h2>
+<ul>
+<li><h4>Controller Board Schematic</h4></li>
+<center><img src="controllersch.PNG" height="480" /><br></center>
+<br><br>
+<li><h4>Main Board Schematic</h4></li>
+<center><img src="schematic.PNG" height="450" /><br></center>
+<br><br>
+</ul>
+<h2>Troubles We Faced During Routing</h2>
+Having schematic of controller board and main Board separately,when we started to route our boards, the first issue we faced was that how should we route two boards in a way that we can connenct them easily, so what we do was that we used two connectors to connect controller board with main board in a way that main board is palced on controller board.The next thing that troubled us was how route these two boards, so after routing and derouting the board around 4 to 5 times, we got a direction and started to route controller board by taking reference to Atmega238P and connectors in main board.when we have routed many of components, one more issue we faced was the components that were left could have a possible path to route them, so there we used resistors of 0 ohms to provide path to those components.
+<h2>PCB layout</h2>
+
+<ul>
+<li><h4>Controller Board Schematic</h4></li>
+<center><img src="controller board.PNG" height="480" /><br></center>
+<br><br>
+<li><h4>Main Board Schematic</h4></li>
+<center><img src="board.PNG" height="480" /><br></center>
+<br><br>
+</ul>
+<h2>Bill of Material</h2>
+<center><img src="component.jpg"  ><br></center>
+<br><br> 
+<h2>Fabricated PCB</h2>
+This the picture of one of our fabricated board, as we have changed the boards 2 times so other picture is not available.
+<center><img src="fabrication.PNG"  ><br></center>
+<br><br> 
+<h2>Populated Board</h2>
+<ul>
+<li><h5>Controller Board<h5></li>
+This is our populated micro-controller board <br>
+<center><img src="pop.PNG" height="480" ><br></center>
+<br><br>
+<li><h5>Main Board</h5></li>
+Our Main board of the pwm charge controller is shown below<br>
+<center><img src="main.PNG" height="480" ><br></center>
+<br><br>
+<h2>Procedure Adopted To Burn BOOTLOADER </h2>
+We were using bootloader connector which was connected to PC through Usb port, Then we opened the Arduino program and write the bootlooder program there,which was then uploaded to the controller board
+<br><br>
+<h2>Challenges While Booting-up</h2>
+Our Micro-controller was bootloaded in first attempt so we didn,t face any issue while booting up the micro-controller IC.
+<center><img src="boot.PNG"  ><br></center>
+<br><br>
+<h2 id="A5">Successfull Built-up Circuit </h2><br>
+Finally here is the output of our circuit
+<center><img src="output.PNG" height="480"  ><br></center>
+<br><br>
+<h2>Flow code of Software Design</h2>
+<center><img src="software.PNG"  ><br></center>
+<br><br>
+<h2></h2>
+<br><br>
+
+<h2 id="A6">Reference of Project Implementation</h2><br>
+https://github.com/GarethDaviesLondon/PWM-Charge-Controller-Arduino
+<br><br>
+<h2>Cost of Project</h2>
+<table>
+<tr> 
+<th>Component</th>
+<th>Cost</th>
+ </tr> 
+<tr> 
+<td>Atmega328P</td> 
+<td>299</td>
+ </tr>
+ <tr>
+ <td>Crystal Oscillator</td> 
+<td>10</td>
+ </tr> 
+<tr> 
+<td>capacitors</td> 
+<td>5xQuantity</td>
+ </tr>
+ <tr>
+ <td>Resistors</td> 
+<td>10/12</td>
+ </tr>
+<tr> 
+<td>Diodes</td> 
+<td>6</td>
+ </tr>
+ <tr>
+ <td>BJTs</td> 
+<td>5</td>
+ </tr>
+<tr> 
+<td>MOSEFTs</td> 
+<td>40</td>
+ </tr>
+ <tr>
+ <td>LEDs</td> 
+<td>5</td>
+ </tr>
+<tr>
+ <td>LCD</td> 
+<td>700 </td>
+ </tr>
+</table>
+That means it will cost around Rs.1300/-
+<br<br>
+<h2>Commercialization Aspects</h2>
+The PWM Charge Controller can also be used as a BUSINESS MODEL as people in many far flung areas are still deprived of the basic need of electricity, so if this charge ontroller is used in these areas, it will help the people to at least use a bulb at night or also they can used it for charging purposes of phones etc.Also, It can also be sale to the companies who use batteries as there backup for electricty as this charge controller will help them to increase the life of battries. Also it is a cheap product that everyone can find it affordable as compared to other means of controllring battery systems.
+
+<br><br><br><br>
+<h2 id="C6">Appendix</h2> 
+
+<center>
+<table style="width:50%">
+ 
+<tr>
+    <td>Report Submitted on Time</td>
+    <td> .......................  </td> 
+  </tr>
+  <tr>
+    <td>Matlab Profeciency</td>
+    <td> .......................</td> 
+  </tr>
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</font>
+</html>

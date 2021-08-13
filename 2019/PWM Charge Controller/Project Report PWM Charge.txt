@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:white; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						PWM Charge Controller 
+		</title>
+	</head>
+	
+	<body>
+	<div id="main-wrapper">
+		<div id="left-ajrak">
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+			              Muhammad Asim Samejo
+				</div>
+			</div>
+			<hr>
+			<div id="nav-bar">
+				<div id="nav-bar-area">
+					<div class="link"><a href="#C1">Introduction</a></div><div class="separator"></div>
+					<div class="link"><a href="#C2">High Level Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C3">Design</a></div><div class="separator"></div>
+					<div class="link"><a href="#C4">Results</a></div><div class="separator"></div>
+					<div class="link"><a href="#C5">Conclusion</a></div><div class="separator"></div>
+					<div class="link"><a href="#C6">Appendix</a></div><div class="separator"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr>
+			<br><br>
+			<div id="main-container">
+				<div id="page-title">PWM Solar Charge Controller</div>
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+The objectives of this assignment are:<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+<img src="http://latex.codecogs.com/svg.latex?1+sin(x)" border="0"/>	
+<center><img src="radio.jpg"/><br></center><br><br>
+<p>In solar power system, charge controller is the heart of the system which was designed to protect the rechargeable battery.The Advantages of Pwm arge controller include Higher Charging efficiency,longer battery life,Reduces battery overheating, Minimizes stress on the battery and Ability to desulfate it. This charge controller can be used for charging batteries, solar home system and also solar lantern in rural areas. Sadia Iftikhar and Fatima Zehra Alvi worked collectively to make this pwm charge controller.</p><br><br>
+This section should also include the sketch (image) of what product you have in mind.<br>
+<center><img src="mech.PNG" height="480" /><br></center>
+<br><br>
+<h2 id="C2">High Level Design</h2>    
+This section should be just a high level diagram which explains the main components of your project and how they are integrated.<br><br>
+Here you should layout the design specifications and components which you should choose as per requirements. <br><br>
+<br>
+<center><img src="block.PNG" height="480" /><br></center>
+<br><br>
+<ul>
+<li>The Micro-controller</li><br><br>
+<li>The comms protocols</li><br><br>
+<li>I/O Modules </li> <br><br>
+<li>Other Discrete Components </li> <br><br>
+</ul>
+During the discourse you should also discuss the following:<br><br>
+<h4>Deligation of Tasks</h4>
+Who is doing what! this must be in table format (major tasks include review of literature/datasheets, selection of components, design of electrical circuit and PCB layout, design of finished product,writing firmware, testing/debugging of hardware software and final Assembly.)
+<br><br>
+ 
+ <h4>Intellectual Properties and Ethics Considerations</h4>
+ You must show your understanding of ethical considerations; for example what sites were refered for this project. Since this is your project what kind of copy rights you are delegating to viewers of this assignment. e.g. is it free to use and pass on to others, it is copy righted no one can copy this at all; In short you should review the types of Intellectual Property liecense exist and which liecense applies in your case.
+ 
+ <h4>Commercialization Aspects</h4>
+ Although its not a must but you may also propose a simple business model as how you can commercialize this project. Can you sell this device in the market, can you form a venture with a industrial firm, please papre a simple business model which means the cost of your equipment and how much would you sell it for, what is your target audience etc.
+ 
+<br><br><br><br>
+<h2 id="C3">Design</h2> 
+The Design process has several layers to it. Electrical Design, Software Design, Final Hardware Assembly<br><br>
+Every component must be carefully described: <br><br>
+<h4>Electrical Circuit</h4>
+Discuss the design decisions you made and the informed reasons for that. You may refer to key facts from data sheets of your components.
+<br><br>
+<h4>PCB Layout</h4>
+Document the process of design and fabrication of the PCB; the steps you followed to boot up the system.
+<br><br>
+<h4>Software Development</h4>
+Describe the structure of your software. In a pictorial format you may describe the flow of your algorithm and how you have used the functions to implement the code in an efficient way.
+<br><br>
+<h4>Design of finished Product</h4>
+The Hardware needs a proper enclosure to operate as expected. Please include detailed CAD drawings and explain the reasons for design decisions you have made.
+
+<br><br>
+<br><br>
+<h2 id="C4">Results</h2> 
+Ideally this section should contain the final and functional product in a video format. I nice video explaining the operation of system would be what is required. <br><br>
+<br><br>
+
+<br><br>
+
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+In this section you should present an honest reflection to what you have learned through the duration of this course.<br><br>
+Your experience with choice of components at higher level, from review of data sheets to putting components together to finalizing of PCBs, milling and stuffing it. Procedure followed to burn bootloader and eventually operating the full system. <br><br>
+Please include ample pictures to be as illustrative and descriptive as possible with various issues you came across and how you got around them.<br><br>
+<br><br>
+
+<br><br>
+<h2 id="C6">Appendix</h2> 
+This section should contain all your Eagle Circuit/PCB Layouts files,  Arduino Code, Solid work Desings etc.<br><br>
+You should also paste the Bill of material in table format. The table should include the list of components, their quantity and cost.<br><br>
+<br><br>
+<center>
+<table style="width:50%">
+ 
+<tr>
+    <td>Report Submitted on Time</td>
+    <td> .......................  </td> 
+  </tr>
+  <tr>
+    <td>Matlab Profeciency</td>
+    <td> .......................</td> 
+  </tr>
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+
+
+				</div>
+			
+			</div>
+		</div>
+		<div id="right-ajrak">
+			
+		</div>
+	</div>
+	
+
+	</body>
+</html>
