@@ -1,0 +1,197 @@
+<html>
+
+<head>
+
+    <title>The Weekend Worriors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .card-img img{
+            height: 89%;
+            border-radius: 50%;
+            margin-left: 7%;
+            margin-top: 7%;
+        }
+        .details>div{
+            text-align: center;
+        }
+        .details>div:first-child{
+            border-right: 2px solid rgba(255,255,255,0.08);
+        }
+        button{
+            background-color: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 240px;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0;
+        }
+    </style>
+
+
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        td{
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+
+    <style>
+        body {
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+
+
+        }
+    </style>
+<style>
+
+    .button{
+        text-decoration: none;
+        padding: 20px 32px;
+        border: 3px solid #aaa;
+        color: #aaa;
+        font-family: "Varela Round";
+        transition: all 0.3s;
+        transition-delay: 0.1s;
+        position: relative;
+        overflow: hidden;
+
+        -webkit-box-reflect: below 1px linear-gradiend(transparent,rgba(0,0,0,0,4));
+
+    }
+
+.arrow{transition: margin 0.3s}
+
+.button::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    transform: translateX(-110%) rotate(45deg);
+    transition: all 1.2s cubic-bezier(0.15,1,0.19,1);
+}
+
+.button:hover{
+    border: 3px solid #fff; color: #fff;
+
+}
+.button:active{
+    background-color: #fff; color: #111;
+}
+
+.button:hover::before{
+    background-color: #fff;
+    transform: translate(115%,-50px) rotate(90deg);
+}
+
+.button:hover.arrow{margin-left: 10px}
+
+</style>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+
+    //position: fixed;
+        overflow: hidden;
+        background-color: #333;
+
+    }
+
+    .topnav a {
+
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+
+
+    }
+</style>
+
+<div style="position:fixed; background-color:black; width:100%" >
+
+    <div class="topnav">
+        <a href="../Project Report.html">Home</a>
+        <a href="Introduction to Project (2).html">Project Introduction</a>
+        <a href="Execution Plan.html">Project Execution Plan</a>
+        <a href="Detail of COmponents.html">Detail of Coponents</a>
+        <a href="PCB Fabrication.html">Project Design</a>
+        <a href="Principle Working.html">Principle Working</a>
+        <a href="Challenges.html">Challenges</a>
+        <a class="active" href="Project Materials.html">Project Materials</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <a href="Ethical.html">Ethical Aspects</a>
+    </div>
+    <div style="padding-left:16px">
+        <table width=100%>
+            <tr style="vertical-align:bottom">
+                <td width=10% align=center><img src="SIBA_Logo.jpg" width=110 height=100></td>
+                <td align=center width=70% style="vertical-align: center"><h1> </img>Project Materials</h1></td><td>
+            </tr>
+        </table></div>
+    <table><tr><td><br><br>
+    <b>Click to Download Materials</b></td></tr></table>
+
+    <br><br><br><br><br>
+    <table width=90% >
+        <tr>
+            <td><a href = "Arduino Codes with Libraries.zip"  download class="Button">Arduino Codes with Libraries
+                <span class="arrow"></span></a></td><td></td>
+            <td><a href = "PCB Material.zip"  download class="Button">PCB Fabrication Stuff
+            <span class="arrow"></span></a></td>
+
+            <td><a href = "MAX7219-MAX7221-Datasheet.pdf"  download class="Button">MAX7219-MAX7221-Datasheet
+                <span class="arrow"></span></a></td>
+            <td><a href = "LED Matrix 1088AS-Datasheet.pdf"  download class="Button">LED Matrix-1088AS-Datasheet
+                <span class="arrow"></span></a></td>
+
+        </tr>
+
+
+    </table>
+
+
+</div>
+</body>
+</html>

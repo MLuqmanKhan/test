@@ -1,0 +1,304 @@
+<html>
+
+<head>
+
+    <title>The Weekend Worriors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .card-img img{
+            height: 89%;
+            border-radius: 50%;
+            margin-left: 7%;
+            margin-top: 7%;
+        }
+        .details>div{
+            text-align: center;
+        }
+        .details>div:first-child{
+            border-right: 2px solid rgba(255,255,255,0.08);
+        }
+        button{
+            background-color: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 240px;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0;
+        }
+    </style>
+
+
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        td{
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+
+    <style>
+        body {
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+
+    }
+
+    .topnav a {
+
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+
+
+    }
+</style>
+<body>
+<div style="position:fixed; background-color:black; width:100%" >
+
+    <div class="topnav">
+        <a href="../Project Report.html">Home</a>
+        <a href="Introduction to Project (2).html">Project Introduction</a>
+        <a href="Execution Plan.html">Project Execution Plan</a>
+        <a href="Detail of COmponents.html">Detail of Coponents</a>
+        <a href="PCB Fabrication.html">Project Design</a>
+        <a class="active" href="Principle Working.html">Principle Working</a>
+        <a href="Challenges.html">Challenges</a>
+        <a href="Project Materials.html">Project Materials</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <a href="Ethical.html">Ethical Aspects</a>
+    </div>
+    <div style="padding-left:16px">
+        <table width=100%>
+            <tr style="vertical-align:bottom">
+                <td width=10% align=center><img src="SIBA_Logo.jpg" width=110 height=100></td>
+                <td align=center width=70% style="vertical-align: center"><h1> </img>Principle Working</h1></td><td>
+            </tr>
+        </table></div></div>
+
+    <table width=71%>
+        <br><br ><br><br><br><br><br><br><br>
+
+        <tr >
+            <td>
+                <br>
+                <h2> <u>Higher Level System Diagram:- </u></h2>
+                For our project, the higher level diagram is shown below:
+                From this diagram we can see how this system works. In<br>
+                <br><u>step 1:</u><br>
+                The code for a specific pattern is send to the microcontroller which interprets it.
+                <br><br><u>step 2:</u><br>
+                The microcontroller drives the Max7219 Ic and send the information to the Ic for displaying on the led matrix Display.
+                <br><br><u>step 3:</u><br>
+                The Max7219 Ic works as a shift register which moves the data and it feds into the led matrix.
+                <br><br><u>step 4:</u><br>
+                when the data reaches the led matrix, the leds corresponding to high bits turn on and the rest of the leds are turned off. In this way the information sent by the microcontroller is displayed on the led matrix.
+                <br><br><u>step 5:</u><br>
+                The code is now  reset and new information is sent to the driver Ic which turns the Led matrix accordingly. This is how this system works.
+                <br><br>
+            </td></tr>
+        <tr><td><img src="Hardware.jpg" width="1000" height="500"> </td></td></tr>
+        <table>
+        </table>
+
+        <table width=71%><tr>
+            <td >
+
+            <h2><u>Connectivity to components (Protocol):-</u></h2>
+            Our led driver IC (MAX7219CNG) works on SPI serial interface communication. Unique characteristic of that communication protocol is that it can transfer data without any interruption. Devices communicating via SPI are in a master-slave relationship. The master is the controlling device (usually a microcontroller), while the slave (usually a sensor, display, modules, or memory chip) takes instruction from the master. The simplest configuration of SPI is a single master, single slave system, but one master can control more than one slave. Another advantage is that it has a separate MOSI and MISO lines so data can be transferred without any interruption.
+            <br><br><img src="master_slave.jpg" width="500" height="300">
+        </td></tr>
+        <tr><td>
+
+            <br><h2><u>ELCTRICAL SCHEMATIC:-</u></h2>
+            Electrical schematic is given below. It is only interfacing of the led matrix with led driver IC. The remaining pin of the IC is connected with microcontroller to burn codes onto it and display message on the matrix.
+            <br><br><img src="15.png" width="700" height="450">
+
+        </td></tr>
+
+
+        <tr><td>
+            <br><h2><u>Brief description of electrical schematic:-</u></h2>
+            Now let’s take a closer look at the MAX7219 driver. The IC is capable of driving 64 individual LEDs while using only 3 wires for communication with the Arduino, and what’s more we can daisy chain multiple drivers and matrixes and still use the same 3 wires.
+            The 64 LEDs are driven by 16 output pins of the IC. The question now is how is that possible.  Well the maximum number of LEDs light up at the same time is actually eight. The LEDs are arranged as 8×8 set of rows and columns. So the MAX7219 activates each column for a very short period of time and at the same time it also drives each row. So by rapidly switching through the columns and rows the human eye will only notice a continuous light.
+            Note how the pins of a common 8×8 LED Matrix are internally arranged, so if you are building a matrix on your own you should consider it. Also note that a common breakout board for the MAX7219 comes with a resistor between the 5V and the IC pin number 18. The resistor is used for setting the brightness or the current flow to the LEDs.
+             <table width=50% align="center" ><tr><td><img src="UseResistor.jpg" width="400" height="300"></td></tr></table>
+            The following table from the datasheet of the IC shows the value of the resistor that we should use according to the forward voltage drop of our LEDs.
+            <table width=50% align="center" ><td><img src="Resistor%20Values.JPG" width="400" height="300"></td></tr></table>
+
+            When we started to explore hooking up scrolling text, we found some library which supported these function like scrolling and alignment pattran on LED matrix.But It takes a lot of time time to crack the library function.Even more then 20 time we fail to run code properly because of interconnection of Max with Arduino and Sometime get problems  because of  clustering of wire LED (Connection of LED Matrix and Max7219 IC),
+            <table><tr><td></td><td></td></tr></table>
+
+
+
+            <h2>Wiring Instructions</h2>
+            <ul>
+                <li>Connect Arduino pin12 to DIN on 8×8 LED Matrix</li>
+                <li>Connect Arduino pin10 to CS of 8×8 LED Matrix</li>
+                <li>Connect Arduino pin11 to CLK of 8×8 LED Matrix</li>
+                <li>Connect an external 5VDC (1A) to VCC of 8×8 LED Matrix</li>
+                <li>Connect external 5VDC supply’s GND, to the GND of 8×8 LED Matrix Module</li>
+            </ul>
+            Note that the 8x8LED Matrix Module should be common-grounded with Arduino, ie, always remember to interconnect the Arduino GND terminal with the external 5VDC power supply GND terminal. Connect pins according to the instructions given above, and download the sketch into Arduino board. If everything seems right, you can power up the Arduino (and the LED matrix) to see the LED matrix circularly displays output.
+            <table width=70% align="center"><td><img src="Pincong.jpg" width="500"></td></tr></table>
+
+
+            <table  align="center">
+                <tr><td colspan="2"><br><h2>Cascading of Led Matrix:-</h2>To display larger messages only 1 matrix is not sufficient. Therefore multiple matrices needs to be cascaded in order to get bigger display. For this purpose they are cascaded and mostly in series so to have no difficulties while programing. As we know that our IC works as a shift register which purposely work as shifting of data so it has data out pin along with data in. Therefore from one module Data out pin is entered into Data in, in order to cascade them and data linearly (serially) flow between modules.</td></tr>
+                <td align="center"><img src="Connection.jpg" width="400" ></td><td><img src="02S72MI.jpg" width="500" height="350"></td>
+
+
+
+                </tr></table>
+
+            <br><h2><u>Different Ways of Cascading</u></h2>
+            <table><tr><td colspan="2"><img src="Way3.jpg" width="700" ></td></tr>
+                <tr><td><img src="Way2.jpg" width="350" ></td><td><img src="Way1.jpg" width="350" ></td></tr>
+            </table>
+
+            <br><h2>Warning !</h2>
+            Before powering up, ensure that corresponding wires are properly connected.
+
+            <br><h3><u> Connecting Led matrix with MAX7219CNG:-</u></h3>
+            As we know that the anodes of a led matrix is connected together for each row so making one pin (terminal) and so that for cathode. Common anode is connected to SEGMENTS (A-H) while common cathode is connected to DIG (0-7) of the IC.
+            They can be directly connected to the MAX72XX. Some are arranged as column cathode and some are column anode (as in the diagram above). Either type will work but you must connect the anodes to the Seg lines and cathodes to the Dig lines
+            and arrange your source data to suit (e.g. be prepared to swap rows for columns). Table shows the configuration of pins of matrix with the MAX7219CNG.
+            <table width=70% align="center" ><td><br><img src="LED_Max.jpg" width="600" height="500"></td></tr></table>
+
+
+
+        </td>
+
+            <table  align=left border=1>
+                <tr>
+                    <td><b>Rows corresponding to Pins of Matrix</b></td>
+                    <td><b>Connection with MAX7219CNG & pin number of IC</b></td>
+                </tr>
+                <tr>
+                    <td>Row 1 , Pin 9</td>
+                    <td>SEG DP,PIN 15</td>
+                </tr>
+                <tr><td> Row 2,Pin 14</td>
+                    <td>SEG A, PIN  23</td>
+                </tr>
+                <tr><td>Row 3,Pin 8</td>
+                    <td>SEG    B , PIN  21</td>
+                </tr>
+                <tr><td>   Row 4 , Pin 12</td>
+                    <td>SEG     C, PIN   17</td>
+                </tr>
+                <tr><td>Row 5 , Pin 1</td>
+                    <td>SEG     D, PIN   14</td>
+                </tr>
+                <tr><td>Row 6 , Pin 7</td>
+                    <td>SEG    E , PIN    16</td>
+                </tr>
+                <tr><td>   Row 7 , Pin 2</td>
+                    <td>SEG    F , PIN  22</td>
+                </tr>
+                <tr><td>Row 8 , Pin 5</td>
+                    <td>SEG    G , PIN  20</td>
+                </tr>
+                <tr><td colspan="2" ><br></td></tr>
+            </table>
+
+            <table  align=left border=1>
+                <tr>
+                    <td><b>Column corresponding to Pins of Matrix</b></td>
+                    <td><b>Connection with MAX7219CNG & pin number of IC</b></td>
+                </tr>
+                <tr>
+                    <td>Column 1 , Pin 13</td>
+                    <td>DIG 0,PIN 2</td>
+                </tr>
+                <tr><td>Column 2,Pin 3</td>
+                    <td>DIG 1, PIN  11</td>
+                </tr>
+                <tr><td>Column 3,Pin 4</td>
+                    <td>DIG 2, PIN  6</td>
+                </tr>
+                <tr><td>Column 4 , Pin 10</td>
+                    <td>DIG 3, PIN 7</td>
+                </tr>
+                <tr><td>Column 5 , Pin 6</td>
+                    <td>DIG 4, PIN 3</td>
+                </tr>
+                <tr><td>Column 6 , Pin 11</td>
+                    <td>DIG 5 , Pin 10</td>
+                </tr>
+                <tr><td>Column 7 , Pin 15</td>
+                    <td>DIG 6 , Pin 5</td>
+                </tr>
+                <tr><td>Column 8 , Pin 16</td>
+                    <td>DIG 7 , Pin 8</td>
+                </tr>
+            </table>
+        </td></tr>
+    </table>
+        <table width=71%><tr>
+            <td colspan="2">
+                <h2>Working of led matrix by Coding:-</h2>
+                Each and every led in a matrix has its own destination (path/address). They can be addressed column wise or row wise. For the send last le in the matrix of 8*8 we can say that has address of 8*6. For the 3rd led in 5th row we can say that it has path of 5*3 and so on. This produces convenience for controlling led while programing. We have a website” <a href="http://embed.plnkr.co/3VUsekP3jC5xwSIQDVHx" style="color: yellow">http://embed.plnkr.co/3VUsekP3jC5xwSIQDVHx</a>” on which we can make sprite of our need and get the corresponding code as shown in figure.
+            </td>
+            </tr>
+            <tr><td align="center"> <img src="codeWorking.png" width="400"> </td><td> <img src="Working.gif" width="300">    </td> </tr>
+
+        </table>
+
+
+        <table width=71%>
+            <tr><td align="center"><iframe width="800" height="400" src="https://www.youtube.com/embed/3gqVT_Ql6hE">
+            </iframe></td>></tr>
+        </table>
+    </table>
+    </body>
+</html>

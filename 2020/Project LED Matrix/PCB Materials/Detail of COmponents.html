@@ -1,0 +1,373 @@
+<html>
+
+<head>
+
+	<title>The Weekend Worriors</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="style.css">
+
+
+	<style>
+		.card-img img{
+			height: 89%;
+			border-radius: 50%;
+			margin-left: 7%;
+			margin-top: 7%;
+		}
+		.details>div{
+			text-align: center;
+		}
+		.details>div:first-child{
+			border-right: 2px solid rgba(255,255,255,0.08);
+		}
+		button{
+			background-color: rgba(255,255,255,0.06);
+			backdrop-filter: blur(20px);
+			position: absolute;
+			width: 80%;
+			left: 10%;
+			top: 240px;
+			border: none;
+			border-radius: 5px;
+			padding: 15px 0;
+		}
+	</style>
+
+
+	<style>
+		h1 {
+			font-size: 50px;
+		}
+
+		h2 {
+			font-size: 30px;
+			text-decoration: underline;
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+		td{
+			font-size: 20px;
+			color: white;
+		}
+	</style>
+
+	<style>
+		body {
+			background-image: url('background.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
+
+</head>
+<style>
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.topnav {
+		overflow: hidden;
+		background-color: #333;
+
+	}
+
+	.topnav a {
+
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 14px;
+
+	}
+
+	.topnav a:hover {
+		background-color: #ddd;
+		color: black;
+	}
+
+	.topnav a.active {
+		background-color: #4CAF50;
+		color: white;
+
+
+	}
+</style>
+<body>
+<div style="position:fixed; background-color:black; width:100%" >
+
+	<div class="topnav">
+		<a href="../Project Report.html">Home</a>
+		<a href="Introduction to Project (2).html">Project Introduction</a>
+		<a href="Execution Plan.html">Project Execution Plan</a>
+		<a class="active" href="Detail of COmponents.html">Detail of Components</a>
+		<a href="PCB Fabrication.html">Project Design</a>
+		<a href="Principle Working.html">Principle Working</a>
+		<a href="Challenges.html">Challenges</a>
+		<a href="Project Materials.html">Project Materials</a>
+		<a href="Conclusion.html">Conclusion</a>
+		<a href="Ethical.html">Ethical Aspects</a>
+	</div>
+	<div style="padding-left:16px" >
+		<table width=100%>
+		<tr style="vertical-align:bottom">
+		<td width=10% align=center><img src="SIBA_Logo.jpg" width=110 height=100></td>
+		<td align=center width=70% style="vertical-align: center"><h1> </img>Detail of Components</h1></td><td>
+		</tr>
+		</table>
+	</div>
+</div>
+<br><br ><br><br><br><br><br><br><br>
+<div>
+<table width=80%>
+
+<tr>
+
+<td width=60%><p>Led matrix is a dot matrix of large display, low resolution value and is useful for both industrial or commercial displays as well as for human interface machines. Basically the concept of pixels emerges from led matrix. It contains a 2-D diode matrix which have the cathode joined in rows and anode in columns. In this led matrix each can be control individually by controlling the electricity through each pair of columns or rows diodes. These matrix are very popular matrix by means of displaying information it, allows the static and animated images and text.</p></td>
+<td width=20%><img src="led matrix.jpg" width=300 heigth=300></img></td>
+</tr>
+
+</table>
+
+<table width=80%>
+
+	<tr>
+
+		<td width=60%><h2>Types of led matrix:-</h2>
+
+			There are different types of led matrix used for different commercial and industrial purposes. i-e
+
+			<ol>
+				<li><a href=""
+					   target="popup"
+					   onclick="window.open('1388A-8x8-LED-Matrix.png','popup','width=600,height=600'); return false;">
+					<p style="color: white">8*8 dot Matrix</p>
+				</a></li>
+
+				<li><a href=""
+					   target="popup"
+					   onclick="window.open('ER023_1.jpg','popup','width=600,height=600'); return false;">
+					<p style="color: white">5*7 dot Matrix</p>
+				</a></li>
+				<li><a href=""
+					   target="popup"
+					   onclick="window.open('128ledmatrix.jpg','popup','width=600,height=600'); return false;">
+					<p style="color: white">128*16 Two lined</p>
+				</a></li>
+				<li><a href=""
+					   target="popup"
+					   onclick="window.open('dmge1032128cp.jpg','popup','width=600,height=600'); return false;">
+					<p style="color: white">128*32 Four lined</p>
+				</a></li>
+				<li><a href=""
+					   target="popup"
+					   onclick="window.open('blob_t753arqwQg.jpg','popup','width=600,height=600'); return false;">
+					<p style="color: white">128*64 Eight lined</p>
+				</a></li></ol>
+			But here we will discuss about 8*8 dot matrix.
+
+		</td>
+		<td width=20%><img src="12.jpg" width=250 heigth=250></img></td>
+	</tr>
+
+</table>
+
+<table width=80%>
+
+<tr>
+
+<td width=60%><h2><u>8*8 dot matrix:-</u> </h2><p>As we know that led has two terminals cathode and anode.so 8*8 led matrix has total of 128 pins but it is arranged in such a way that the pin reduced to 16 pins overall. For making 8*8 dot matrix all the anodes are connecting together in rows R1 to R8, similarly the cathodes are connected together in columns C1 to C8, by doing this, the required number of I/O pins  reduces to 16 which is easy to use and connect .</p></td>
+<td width=20%><img src="12.jpg" width=250 heigth=250></img></td>
+</tr>
+
+</table>
+
+
+
+
+
+<table width=80%>
+
+<tr>
+
+<td width=60%><h2><u>Max7219 Module: - </u></h2><p>This module is an integration of matrix driver IC (MAX7219) and 8*8 led matrix. They both are integrated on PCB. This module is then connected to microcontroller to drive the led accordingly. This module has five input and five output pins. Input pins include VCC, ground, Data in, Chip select, and clock while output pin include VCC, ground, Data out, Chip select, and clock. In this module one resistor of 62KΩ is used and some capacitors of range (1 -10 µF) is used. Main purpose of the resistor used is to control current to the module while capacitor is used to reduce the noise of signal from microcontroller to the Max7219 Module.</p></td>
+<td width=20%><img src="13.jpg" width=400 heigth=400></img></td>
+</tr>
+
+
+
+</table>
+
+
+
+
+<table width=80%>
+
+<tr>
+
+<td width=60%><h2><u>Led Driver IC (MAX7219CNG):- </u></h2><p>The MAX7219CNG is a compact, serial input/output common-cathode display driver that can interface microprocessors to 7-segment numeric LED displays of up to 8 digits, bar-graph displays, or 64 individual LEDs. Included on-chip are a BCD code-B decoder, multiplex scan circuitry, segment and digit drivers, and an 8x8 static RAM that stores each digit. This IC is 24 pin IC, 12 on each side. 16 pin is used for connecting it to the matrix. 2 pin is dedicated to ground and one is dedicated for VCC. Data from microcontroller is entered to the MAX7219 through DIN pin while another is connected to shift data from one module to another through DOUT pin. One pin is dedicated for Clock. Pin 24 is for chip select (CS) which determines number of modules connected together while programing of the project. </p></td>
+<td width=20%><img src="14.jpg" width=300 heigth=300></img></td>
+</tr>
+
+</table>
+<table>
+	<tr><td>
+<h2><u>Connecting Led matrix with MAX7219CNG:- </u></h2>
+As we know that the anodes of a led matrix is connected together for each row so making one<br>pin (terminal) and so that for cathode. Common anode is connected to SEGMENTS (A-H)<br>while common cathode is connected to DIG (0-7) of the IC. BELOW table shows<br> the configuration of pins of matrix with the MAX7219CNG.
+	</td></tr>
+
+</table>
+
+
+<table width=80%>
+
+<tr>
+
+<td width=40%>
+
+<table  align=center border=1>
+<tr>
+<td><b>Rows corresponding to Pins of Matrix</b></td>
+<td><b>Connection with MAX7219CNG & pin number of IC</b></td>
+</tr>
+<tr>
+<td>Row 1 , Pin 9</td>
+<td>SEG DP,PIN 15</td>
+</tr>
+<tr><td> Row 2,Pin 14</td>
+<td>SEG A, PIN  23</td>
+</tr>
+<tr><td>Row 3,Pin 8</td>
+<td>SEG    B , PIN  21</td>
+</tr>
+<tr><td>   Row 4 , Pin 12</td>
+<td>SEG     C, PIN   17</td>
+</tr>
+<tr><td>Row 5 , Pin 1</td>
+<td>SEG     D, PIN   14</td>
+</tr>
+<tr><td>Row 6 , Pin 7</td>
+<td>SEG    E , PIN    16</td>
+</tr>
+<tr><td>   Row 7 , Pin 2</td>
+<td>SEG    F , PIN  22</td>
+</tr>
+<tr><td>Row 8 , Pin 5</td>
+<td>SEG    G , PIN  20</td>
+</tr>
+</table>
+
+</td>
+<td width=40%>
+
+<table align=center border=1>
+<tr>
+<td><b>Column corresponding to Pins of Matrix</b></td>
+	<td><b>Connection with MAX7219CNG & pin number of IC</b></td>
+</tr>
+<tr>
+<td>Column 1 , Pin 13</td>
+<td>DIG   0  , PIN  2</td>
+</tr>
+<tr>
+<td>Column 2 , Pin  3</td>
+<td>DIG  1  , PIN  11</td>
+</tr>
+<tr>
+<td>Column 3 , Pin  4 </td>
+<td>DIG    2 , PIN  6</td>
+</tr>
+<tr>
+<td>Column 4 , Pin  10</td>
+<td>DIG   3  , PIN   7</td>
+</tr>
+<tr>
+<td>   Column 5 , Pin  6</td>
+<td>DIG   4  , PIN   3</td>
+</tr>
+<tr>
+<td>Column 6 , Pin  11</td>
+<td>DIG   5  , PIN    10</td>
+</tr>
+<tr>
+<td>Column 7 , Pin  15</td>
+<td>DIG   6  , PIN  5</td>
+</tr>
+<tr>
+<td>Column 8 , Pin  16</td>
+<td>DIG    7 , PIN  8</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+<br>
+<table width=90%>
+
+<tr>
+<td width=8%></td>
+<td width=80%><img src="15.png" width=900 heigth=900></img></td>
+</tr>
+
+</table>
+
+
+<br><br>
+
+<table width=80%>
+
+<tr>
+<td width=45%><h2>MICROCONTROLLER (Atmega328/p):- </h2>
+	The Atmel AVR core combines a rich instruction set with 32 general purpose working registers.<br>All the 32 registers are directly connected to the Arithmetic Logic Unit (ALU),<br>allowing independent registers to be accessed in a single instruction executed in one clock cycle.<br><br>The ATmega328/P provides the following features:
+
+	<ol>
+<li>32Kbytes of In-System Programmable Flash with Read-While-Write capabilities</li>
+<li>1Kbytes EEPROM</li>
+<li>2Kbytes SRAM</li>
+<li>23 general purpose I/O lines</li>
+<li>32 general purpose working registers</li>
+<li>Real Time Counter (RTC)</li>
+<li>Three flexible Timer/Counters with compare modes and PWM</li>
+<li>1 serial programmable USARTs </li>
+<li>1 byte-oriented 2-wire Serial Interface (I2C)</li>
+<li>6- Channel 10-bit ADC (8 channels in TQFP and QFN/MLF packages)  </li>
+<li>A programmable Watchdog Timer with internal Oscillator</li>
+<li>An SPI serial port</li>
+<li>Six software selectable power saving modes.</li>
+</ol>
+
+</td>
+<td width=35%><img src="16.png" width=400 heigth=400></img></td></tr>
+</table>
+
+<table>
+	</tr>
+	<tr> <td>
+		The Idle mode stops the CPU while allowing the SRAM, Timer/Counters, SPI port, and interrupt system to continue functioning.
+		<br>The Power-down mode saves the register contents but freezes the Oscillator, disabling all other chip functions until the next
+		<br>interrupt or hardware reset. In Power-save mode, the asynchronous timer continues to run, allowing the user to maintain a
+		<br>timer base while the rest of the device is sleeping. The ADC Noise Reduction mode stops the CPU and all I/O modules
+		<br>except asynchronous timer and ADC to minimize switching noise during ADC conversions. In Standby mode, the
+		<br>crystal/resonator oscillator is running while the rest of the device is sleeping. This allows very fast start-up combined
+		<br>with low power consumption. In Extended Standby mode, both the main oscillator and the asynchronous timer
+		<br>continue to run.
+		In our project, led matrix we will use only 5 pins of the microcontroller. VCC, Ground, DIN, DOUT and CS.
+
+
+	</td></tr>
+	<tr><td><img src="Components.PNG"></td></tr>
+</table>
+</div>
+</body>
+</html>

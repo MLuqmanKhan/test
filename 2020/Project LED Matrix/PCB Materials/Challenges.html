@@ -1,0 +1,171 @@
+<html>
+
+<head>
+
+    <title>The Weekend Worriors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .card-img img{
+            height: 89%;
+            border-radius: 50%;
+            margin-left: 7%;
+            margin-top: 7%;
+        }
+        .details>div{
+            text-align: center;
+        }
+        .details>div:first-child{
+            border-right: 2px solid rgba(255,255,255,0.08);
+        }
+        button{
+            background-color: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            position: absolute;
+            width: 80%;
+            left: 10%;
+            top: 240px;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0;
+        }
+    </style>
+
+
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        td{
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+
+    <style>
+        body {
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+
+
+        }
+    </style>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+
+    //position: fixed;
+        overflow: hidden;
+        background-color: #333;
+
+    }
+
+    .topnav a {
+
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+
+
+    }
+</style>
+
+<div style="position:fixed; background-color:black; width:100%" >
+
+    <div class="topnav">
+        <a href="../Project Report.html">Home</a>
+        <a href="Introduction to Project (2).html">Project Introduction</a>
+        <a href="Execution Plan.html">Project Execution Plan</a>
+        <a href="Detail of COmponents.html">Detail of Coponents</a>
+        <a href="PCB Fabrication.html">Project Design</a>
+        <a href="Principle Working.html">Principle Working</a>
+        <a class="active" href="Challenges.html">Challenges</a>
+        <a href="Project Materials.html">Project Materials</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <a href="Ethical.html">Ethical Aspects</a>
+    </div>
+    <div style="padding-left:16px">
+        <table width=100%>
+            <tr style="vertical-align:bottom">
+                <td width=10% align=center><img src="SIBA_Logo.jpg" width=110 height=100></td>
+                <td align=center width=70% style="vertical-align: center"><h1> </img>Challenges</h1></td><td>
+            </tr>
+        </table></div></div>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+    <table width=75%>
+        <tr><td>
+            <h3><u>Verification of Electrical circuit:-</u></h3><br>
+            It is not good practice to directly design PCB for the proposed electrical circuit of the project. Therefore it is first done on the breadboard with physical connecting each and every components through jumper wires. Obviously it is very hectic and tiring approach but as well very much necessary. This is the first step toward project hardware so is time taking. Below snap is of our work while checking our proposed electrical circuit.
+            <table><tr><td><img src="Wires.jpg" width="500"></td></tr></table>
+
+
+
+        </td>/tr>
+
+        <tr><td><br>
+            <h3><u>PCB Layout:-</u></h3><br>
+            One of the big issue with our project was “How to set PCB layout for the 3x3 led matrix display. The main problem was that the leds work in a cascaded manner so they are needed to be connected in a very precise and carefull manner. After lots of consideration we decided to design the PCB layout in such a way that the leds will be placed serially on the PCB board 3 leds on a row and they will be connected such that the data-out connection from each led will be connected to data-in connection. In this way the PCB Layout is set for our project.
+            One of the major issue which we faced that the output were inverted as shown in the below diagram.  We were surprised with such results because everything was working well but the output was inverted every time the code was run. This was a real concern for us because we could not move on until we solve this problem.
+            <table><tr><td><img src="mirror1.jpg" width="500"></td><td><img src="mirror2.jpg" width="500"></td></tr></table>
+            After lot of search, study different websites and going through datasheet for led matrix finally we found the error. The error was in connecting the rows and columns in a wrong manner. Because we had changed our led matrix and with that the configuration of leds in the matrix was also changed.<br>In the previous led matrix the leds were configured from 1-8 as the columns. With the new matrix the configuration had totally changed now the leds were configured in a vice versa (i.e) from 8-0 as the columns for the leds. After connecting led matrix in the right way we got this issue solved. This was done because of the combined efforts of our team members.
+            <table><tr><td><img src="Heart.jpg" width="500"></td><td><img src="Real1.jpg" width="300"></td></tr></table>
+            <table width=71%>
+
+                <td align="center"><iframe width="850" height="450" src="https://www.youtube.com/embed/3q4AWQgH0Ro" frameborder="0">
+                </iframe></td>
+                </tr>
+            </table>
+            <br><h3><u>PCB Routing:-</u></h3>
+            One of the most hectic and complicated job in our project was routing that board file in such a way that there must be no crossover. Another challenge was that it must be one layer PCB which increases over burden. We tried our best to reduce and avoid as much cross over as possible. Below is the image of unrouted PCB board which almost took us two days to route.
+            <br>First when we routed our board file all the components were not mirrored so we have to solder it on upper (cupper side) of the sheet which was very difficult to solder. After that we mirror every component and route board file again.After much efforts we were able to route our pcb.
+            <table><tr><td><img src="unroute.png" width="500"></td><td><img src="br.png" width="500"></td></tr></table>
+
+            <br><h3><u>Program Code</u></h3>
+            To show any specific pattern on the led matrix Display requires thorough understanding and deep concept of the functions used in the coding. To set the code for desired output like in our case an analog clock pattern was a tricky and challenging task. We had to search out many different websites and took the help of our coordinators. We also had to gone through different libraries and their functions to understand how the codes are working. This took many weeks with day by day progress towards our objective. At last after lot of efforts, We got it, we successfully set the code for our desired output.<br>The credit for this goes to our team members, Lab Assistances and Supervisor, who helped around-the-clock to make this happen.
+            <table><tr><td><img src="Problem1.JPG" width="250"></td><td><img src="gif_face_final.gif" width="500"></td></tr></table>
+        </td></tr>
+
+
+    </table>
+            </div>
+        </body>
+</html>
