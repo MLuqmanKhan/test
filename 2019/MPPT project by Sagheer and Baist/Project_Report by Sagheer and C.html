@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+		<title> MPPT solar charger</title><style>
+						
+				</style>
+
+
+	</head>
+	
+	<body>
+	   
+<center><font color="white"> <h1>Introduction to Embedded Systems (Project Report)</h1></title></font>	</center>
+	<font color="white">
+	<div id="main-wrapper">		<div id="main">
+			<div id="header">
+				<div id="header-title">
+					<font color="White"><b><h3>Sagheer Abbas Shah (041-18-0016)<br> Abdul Basit (041-18-0014)</h3> </b></font>
+				</div>
+			</div>
+		
+			<br><br>
+			<div id="main-container">
+				<font color="White"><div id="page-title"> Maximun Power Point Tracking	</div></font>
+				
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+</style>
+</head>
+
+
+
+
+
+
+
+<div class="w3-content w3-section" style="max-width:750px "  >
+  <img class="mySlides" src="New/Dr_Asim.jpg" style="width:100% " >
+  <img class="mySlides" src="New/AizazSir.jpg" style="width:100%">
+  <img class="mySlides" src="New/Sagheer.jpg" style="width:100%">
+   <img class="mySlides" src="New/basit.jpg" style="width:100%">
+      <img class="mySlides" src="New/p1.jpg" style="width:100%">
+   <img class="mySlides" src="New/p1+2.jpg" style="width:100%">
+      <img class="mySlides" src="New/p3.jpg" style="width:100%">
+	     <img class="mySlides" src="New/p4.jpg" style="width:100%">
+		    <img class="mySlides" src="New/p5.jpg" style="width:100%">
+			   <img class="mySlides" src="New/p6.jpg" style="width:100%">
+			      <img class="mySlides" src="New/p7.jpg" style="width:100%" >
+				     <img class="mySlides" src="New/p8.jpg" style="width:100%">
+					    <img class="mySlides" src="New/p9.jpg" style="width:100%">
+						 <img class="mySlides" src="New/p10.jpg" style="width:100%">
+						    <img class="mySlides" src="New/p11.jpg" style="width:100%">
+							   <img class="mySlides" src="New/p12.jpg" style="width:100%">
+							      <img class="mySlides" src="New/p13.jpg" style="width:100%">
+								     <img class="mySlides" src="New/p14.jpg" style="width:100%">
+									    
+										   <img class="mySlides" src="New/p17.jpg" style="width:100%">
+										    <img class="mySlides" src="New/p18.jpg" style="width:100%">
+											   <img class="mySlides" src="New/p19.jpg" style="width:100%">
+  
+  
+  
+  
+  
+</div>
+<p><center><b><font size="15">Project Overview</font></b></center></p>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+ 
+<center> <h3 id="C1"><b>Introduction to Project </b> </h3> </center>
+
+ 
+ <p align="justify" class="serif" >Infrarred radiation from sun is varibale throughout the day. In morning time the intensity of sunlight is lower as compared to the sunlight 
+in the mid-day and the evening afternoon intensity of sunlight is  also lower than the mid-day intensity of the sunlight. due to this phenomenon, the energy
+we receive from the sun varries all the day. Also clouds can suddenly effect the energy being received by our solar panels. To give an optimized solution 
+to this problem, we use a technique to efficiently charge our batteries through solar panels. Maximum Power Point Tracking Technique is utilzed in our 
+project to provide appropriate voltage to the battery. As in Pakistan, the environment is hot, so we decided to design an MPPT solar charge controller based
+on Buck Converter. It will take input from Solar Panel and then will operate upon the input volatge and current and will give an appropriate output required
+by the battery.</p><br>
+ 
+ <center><img src="Project_pics/flowcaht.png" /><br></center>
+ <br>
+ </p>
+ 
+ 
+
+ <center> <h2 ><b> Design requirements</b> <h2></center> 
+ <p align="justify" class="serif" > We want to design a solar charger that can be carrie dor placed anywhere. it should look attractive as well as should not be of very large volume. We have resources of 3D-Printing 
+ in FabLab and also the facility of Laser-cut Acrylic sheet. utilizng these two resources we wanted to design a product that can be carried anywhere with great portability and lesser size.</p>
+ 
+ <center> <h2><b>Sample image of final design </b><h2></center> 
+ <p align="justify" class="serif">For our product, initially, we thought of a simpler design keeping in mind our Display of the input and out entities as well as sockets for input, output and supply voltages.
+</p>
+ 
+    <center><img src="Project_pics/md2.jpg" width='800' height='600'  class="center" /><br></center>
+ <center><h2 id="C1">Mechanical Drawing <h2></center>
+ <p align="justify" class="serif"> The mechanical design depends on the PCB dimensions as well as the devices related to it. we choose appropriate dimension to save as much of the filament of 3D printer as possible.
+</p>
+ <center><img src="Project_pics/md1.jpg" width='800' height='650'  class="center" /><br></center><br>
+ 
+ 
+ <center><h2 id="C1"><b>Project Execution Plan </b><h2></center>
+ <p align="justify" class="serif"> The components involved in the circuit were not easilt available in pakistan, we had to order it from china to develop a PCB because all the coponents were in SMD packages.
+we had following project execution plan depending upon the above fact.<br>
+ <center><img src="Project_pics/GanttChart.png" width='900' height='650'  class="center" /><br></center>
+
+
+1- Literature Review<br>
+2- Understanding the working principle of components involved<br>
+3- deveolping a PCB<br>
+4- Fabrication of PCB <br>
+5- First soldering the componets required by the microcontroller to burn the bootloader and test the microcontroller's working<br>
+6- After succesfully testing the microcontroller, soldering the rest of the components<br>
+7- Energizing the circuit and troubleshooting all the errors<br>
+8- After getting desireable results, Designing the case for the PCB<br>
+9- Preparing the product for the final go<br>
+ </p>
+
+
+
+
+
+<center><h2 id="C1"><b>Deligation of Task </b><h2></center>
+ <p> 
+<center><img src="Project_pics/Deligation_of_tasks.PNG" width="800" height="400" class="center"/></center><br>
+ </p>
+ 
+<center><h2 id="C1"><b>Higher Level System Diagram</b><h2></center>
+ <p> Following diagram shows how the Project works on a macro level:
+
+<center><img src="Project_pics/High_Level%20Digram.png" width='800' height='500' /> </center>
+ 
+ 
+ </p>
+ 
+ <center><h2 id="C1"><b>Description of Principle of Operations </b><h2></center>
+ <p align="justify" class="serif"> Maximum power point tracking solar charge controller works on the basis of Buck/Boost converter. The circuit we chose only has the buck converter as in pakistan, most of the time
+ wether is very hot which gives extra power. The charger takes input from panel which is lesser than 20 volts. Which is sensed through a voltage divider circuit developed on the input
+ and gives it to an analogue pin of microcontroller. also a current sense amplifier is attached using a shunt resistor on the main input section. There is also a voltage divider circuit
+ on the output section where the battery is connected. A current sense amplifier is used on the output section as well. These all values are fed to the microcontroller.
+ Depending upon these values, microcontroller decides about the PWM signal fed to the Half-Bridge Mosfet Driver IC. this IC takes input as a PWM signal and switches the MOSFETs with a very high 
+ speed. The Buck converter acts according to the decission made by microcontroller depending upon the input and output currents and voltages.</p>
+ 
+<center><h2 id="C1"><b>Bill of materials</b><h2></center>
+ <p> 
+
+ <center><img src="Project_pics/bil_ of_material.png" width="800" height="900" class="center"/></center><br>
+
+ </p>
+ 
+ <center><h2 id="C1"><b>Brief Description of Major Components</b> <h2></center>
+ 1. <b>Microcontroller description:</b><br>
+	<p align="justify" class="serif">		The low-power Microchip 8-bit AVR RISC-based microcontroller featuring 32KB self-programming flash program memory,
+2.5KB SRAM, 1KB EEPROM, USB 2.0 full-speed/low speed device, 12-channel 10-bit A/D-converter, and JTAG interface 
+for on-chip-debug. The device achieves up to 16 MIPS throughput at 16 MHz. 2.7 - 5.5 Volt operation.</p>
+<p align="justify" class="serif">		We have used this microcontroller because of its lower consemption and usb support. its features helped us to replace arduino 
+with this microcintroller in project.</p>
+
+
+<br> <center><img src="Project_pics/ATmega32U4schematics02.jpg" alt="Paris" width="800" height="600"  /></center><br>
+
+<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" target="blank">
+<center><font color="Yellow">http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf<br></font></a><br></center>
+
+	<br>		
+2. <b>USB mini: </b><br>
+	 <p align="justify" class="serif"> The small USB socket found on digital cameras, external hard drives, USB hubs and other equipment. 
+Mini USB is much smaller than USB Type A and B but twice as thick as Micro USB. We have used this componant as we could burn our
+ code easily on the microcontroller.</p>
+ <br> <center><img src="Project_pics/USB_mini.jpg" width="250" height="250"  /></center><br>
+	<br>		
+3. <b>INA213 (Current sense amplifier):</b><br>
+	 <p align="justify" class="serif"> The INA21x are voltage-output, current-shunt monitors (also called current-sense amplifiers) that are commonly used for overcurrent protection, 
+precision-current measurement for system optimization, or in closed-loop feedback circuits. This series of devices can sense drops across shunts
+at common-mode voltages from 0.3 V to 26 V, independent of the supply voltage. Six fixed gains are available: 50 V/V, 75 V/V, 100 V/V, 200 V/V,
+500 V/V, or 1000 V/V. 
+<br>
+The low offset of the zero-drift architecture enables current sensing with maximum drops across the shunt as low as 10-mV full-scale.
+These devices operate from a single 2.7-V to 26-V power supply, drawing a maximum of 100 uA of supply current. All versions are specified over the extended
+operating temperature range (40°C to +125°C), and offered in SC70 and UQFN packages.
+We have used this componant as to sense the input and output voltage/current to track the working of the MPPT.</p>
+<br> <center><img src="Project_pics/ina213.jpg" width="250" height="250" /></center><br>
+
+<a href="http://www.ti.com/lit/ds/symlink/ina213.pdf" target="blank">
+<center><font color="Yellow">http://www.ti.com/lit/ds/symlink/ina213.pdf<br></font></a><br></center>
+
+<br>
+4. <b>IR2104 (Half-bridge)</b>:
+	<div> <p align="justify" class="serif"> The discrete  Half-bridge driver based on IR2104 gate driver IC and low impedance high current N channel  IRFP4368 MOSFETS  , The IR2104 is a 
+	high voltage, high speed power MOSFET driver with independent high and low side referenced output channels.
+		We have used this componant to derive the mosfets.</p></div><div>
+		<br> <center><img src="Project_pics/ir2104.png" width="250" height="250" /></center><br></div>
+		<a href="https://www.infineon.com/dgdl/Infineon-IR2104-DS-v01_00-EN.pdf?fileId=5546d462533600a4015355c7c1c31671" target="blank">
+<center><font color="Yellow">https://www.infineon.com/dgdl/Infineon-IR2104-DS-v01_00-EN.pdf?fileId=5546d462533600a4015355c7c1c31671<br></font></a></center><br>
+		
+<br> 
+5. <b>Schottky Diode </b>:<br>
+	 <p align="justify" class="serif"> The Schottky Diode is a type of semiconductor diode which have the advantage that their forward voltage drop is substantially 
+less than that of the conventional silicon pn-junction diode.
+	Schottky diodes have many useful applications from rectification, signal conditioning and switching, through to TTL and CMOS
+logic gates due mainly to their low power and fast switching speeds.</p>
+			<br> <center><img src="Project_pics/shottky.jpg" width="250" height="250"  /></center><br>
+				<a href="multimedia/what we have.PDF" target="blank">
+<center><font color="Yellow">datasheet here.<br></font></a></center><br>
+	
+			
+			<br>
+6. <b>IPB136n08n3  (PWR-MOSFET)</b>:<br>
+	 <p align="justify" class="serif"> These are ideal for high frequency switching. Optimized technology for DC/DC converters. Excellent gate charge x R product
+N-channel, normal level. 100% avalanche tested. Pb-free plating; RoHs compliant.</p>
+	<br> <center><img src="Project_pics/PowerMosfet.jpg" width="250" height="250"/></center><br>
+		<a href="https://www2.mouser.com/datasheet/2/196/IPP139N08N3_Rev2.5-97962.pdf" target="blank">
+<center><font color="Yellow">https://www2.mouser.com/datasheet/2/196/IPP139N08N3_Rev2.5-97962.pdf<br></font></center></a><br>
+	
+	<br>
+7. <b>Shunt Resistors:</b><br>
+	Shunt resistors are used with current sense amplifier to sense the current.
+	<br> <center><img src="Project_pics/ShuntResistor.jpg" width="250" height="250" /></center><br>
+<br>
+8. <b>Voltage Regulator LM7805:</b><br>
+	We are using this voltage regulator because the input voltage is 12 voltages and our microcintroller and some other componants run on 5V
+so its is regulating the voltages. It is easily available for use.
+		<br> <center><img src="Project_pics/VR_LM7805.jpg" width="250" height="250" /></center><br>
+			<a href="https://pdf1.alldatasheet.com/datasheet-pdf/view/85503/ETC/LM7805.html" target="blank">
+<center><font color="Yellow">https://pdf1.alldatasheet.com/datasheet-pdf/view/85503/ETC/LM7805.html<br></font></center></a><br>
+	
+		<br>
+9. <b>Zener Diode:</b><br>
+	<p align="justify" class="serif">We are using zener diode if our input voltage increases from the circuit limitations, it will directly ground the voltages.</p>
+		<br> <center><img src="Project_pics/Zener.jpg"width="250" height="250"  /></center><br>
+ 			<br>
+
+ </p>
+ <center><h2 id="C1"><b>Connectivity to components (Protocol)</b> <h2></center>
+ <p align="justify" class="serif"> As we have used Atmega32U4 microcontroller, which has the support to connect a USB, so we are using Universal serial bus for the connectivity of our board with PC 
+to burn the code into it. </p>
+ 
+ <center><h2 id="C1"><b>Electrical Schematic</b> <h2></center>
+ <p align="justify" class="serif"> The schematic diagram is taken from the Eagle file we have developed for our final PCB:
+  <center><img src="Project_pics/Electrical_diagram.png" width="900" height="600"/> </center>
+ </p>
+ 
+ <center><h2 id="C1"><b>Brief Description of Schematic </b><h2></center>
+ <br>
+  <br> <center><img src="Project_pics/MPPT_Schametic_Numbering.png" width="900" height="600"/> </center>
+  <br>
+
+ <p align="justify" class="serif">
+In above figure we have given numbering to the different portion of the schematic, it is explained below:<br><br>
+<b>1- Microcontroller and its required components:</b><br>
+	The microcontroller is the key component of this whole circuit as it is making decissions on the basis of values it is receiving.
+the components attached with microcontroller in "1" are chosen according to the Arduino Leonardo which uses the same Microcontroller.
+An ICSP header is also connected to burn the boadloader on to the microcontroller. The connection of a USB MINI are also made with the
+microcontroller.<br><br>
+
+<b>2- Input Voltage Divider Circuit:</b><br>
+	This circuit divides the input voltage to such a level in which microcontroller can sense it because if we attach the microcontroller directly, it cannot
+bear the voltage and will burnout intantly. So we have to reduce the voltage to such a level which can be given to microcontroller. We used a 39kiloohm resistor and a 10 kilo ohm resistor 
+to make the ratio appropriate. Also two zener voltages are connected in parallel for we want input voltage not more than a certain value.
+<br><br>
+<b>3- Input Current Sense Amplifier:</b><br>
+	INA213, a current sense amplifier is connected here to sense the input current. The shunt resistor helps this IC to sense the current and then this IC gives output to the Microcontroller which then displays 
+it on the LCD.<br><br>
+
+<b>4- Half Bridge Driver IC and Buck Converter:</b><br>
+	The IR2104, a half bridge MOSFET driver takes input of PWM signal from the microcontroller and then performs the switching of the MOSFETs. Hence controlling the output current and voltage.
+<br><br>
+<b>5- Output Current Sense Amplifier:</b><br>
+	It works on the same principle as the input current sense amplifier.
+<br><br>	
+<b>6- Output Voltage Regulator:</b><br>
+	Volatge regulator is developed here for the same reason, the only difference is the voltage for division. Here the voltage is 12V. So, we connected a 22 kilo-ohm resistor in series with a 10 kilo-ohm resistor.
+<br><br>
+<b>7- LCD connectors:</b><br>
+	these connectors are attached for the display which will be mounted on the casing.
+	<br><br>
+<b>8- Power Headers and Voltage Regulator:</b><br>
+	The three headers for 12 volts Supply(on which the board will operate), Panel(to take input from solar panel) and Output(for the output voltage taken from the circuitry ).
+The voltage regulator is connected because we are using 12V supply on which the IC IR2104 operates but all other ICs need 5V to operate so we are using this LM7805 for this purpose.
+<br> <br>
+	</p>
+ 
+ <center><h2 id="C1"><b>PCB Layout </b><h2></center>
+ <p align="justify" class="serif"> We used Eagle software to develop the PCB for our project and we created the layouts in .PNG formats as the Milling Machine available in Fablab needs picture format for its processing. Following is the final PCB layout: 
+
+<br><br>
+<center><img src="Project_pics/Schametic.jpg" width="800" height="550" class="center"/></center><br>
+
+
+
+<br>
+ </p>
+ 
+ <center><h2 id="C1"><b>Challenges While Routing</b> <h2></center>
+ <p align="justify" class="serif"> 	whille routing the PCB it consumed a lot of out time because the circuit we were following used a separate board for microcontroller
+but our aim was to embed both the circuit on a single layer, making it more compact. This came with lots of hurdles while routing, we used few zero ohm resitor to overcome 
+routing issues and at the end developed a lot more compact circuit after tens of attempts. </p>
+ 
+ <center><h2 id="C1"><b>Bill of Material on taped on a Paper</b> <h2></center>
+ <p align="justify" class="serif"> Following is the Picture of the components taken from the FabLab
+ <center><img src="Project_pics/Componants.jpg" width="800" height="900" class="center"/></center><br>
+
+ </p>
+ 
+ <center><h2 id="C1"><b>Picture of Clean Printed Circuit Board </b><h2></center>
+ <br>
+  <p align="justify" class="serif"> For fabrication of our PCB, we used SRM-20(Rolland's mills) machine. It needs a monochrome picture for its processing. the monochrome picture we took from
+  Eagle software were then uploaded to the "Fab-Modules.org" and then we generated the ".rml" files needed for SRM-20 to process the milling.
+
+  
+ </p>
+ <center> <img src="Project_pics/Fabrication%20in%20Roland.jpg" width="800" height="600" class="center"/></center><br><br>
+  <center><img src="Project_pics/Printed%20PCB.jpg" width="800" height="600"  class="center" /></center><br>
+ <br>
+ 
+ <center><h2 id="C1"><b>Picture of Populated Circuited Board</b> <h2></center>
+ <p align="justify" class="serif"> After fully soldering teh components, our board looked like this: 
+
+  <center><img src="Project_pics/Populated_PCB.jpg" width="800" height="600"  class="center" /></center><br>
+ </p>
+ 
+ <center><h2 id="C1"><b>Procedure adopted to burn Bootloader </b><h2></center>
+ <p align="justify" class="serif">	To burn the boot loader on to the microcontroller, we used ICSP header and arduino IDE. 
+ we burnt the bootloader of Arduino leonardo onto the ATmega32U4. For this we followed the following steps:<br>
+1-  connetcing th board with PC through ICSP header and a USB mini cable for further burning the test code.<br>
+2-  selecting the board through "Tools" menu.<br>
+3-  in tools, further going to submenu "Select Board".<br>
+4-  selecting "Arduino Leonardo".<br>
+5-  again going to "tools" menu and then selecting the submenu "Port" and then select the port on which ICSP is connected.<br>
+6-  again going to another submenu "Programmer" and selecting "AVRISP mkll" .<br>
+7-  last step is to select the last most option of "burn the bootloader".<br>
+8-  wait for few minutes till it shows the message on status bar as "Done burning Bootloader.".<br>
+<br> <center><img src="Project_pics/Boot_loader.jpg" width="800" height="600"  class="center" /></center><br>
+ </p>
+ 
+ 
+ <center><h2 id="C1"><b>Picture of successfully operating circuit</b><h2></center>
+ <p align="justify" class="serif"> Following is the picture when we succesfully got the output: 
+ <br> <center><img src="Project_pics/Operating_circuit.jpg" width="600" height="800"  class="center" /></center><br>
+
+ </p>
+ 
+  <center><h2 id="C1">	<b>Picture of fully assembled System</b> <h2></center>
+ <p align="justify" class="serif">   <center><img src="Project_pics/Enclosure.jpg" width="800" height="600"  /></center><br>
+  <center><img src="Project_pics/Enclosure2.jpg" width="800" height="600"   /></center><br> </p>
+ 
+  <center><h2 id="C1"><b>Demonstration of operational circuit </b><h2></center>
+ <center><iframe height="600" width="600"
+ src="https://www.youtube.com/embed/numA_EJpTGs?autoplay=1"> 
+</iframe></center>
+ 
+  <center><h2 id="C1">The FlowChart of our software design <h2></center>
+ <p>
+ <br>
+   <center><img src="Project_pics/Software_flowchart.png" width="700" height="1100"  class="center" /></center><br>
+ 
+ </p>
+ 
+  <center><h2 id="C1"><b>Main Functions of the code</b><h2></center><br>
+ <p align="justify" class="serif"><br>1- buck_setup() Function:<br>
+	This function is designed to set up the timer to generate PWM signal. It initializes the timer with the desired duty cycle to set the circuit up.<br><br>
+2- buck_enable() Function:<br>
+	This method is written so to enable the clock source and then turns on the Half bridge driver through PWM signal.<br><br>
+3- buck_disable() Function:<br>
+	This functtion turns off the clock source and sets the duty cycle of PWM signal to zero.<br><br>
+4- buck_duty(unit8_t duty) Function:<br>
+	This function checks the duty cycle of the and stes it to the appropriate value for the operation of the Buck converter. it Arranges the duty cycle
+to an optimum level.<br><br>
+5- write_display() Function:<br>
+	This function is utlized to write on the LCD. it tfakes values from several values and displays them along with some text on the LCD.<br><br>
+6- read_values() Function:<br>
+	This function takes the values from the volatge divider circuits and current sense amplifiers and sets them correctly after callibration.<br><br>
+7- buck_update() Function:<br>
+	This method is the key function in the code which calls some of the above functions and updates the duty cucle accordingly.
+</p><br><br>
+ 
+  <center><h2 id="C1"><b>Challenges faced while coding</b><h2></center>
+ <p align="justify" class="serif">The major problem we faced during the coding for this project was configuring the timer for generatng PWM signal. We tried to configure different available timers using different PWM pins on the board. First we configured timer1 using PWM pin 9, but this timer was a 16 bit timer which 
+brought a lot of problems because our major calculations were based on the 8 bit timer. so after struggling a lot we obtained a maximum volatge of 7.44V at the output. Furthermore we connected
+our Half bridge driver with PWM pin 11 and using timer0 we obtained the exact output.
+ </p>
+ 
+  <center><h2 id="C1"><b>CAD Design of Enclosure </b> <h2></center>
+ <p align="justify" class="serif"> For Casing of our prodcut, we used both laser Cut and 3D-printing. We wanted to consume lesser filament for 3D-printing thats why we 
+ thought of making the top of the casing clear to make it 
+a bit unique. So, we made the top using laser cut. We designed a locking mechanism of Slide and press. 
+We slide one side of the top and press the other towards the bottom.  </p>
+ 
+ 
+  <center><h2 id="C1"><b>CAD Design with Dimensions</b><h2></center>
+ <p align="justify" class="serif"> Followings are the CAD design pictures with dimensions:
+<br><br>
+ 
+  <center><img src="Project_pics/dimension_length_and_width.PNG" width="550" height="600"   /></center><br> </p>
+    <center><img src="Project_pics/Hieght_dimension.PNG" width="800" height="600"   /></center><br> </p>
+ 
+ </p>
+ 
+  <center><h2 id="C1"><b>Procedure followed to fabricate  design 3D-Printing Printing / Laser cutting </b><h2></center>
+ <p align="justify" class="serif">We used both processes i.e. 3D-printing as well as Laser cut. out main circuit containing part was made using 3D-printer but
+ the top of the case was made using Acrylic sheet with laser cut. </p>
+ 
+ 
+   <center><img src="Project_pics/fab1.jpg" width="800" height="600"   /></center><br> </p>
+
+ 
+ 
+  <center><h2 id="C1"><b>Picture of the final design </b><h2></center>
+ 
+      <center><img src="Project_pics/fab2.jpg" width="800" height="600"   /></center><br> </p><br>
+	  <center><img src="Project_pics/fab3.jpg" width="800" height="600"   /></center><br> </p>
+	  
+  <center><h2 id="C1"><b>Business model </b><h2></center>
+ <p align="justify" class="serif"> Every product which needs to be in the market requires a good business plan. for our product, we considered few major point regarding its cost and its users.
+As our project is user friendly in terms of its size, the size increases the durability. One can carry it anywhere to be used. Furthermore, solar charges(MPPT based) are very expensive 
+products, we used such components which are commonly available and are cheap. With these two major advantages, we hope to cover a good number of users of our products when released in the market.
+ </p>
+ 
+ <h2 id="C1"><b>References </b> </h2>
+
+<a href="https://soldernerd.com/2016/01/21/arduino-mppt-solar-charger-shield/" target="blank">
+<font color="YELLOW">1. https://soldernerd.com/2016/01/21/arduino-mppt-solar-charger-shield/<br></font></a><br>
+
+<a href="http://www.leonics.com/support/article2_14j/articles2_14j_en.php" target="blank">
+<font color="YELLOW">2- http://www.leonics.com/support/article2_14j/articles2_14j_en.php<br></font></a><br>
+
+<a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" target="blank">
+<font color="YELLOW">3- http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf<br></font></a><br>
+
+<a href="https://forum.arduino.cc/index.php?topic=125252.0" target="blank">
+<font color="YELLOW">4. https://forum.arduino.cc/index.php?topic=125252.0<br></font></a><br>
+
+<a href="https://www.element14.com/community/welcome" target="blank">
+<font color="YELLOW">5. https://www.element14.com/community/welcome<br></font></a><br>
+
+<a href="https://hackaday.io/project/4613/components" target="blank">
+<font color="YELLOW">6.https://hackaday.io/project/4613/components<br></font></a><br>
+
+<a href="https://pdfs.semanticscholar.org/4a51/47c800c66d2fa280f9b0bcdd484abf37abf4.pdf" target="blank">
+<font color="YELLOW">7.https://pdfs.semanticscholar.org/4a51/47c800c66d2fa280f9b0bcdd484abf37abf4.pdf<br></font></a><br>
+
+<a href="https://www.homemade-circuits.com/mppt-circuit-using-pic16f88-with-3/" target="blank">
+<font color="YELLOW">8. https://www.homemade-circuits.com/mppt-circuit-using-pic16f88-with-3/<br></font></a><br>
+
+
+
+ 
+  <center><h2 id="C1"><b>Credits Acknowledged </b><h2></center>
+ <p align="justify" class="serif"> The project we have implemented was first designed by a hobiest "Lucas Fuslar", whose project have been chosen for Hackaday finals. He have done a lot of experiments over this project
+We were following his lead majorly in this project. Our FabLab Assitants also were a source of great help when we had difficulty relating hardware. Our lab instructor Sir Aizaz Ali helped us dealeing with the code as well as routing of the PCB. Sir Nadir was a great source of help when we needed help in 
+milling the PCB. Sir Azmat assited us while were designing the enclosure for our project. Without all of these, our succes in this project was difficult. </p>
+ 
+ 
+ 
+  <center><h2><b>The table outlining the cost of project</b> <h2></center>
+ 
+<center><img src="Project_pics/table for cost.png" height="600" width="550" /></center>
+ 
+ 
+ 
+  <center><h2 id="C1"><b>Zip file containing source code</h2></b></center>
+ 
+  <a href="Multimedia/arduino_code.rar" download>
+<font color="YELLOW"><center>click here to download Arduino code</center></font></a>
+
+  
+
+ 
+  <center><h2 id="C1"><b>Zip file containing cad files</b><h2></center>
+<a href="Multimedia/CAD_design.rar" download>
+<font color="YELLOW"><center>click here to download CAD design</center></font></a>
+
+
+  <center><h2 id="C1"><b>Zip file containing sch and brd files</b> <h2></center>
+<a href="Multimedia/eagle_files.rar" download>
+<font color="YELLOW"><center>click here to download Eagles files</center></font></a>
+ 
+
+ 
+  <center><h2 id="C1"><b>Conclusion</b><h2></center>
+ <p align="justify" class="serif" >This project was full of learning. We had a lot of practical interaction with our theoratical knowledge. 
+ This project proved a golden oppurtunity as we implemented most of our theoratical knowledge.
+Creating an inductor, milling a PCB, designing an enclosure.etc. all of these experiences proved fruitful in increasing our skills 
+and capabilty to do experiments and troubleshooting. In future, we have decided to continue such kind of practice
+for further learning and skill development.</p>
+
+
+<b><p style=" text-align:center">Copyrights:2019,Sagheer and Basit,All Rights Reserved | Terms and conditions | Privacy policy</p><b><br>
+ </div>   </div>		</div>
+	</body>
+</html>
