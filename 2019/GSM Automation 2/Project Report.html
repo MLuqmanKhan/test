@@ -1,0 +1,368 @@
+<html>
+<bgcolor="pink">
+	<head>
+		<link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+			<style>footer {background: #aaa;color:red; height:30px; z-index:10000; position:relative;}
+	table, th, td {      border: 1px solid black;     border-collapse: collapse; }
+	th, td {  padding: 10px;}
+       th { text-align: left;}
+    </style>
+		<title>
+						Ict Report - (Abdul GHafoor & Muhammad Irfan!)
+						Introduction to Embedded Systems Project Report -
+		</title>
+	</head>
+	
+	
+	<body>
+	<div id="main-wrapper">
+		
+			
+		</div>
+		<div id="main">
+			<div id="header">
+				<div id="header-title">
+				
+				
+				 Muhammad Irfan Rind<br>
+					Abdul Ghafoor 
+				</div>
+			</div>
+			<hr>
+<td align="center"><marquee direction="left" scrollamount="5"><b><font color="blue">Project Name</font> <font color="red">"GSM Based Home Automation"</font></b></td></marquee>
+<table border="1" bordercolor="red" width="1100" height="30" align="center" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center" width="190" bgcolor="white"><a href="#C1">Introduction</a></td>
+<td align="center" width="190" bgcolor="light blue"><a href="#C2">High Level Design</a></td>
+<td align="center" width="190" bgcolor="gray"><a href="#C3">Design</a></td>
+<td align="center" width="190" bgcolor="yellow"><a href="#C4">Results</a></td>
+<td align="center" width="190" bgcolor="pink"><a href="#C5">Conclusion</a></td>
+<td align="center" width="190" bgcolor="white"><a href="#C6">Appendix</a></td>
+</tr>
+</table>
+<br>
+<br>
+
+
+				<div id="page-title">GSM Based Home Automation </div>
+<h5 align="center"><strong><u> <font color="grey">Participants</font></strong></u></h5>
+<table align="center" width="288" height="160">
+<tr>
+<td><img src="me.JPG"" width="140" height="120"></td>
+<td><img src="abghafoor.JPG" width="140" height="120"></td>
+</tr>
+</table>
+<table align="center" border="1" bordercolor="red" width="324.5" height="3">
+<tr>
+<td width="161.5">M irfan Rind</td>
+<td width="161.5">Abdul Ghafoor</td>
+</tr>
+</table>
+<br>
+
+
+				<div id="assignments">
+
+<br><br>
+<h2 id="C1">Introduction</h2>  
+The objectives of this assignment are:
+<ul>
+    <li>
+        Our semester project is to design a GSM  based home automation system. The device can control domestic equipment for energy saving applications.
+    </li>
+    <li>
+        Our objective in this project is to control our home appliances through SMS. 
+    </li>
+</ul>
+<br>
+<!--<p> In assignment 4 the PCB was available </p>--><br>
+	
+<center><img src="ngsm.JPG" width="400" hight"400"/><br></center><br><br>
+Such devices are commercially available in the market, and come with a variety interfaces like GSM, WiFi and Ethernet. These devices are central component of fully automated "smart homes". 
+
+</p><br><br>
+
+<h2 id="C2">How we Start ?</h2>
+When our mentor assigned us to this project we were confused how start and as we started reviewing literature things became very clear.<br><br>
+<h4>Deligation of Tasks</h4>
+<center><img src="gnt.PNG" width="500" height="500" /><br></center>
+<br> </br>
+
+<br> </br>
+<h2 id="C2">High Level Design</h2>
+
+The module recieves the SMS and passes it to Microcontroller and microcontroller will compare it with the preloaded set of messages. After getting result microcontroller will give instruction to relay and relay will finally take action as defined by user.   <br><br>
+<br>
+    
+
+<center><img src="sftimp.PNG" width="850" height="600" /><br></center>
+<br><br>
+
+<h2 id="C2">Brief Description of Major Component</h2>
+
+<h4>Microcontroller</h4>
+Although many micro-controllers are available in the market, ATMEGA328P is the most popular of all because of its features, cost and rich set of resouces available on the internet. Arduino boards are also developed on this micro-controller. <br><br>
+
+With program memory of 32 Kbytes ATMEGA328P applications are many.
+With various Power Saving modes it can work as a portable embedded device.
+With Watchdog timer to reset under error it can be used on systems with minimal human interference.
+With advanced RISC architecture, the controller executes programs quickly.  
+Also with in chip temperature sensor the controller can be used at extreme temperatures.
+These all features add up to selection of ATMEGA328P for our project.
+<p><a href=https://www.theengineeringprojects.com/2017/08/introduction-to-atmega328.html"><font color="blue">For Further info</font></a></p>
+
+
+<center><img src="atm.JPG" width="650" height="500"><br></center><br><br>
+<ul> 
+<li>It has EEPROM memory of 1KB<br>
+</li>
+<li>
+ It has SRAM memory of 2KB  </li>
+<li>It has 8 pins for Analouge to Digital Conversion operation (denoted by PA0 to PA7).
+  </li> 
+
+   <li>
+It has 14 (fourteen) Digital pins specified by (D0 to D13)  </li>
+  </ul>
+
+<br><br>
+<h4>GSM Shield 900</h4>
+Mobile phone is a revolutionary invention of the 20th century. It was primarily designed for making and receiving calls & text messages, but it has become the whole world after the smart phone comes into the picture. In this project we are building a home automation system, where one can control the home appliances, using the simple GSM based phone, just by sending SMS through his phone. In this project, no smart phone is needed, just the old GSM phone will work to switch ON and OFF any home electronic appliances, from anywhere<br><br>
+
+ <br><br>
+<h4> Shield 900 Front</h4>
+<center><img src="gsm900f.JPG" width="500" height="500"/><br></center><br><br>
+<h4> Shield 900 Back</h4>
+<center><img src="gsm900b.JPG" width="500" height="500"/><br></center><br><br><br><br>
+   IMPORTANT NOTE<br>
+                We are using GSM 900 shield. We want to use GSM module but we can't due to unavailablity of it and registration of GSM device with PTA. To check GSM there are two LEDs one is power led showing power in GSM and other is status led showing SIM status. If status led is blinking with the pause of three seconds then GSM is working correctly. From our experience working on this project we realized that there is a power issue in the GSM shield. It takes almost 1.5A for first five seconds then 150mA is needed continously. Power can be given through the adapter as well as power supply. But one thing which is very important is the you are not supposed to take power from the GSM shield for microcontrolar not  for any other usage. It will heatup your Shield and it can be damaged. An other point is you are not supposed to use Rx Tx pins for GSM because it cause issue while loading any programe so use any Digital pins for this purpose we are using 7 and 8 pins for GSM . <br> <br><br>
+
+<h4>Nokia 5110 LCD </h4>
+<ul>
+    <li>
+        Display the status of system.
+    </li>
+    <li>
+       Display the value of Temprature
+    </li>
+<li>
+       Operating Voltage is 2.7V to 3.3V
+    </li>
+<li>
+       Current consumption is 6mA
+    </li>
+<li>
+      Has a 84×48 pixel monochrome display  
+    </li>
+<li>
+     Works using SPI interface
+    </li>
+<li>
+    Consists of Philips PCD8544 interface chip for easy interfacing
+    </li>
+<li>
+    Can be easily interfaced with Arduino
+    </li>
+<li>
+   Supports decent graphics of bitmap images
+    </li>
+<li>
+  Available in green and blue backlight.
+    </li>
+
+</ul>
+ <center><img src="lcd.PNG" width="500" height="500"/><br></center><br><br>
+<br><br>
+<h4>DHT22 Sensor </h4>
+<ul>
+    <li>
+       Measures the temprature and humidity, transmits data over I2C protocol.
+    </li>
+   
+</ul><br>
+ <center><img src="sensor.PNG" width="500" height="500"/><br></center><br><br>
+<br>
+<h4>4 Channel Relay </h4>
+<ul>
+    
+This is a 5V 4-channel relay interface board, and each channel needs a 15-20mA driver current. It can be used to control various appliances and equipment with large current. It is equipped with high-current relays that work under AC250V 10A or DC30V 10A. It has a standard interface that can be controlled directly by microcontroller.
+A relay is an electromagnetic switch used to turn on/off a circuit through a low power control signal, or where several circuits must be controlled by one signal.
+  <center><img src="relay.PNG" width="650" height="500"/><br></center><br><br>
+<ul>
+<h4>Implementation Process</h4>
+<li>Firstly we interfaced GSM module with Arduino just to send and recieve SMS through GSM.</li><br><br>
+Here is diagram where we confirmed that GSM is functioning and which pins we have to use.
+
+<center><img src="iga.PNG" width="500" hight"500"/><br></center><br><br>
+<li>We started off our work through basic interfacing of LCD and DHT22 sensor with Arduino Board</li><br><br>
+ 
+<center><img src="lsa.JPG" width="500" hight"500"/><br></center><br><br>
+<li>We also interface GSM with Relay For the Purpose how we have to work in project</li><br><br>
+<center><img src="gra.JPG" width="500" hight"500"/><br></center><br><br>
+<li>Then we make a breadboard circuit where we use leds for the purpose of load. Through this basic implementation we achieved 100% output from this prototype.</li><br><br>
+<center><img src="breadboard.JPG" width="600" hight"600"/><br></center><br><br>
+</ul>
+
+
+
+<br><br>
+
+<h2 id="C2">Next Plan</h2> 
+After Prototype we move forward for PCBs we make two PCBs. 1st PCB for Micro-controller and 2nd For GSM , LCD , Relay , and sensor.<br><br>
+<br><br><br><br>
+<h2 id="C3">Design of Project</h2> 
+
+
+<h4>Electrical Circuit</h4>
+Here is PCB layout of microcontroller board. Alot of time and thought was invested in the process to squeeze all the components together in the minimal space.
+<center><img src="schm.JPG"  width="650" height="500"/><br></center><br><br>
+<h4>Milled PCB </h4>
+<center><img src="pcb1.JPG" width="650" height="500"/><br></center><br><br>
+1)
+First PCB for microcontroller we just insert 14 pin connector therefore our required component setting like sensor, LCD , Relay<br><br>
+<h4>Functional PCB </h4>
+
+when we come up with a fully soldered microcontrolar board then next task is to burn the boatloader program on the micro-controller. For burning programme we first did bootloader through SPI protocol. Then we upload test programme to test 13 pin LED. And to our surprise we succeed to bootload the micro-controller at the very first attempt.<br><br><br><br><br>
+<center><img src="fpcb1.JPG" width="650" height="500"><br></center><br><br>
+<h5>Milled PCB 2 </h4>
+In second PCB there is network for GSM , Relay and Sensor.
+<center><img src="pcb2.JPG" width="650" height="500"/><br></center><br><br>
+
+2)
+2nd PCB in order to design sandwich shape just put GSM on that Board . There are three Pin using therefore Rx,Tx and Ground after making two boards, we realize that there will be irregular shape of our project. From our experience, we come to conclude that where possible design of product with mutliple boards should be avoided.<br><br>
+
+<h2 id="C2">PCB Milling Machine</h2> 
+We milled our PCB using the milling machine available inp our lab.
+<center><img src="ronald.JPG" width="500" height="500"><br></center><br><br>
+<br><br>
+<h2 id="C2">Bill of Material</h2> 
+Here is the bill of material of our micro-controller based device.
+<center><img src="bom1.JPG" width="500" height="700"><br></center><br><br>
+<h2 id="C2">Bill of Material for Second Board</h2>
+<ul>
+<li>GSM Shield 900</li><br><br>
+<li>Four Channel Relay</li> <br><br>
+<li>Nokia 5110 LCD </li> <br><br>
+<li>DHT22 Sensor </li> <br><br>
+
+<h4>PCB Layout</h4>
+
+<br><br>
+
+</ul>
+<br><br>
+
+<br><br>
+ 
+ 
+
+<h4>Software Development</h4>
+In a pictorial format you may describe the flow of your algorithm and how you have used the functions to implement the code in an efficient way.
+<center><img src="block3.PNG" width="650" height="800"><br></center><br><br>
+<br><br>
+<h4>Design of Finished Product</h4>
+
+Here is printed enclosure of our module. The enclosure has width of 2.5" while the hieght is 3" 
+<h4>Front View</h4>
+<center><img src="crop1.JPG" width="500" height="500"/><br></center><br><br>
+<h4>Top View</h4>
+<center><img src="cropf.JPG" width="500" height="500"/><br></center><br><br>
+<br><br>
+<h2 id="C4">Our 3D Printer</h2>
+<center><img src="ulti.JPG" width="500" height="500"/><br></center><br><br>
+<br><br>
+<h2 id="C4">Results</h2> 
+At last we came up with functional product and here is the video link  of functional product.<br>
+<p><a href=https://www.youtube.com/watch?v=OpEdVn2socw"><font color="blue">project Vedio</font></a></p>
+<br><br>
+
+<br><br>
+<h4>Commercialization Aspects</h4><br>
+        GSM Based Home Automation has a great potential for commercialization. Automation of equipment and plants through Internet of Things is being used widely. So if a product is commercialized it's price matters. We made this device just to control four loads of any kind. So it's price is seven thousands only. The price of the device can be lowered significantly by using GSM module instead of shield  which is the main component of our project.
+        As I mentioned above that we are using GSM shield which is very expensive as compared to GSM module. It's price can be vary by varing number of loads. <br><br>   
+<br><br>
+<h2 id="C5">Conclusions</h2> 
+
+        This is our semester project for the module Introduction to Embedded System. We learnt some life long things from it includings some technical Skills Software as well as Hardware skills. And learn how to read datasheets of different components.<br>
+        We learn how to search websites and also learn how to choose compnents, we face problem while choosing GSM shield due to PTA registration issue. We choose ATMEGA328 IC because it is full filling our requirements.
+        We learn how to interface different components with micro-controller.<br>
+    SOFTWARE CASE:<br>
+                    We learnt EAGLE software by making of different PCBs including simple circuit, micro-controllar and PCB for interfacing different components. We have full command on it now.
+                   And we also use Solid Works for making enclosure for our product using 3D printer(ULTIMAKER). We have also command on it. We aslo make sheet for laser cutter for LCD. 
+                   And We also learn programing Skills from this project and learn Arduino language for writting programes.  C language is used in arduino programming. We faced alot of problems while doing programming and while routing of PCBs and making casing is another big challenge for us. These issues are very helpful for us to learn different things in detail. <br>
+   HARDWARE CASE:<br>
+                   In case of Hardware we learnt soldering of SMT as well as DIP components on Printed Circuit Board. And we also learnt the assembly of components. Although we faced alot of issues in assembly of components because we take very compact measurements of our product which cause a big problem for us. We also learned interfacing of components(GSM, SENSOR,NOKIA LCD,RELAY )
+                   with Arduino.<br>
+                  In conclusion we learn many things as we were facing problem and one thing is that we learn how to tackle with the problem and how to search about problems and how to solve them. Problems can be of any kind.<br><br>
+                  It can be interfacing of components, routing of PCBs, soldering of components, Programming , working on Solid Works, assembly problems and many more. 
+               
+               
+
+<br><br>
+<h2 id="C6">Appendix</h2> 
+<br>
+Total expenditure of our project is given below component wise.<br><br>
+
+<br>
+ <font color="grey">
+<b>
+  <a href="Atmega328IC/Atmega328IC.rar">  Eagle PCB Layout files </a></b>
+   
+</b>
+<br>
+
+<br>
+<a href="arduinocode.rar">Arduino Code </a>
+</b>
+<br>
+</font>
+<b><br>
+<br>
+<br><br>
+<center>
+<center><img src="rs.PNG" width="500" height="500"/><br></center><br><br>
+<table style="width:50%">
+ 
+<tr>
+<h4>Intellectual Property and Ethical Considerations</h4>
+We refered to these websites on the internet and we are making our work freely available for others to implement and improve this product further.  
+<html>
+<body bgcolor="#E6E6FA">
+<h1><font color="grey">   Refrences </font></h1>
+<p><a href=https://circuitdigest.com/microcontroller-projects/gsm-based-home-automation-using-arduino"><font color="blue">For Interfacing GSM with Arduino</font></a></p>
+<p><a href=https://www.instructables.com/id/Home-automation-system-using-Arduino-and-SIM900-GS/><font color="blue">For Interfacing GSM with Arduino codes</font></a></p>
+<p><a href=https://components101.com/nokia-5110-lcd><font color="blue">For lcd </font></a></p>
+<p><a href=https://components101.com/sensors/dht22-pinout-specs-datasheet><font color="blue">For Sensor </font></a></p>
+</body>
+</html>
+ 
+
+    <td>Report Submitted on Time</td>
+    <td> .......................  </td> 
+  </tr>
+  <tr>
+    <td>Matlab Profeciency</td>
+    <td> .......................</td> 
+  </tr>
+</table>
+</center>
+<br><br>
+<!--		
+					Double Image Example Below
+					<div id="doubleimg">
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+						<div class="imgbox"><img src="graphics/img_avatar.png" /><div class="doubleimgtitle">text here</div></div>
+					</div>
+-->				
+					<!-- This is comment -->
+</div>
+			
+			</div>
+		</div>
+		
+	
+
+	</body>
+</html>
